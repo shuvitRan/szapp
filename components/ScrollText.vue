@@ -1,6 +1,7 @@
 <template>
 <div>
 
+  <Map :currentStep='currStep' />
 
   <div class="intro">
     <p>SCROLL TO START</p>
@@ -25,7 +26,7 @@
       step {{ n }}
     </div>
     <div class="graphic" slot="graphic"> hello {{ currStep }}</div>
-
+    <!-- <div class="graphic" slot="graphic"> hello {{ currStep }}</div> -->
     <div class = "step" data-step-no = "10">
       <p> shenzhen today  what about</p>
     </div>
@@ -43,13 +44,16 @@
 
 
 <script>
+
+import Map from '~/components/Map'
+
 // import scrollama from "scrollama";
 import 'intersection-observer' // for cross-browser support
 import Scrollama from 'vue-scrollama'
 export default {
   name: 'SrcollText',
   components: {
-    Scrollama
+    Scrollama, Map
   },
   data() {
     return {
@@ -70,11 +74,11 @@ export default {
       // 'data-step-no',
       direction
     }) {
-
-      this.currStep=element.dataset.stepNo;
+      this.$emit('from-mother','hello')
+      this.currStep=parseInt(element.dataset.stepNo);
       // handle the step-event as required here
-      console.log(element, index, direction)
-      console.log(element.dataset)
+      // console.log(element, index, direction)
+      console.log(this.currStep)
     }
   }
 }

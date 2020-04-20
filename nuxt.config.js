@@ -21,12 +21,16 @@ export default {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: '#ff0000' },
+  loadingIndicator:{
+    name:'folding-cube'
+  },
   /*
   ** Global CSS
   */
   css: [
-    'element-ui/lib/theme-chalk/index.css'
+    'element-ui/lib/theme-chalk/index.css',
+    '~assets/styles/main.css'
   ],
   /*
   ** Plugins to load before mounting the App
@@ -45,6 +49,11 @@ export default {
   */
   modules: [
   ],
+
+  transition:{
+    name:'fade',
+    mode:'out-in'
+  },
   /*
   ** Build configuration
   */

@@ -1,0 +1,60 @@
+[
+  {
+    chapter: 0,
+    description: "ssds sdsadsdqwewewqewqew sffwqweqeqwe",
+    location: {
+            center: [138.70156, 15.82343],
+            zoom: 2.73,
+            pitch: 18.00,
+            bearing: 0.00
+        }
+  },
+  {
+    chapter: 1,
+    description: "ssds sdsadsdqwewewqewqew sffwqweqeqwe",
+    location: {
+            center: [114.167245, 22.650228],
+            zoom: 9.85,
+            pitch: 0.00,
+            bearing: 0.00
+        }
+  },
+  {
+    chapter: 2,
+    year: 1979,
+    GDP: 196,
+    population: 314,
+    description: "ssds sdsfss sffwqweqeqwe"
+
+  },
+  {
+    chapter: 3,
+    year: 1988,
+    GDP: 8698,
+    population: 1201,
+    description: "dffs sdsfss fdsfewfrwqsffwqweqeqwe"
+
+  },
+  {
+    chapter: 4,
+    year: 1999,
+    GDP: 182468,
+    population: 6325,
+    description: "hfhfhfffs sdsfss sffwqweqeqwe"
+
+  },
+  {
+    chapter: 5,
+    year: 2018,
+    GDP: 2422197,
+    population: 13026,
+    description: "hfbcvbgbsds sdhfgdhfsfss sffwqweqeqwe"
+
+  }
+
+
+
+
+
+
+]

@@ -1,8 +1,13 @@
 <template>
 <div>
 
-  <div id="map">
+  <div id="map"  >
   </div>
+
+<div class="textCheck">
+    <p>{{currentStep}}</p>
+</div>
+
 
 </div>
 </template>
@@ -18,19 +23,49 @@ import mapboxgl from 'mapbox-gl';
 export default {
   name: 'Map',
 
+  props: {
+    currentStep:{
+      type: Number,
+      require: true
+    }
+  },
+
   data() {
     return {
       msg: 'my map box',
       layer: '',
-
+      showMap:'hidden',
       map: {},
       accessToken: 'pk.eyJ1IjoicmFuZGFuZngiLCJhIjoiY2pwaXdqeHU1MDBtNTNxdGU5bmthMGw0YyJ9.XUsxpyY7bNWN0XUzrpAtxg',
-      mapStyle: 'mapbox://styles/randanfx/ck90oix3e059l1iqtdpli91s5'
+      mapStyle: 'mapbox://styles/randanfx/ck98yu85q0dkn1jnr7zqwfbqd'
     };
   },
 
   created() {
     // this.mapbox= Mapbox;
+
+  },
+
+  watch: {
+
+    mapLoading(){
+      if(this.mapLoading==true){
+          this.showMap= 'visible' // When it is safe to manipulate layers
+      }
+    },
+
+    currentStep(newVale, oldVal){
+
+       console.log('prop changed:',newVale,'|was',oldVal)
+       if(this.currentStep==2){
+         this.map.setLayoutProperty('sz1999Data','visibility', 'none');
+
+       }else{
+         this.map.setLayoutProperty('sz1999Data','visibility', 'visible');
+       }
+
+    }
+
 
   },
   mounted() {
@@ -44,7 +79,8 @@ export default {
     this.map = new mapboxgl.Map({
       container: 'map',
       style: this.mapStyle,
-      scrollZoom: false
+      scrollZoom: false,
+      attributionControl: false
       // zoom:2,
       // accessToken:'
     })
@@ -76,7 +112,7 @@ export default {
         url: 'mapbox://randanfx.akhtcs05'
       });
       map.addLayer({
-        'id': 'terrain-data',
+        'id': 'sz1999Data',
         'type': 'raster',
         'source': 'mapbox-sz1999',
         'source-layer': 'sz1999',
@@ -92,7 +128,7 @@ export default {
       });
 
       var mapLayer = map.getLayer('HospitalDots');
-      console.log(mapLayer)
+      // console.log(mapLayer)
       // map.setPaintProperty('HospitalDots', 'circle-opacity', 1);
 
         // scroller
@@ -105,54 +141,9 @@ export default {
 
 
 
-})
-
-    // this.map.on('load', function() {
-    //   this.map.addSource('sz1979', {
-    //     type: 'vector',
-    //     url: 'https://studio.mapbox.com/tilesets/randanfx.6gqree79/'
-    //   });
-    //   this.map.addLayer({
-    //     'id': 'randanfx.6gqree79',
-    //     'type': 'raster',
-    //     'source': 'sz1979',
-    //     'layout': {
-    //       'visibility': 'visible'
-    //     },
-    //     // 'paint': {
-    //     //   'circle-radius': 8,
-    //     //   'circle-color': 'rgba(55,148,179,1)'
-    //     // },
-    //     'source-layer': 'museum-cusco'
-    //   });
-    // });
+    })
 
 
-    // this.map.on('load', function(){
-    //      // insert layers beneath any symbol layer
-    //      self.layers = map.getStyle().layers;
-    //
-    //
-    //
-    //    })
-
-
-    // this.createMap().setLayoutProperty('shenzhen1979', 'visibility', 'visible');
-    // map.addLayer({
-    //    'id': 'sate1991',
-    //    'type': 'raster',
-    //    'source': 'contours',
-    //    'source-layer': 'shenzhen1979',
-    //    'layout': {
-    //    'visibility': 'visible',
-    //    'line-join': 'round',
-    //    'line-cap': 'round'
-    //    },
-    //    'paint': {
-    //    'line-color': '#877b59',
-    //    'line-width': 1
-    //    }
-    //    });
 
 
   },
@@ -173,6 +164,7 @@ export default {
 
 
 
+
   }
 
 
@@ -181,10 +173,17 @@ export default {
 </script>
 
 
-
+<style src="mapbox-gl/dist/mapbox-gl.css">
+</style>
 
 
 <style scoped>
+
+.textCheck{
+position: fixed;
+z-index: 1;
+color:white;
+}
 #map {
   z-index: -1;
   position: fixed;

@@ -1,6 +1,6 @@
 <template >
   <div>
-  <Map/>
+  <!-- <Map/> -->
   <!-- <vMapbox/> -->
   <ScrollText/>
   </div>
@@ -10,13 +10,13 @@
 <script>
 
 import Map from '~/components/Map'
-import vMapbox from '~/components/vMapbox'
+// import vMapbox from '~/components/vMapbox'
 import ScrollText from '~/components/ScrollText'
 
   export default {
 
     components:{
-      Map, vMapbox, ScrollText
+      Map, ScrollText
     }
 
 
@@ -24,3 +24,11 @@ import ScrollText from '~/components/ScrollText'
 
 
 </script>
+
+
+
+<style >
+  body {
+    background-color: black;
+  }
+</style>
