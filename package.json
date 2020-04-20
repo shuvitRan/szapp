@@ -11,8 +11,14 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "d3": "^5.15.1",
+    "element-ui": "^2.4.11",
+    "intersection-observer": "^0.9.0",
+    "mapbox-gl": "^1.9.1",
     "nuxt": "^2.0.0",
-    "element-ui": "^2.4.11"
+    "scrollama": "^2.2.1",
+    "vue-mapbox": "^0.4.1",
+    "vue-scrollama": "^1.1.9"
   },
   "devDependencies": {}
 }

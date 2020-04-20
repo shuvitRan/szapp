@@ -1,6 +1,9 @@
+  // const webpack = require('webpack')
 
 export default {
-  mode: 'universal',
+
+  mode: 'spa',
+  // mode: 'universal',
   /*
   ** Headers of the page
   */
@@ -30,6 +33,7 @@ export default {
   */
   plugins: [
     '@/plugins/element-ui'
+
   ],
   /*
   ** Nuxt.js dev-modules
@@ -46,6 +50,11 @@ export default {
   */
   build: {
     transpile: [/^element-ui/],
+    // plugins: [
+    //   new webpack.ProvidePlugin({
+    //     mapboxgl: 'mapbox-gl'
+    //   })
+    // ],
     /*
     ** You can extend webpack config here
     */

@@ -1,27 +1,29 @@
 <template>
   <div class="container">
+    <!-- <client-only> -->
+    <!-- <Map/> -->
+  <!-- </client-only> -->
     <div>
-      <logo />
       <h1 class="title">
-        ShenzhenThesis
+        深圳 SHENZHEN
       </h1>
       <h2 class="subtitle">
-        Msdv thesis 
+        a story of grow and its livability in three aspects.
       </h2>
+
+
       <div class="links">
+
+        <nuxt-link to="/shenzhenstory"
+                  class="button--grey"
+              >Start</nuxt-link>
+
         <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
+          href="https://github.com/shuvitRan/msdv-thesis"
           target="_blank"
           class="button--grey"
         >
-          GitHub
+          Documentation
         </a>
       </div>
     </div>
@@ -30,15 +32,19 @@
 
 <script>
 import Logo from '~/components/Logo.vue'
+import Map from '~/components/Map'
 
 export default {
   components: {
-    Logo
+    Logo, Map
   }
 }
 </script>
 
 <style>
+/* nuxt-link{
+  text-decoration: none;
+} */
 .container {
   margin: 0 auto;
   min-height: 100vh;
