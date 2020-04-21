@@ -4,9 +4,10 @@
   <div id="map"  >
   </div>
 
-<div class="textCheck">
+<!-- <div class="textCheck">
     <p>{{currentStep}}</p>
-</div>
+    <p>{{chapterData[1].location}}</p>
+</div> -->
 
 
 </div>
@@ -26,7 +27,19 @@ export default {
   props: {
     currentStep:{
       type: Number,
-      require: true
+      require: false
+    },
+    chapterData:{
+      type: Array,
+      require:false
+    },
+    currentYear:{
+      type: String,
+      requre:false
+    },
+    mapStyle:{
+      type: String,
+      requre:true
     }
   },
 
@@ -36,8 +49,8 @@ export default {
       layer: '',
       showMap:'hidden',
       map: {},
-      accessToken: 'pk.eyJ1IjoicmFuZGFuZngiLCJhIjoiY2pwaXdqeHU1MDBtNTNxdGU5bmthMGw0YyJ9.XUsxpyY7bNWN0XUzrpAtxg',
-      mapStyle: 'mapbox://styles/randanfx/ck98yu85q0dkn1jnr7zqwfbqd'
+      accessToken: 'pk.eyJ1IjoicmFuZGFuZngiLCJhIjoiY2pwaXdqeHU1MDBtNTNxdGU5bmthMGw0YyJ9.XUsxpyY7bNWN0XUzrpAtxg'
+      // mapStyle: 'mapbox://styles/randanfx/ck98yu85q0dkn1jnr7zqwfbqd'
     };
   },
 
@@ -48,21 +61,61 @@ export default {
 
   watch: {
 
-    mapLoading(){
-      if(this.mapLoading==true){
-          this.showMap= 'visible' // When it is safe to manipulate layers
-      }
-    },
-
     currentStep(newVale, oldVal){
 
-       console.log('prop changed:',newVale,'|was',oldVal)
-       if(this.currentStep==2){
-         this.map.setLayoutProperty('sz1999Data','visibility', 'none');
+       // console.log('prop changed:',newVale,'|was',oldVal)
+       if(this.currentStep==0){
+         this.map.flyTo(this.chapterData[0].location)
 
-       }else{
-         this.map.setLayoutProperty('sz1999Data','visibility', 'visible');
+
+
+       } else if(this.currentStep==1){
+         this.map.flyTo(this.chapterData[1].location)
+         this.map.setPaintProperty('mapbox-satellite', 'raster-opacity', 1);
+         this.map.setPaintProperty('shenzhenDistrictsFills', 'fill-opacity', 0);
+         this.map.setPaintProperty('mapbox-satellite', 'raster-brightness-max', 1);
+
+
+       } else if(this.currentStep==2){
+
+         this.map.flyTo(this.chapterData[2].location)
+
+         this.map.setPaintProperty('mapbox-satellite', 'raster-opacity', 0);
+         this.map.setPaintProperty('mapbox-satellite', 'raster-saturation', 0);
+         this.map.setPaintProperty('shenzhen1979', 'raster-opacity', 0);
+         this.map.setPaintProperty('shenzhenDistrictsFills', 'fill-opacity', 1);
+       }else if(this.currentStep==3){
+         this.map.setPaintProperty('mapbox-satellite', 'raster-opacity', 1);
+         this.map.setPaintProperty('mapbox-satellite', 'raster-saturation', -1);
+         this.map.setPaintProperty('mapbox-satellite', 'raster-brightness-max', 0.5);
+         this.map.flyTo(this.chapterData[3].location)
+         this.map.setPaintProperty('shenzhen1979', 'raster-opacity', 1);
+         this.map.setPaintProperty('shenzhen1988', 'raster-opacity', 0);
+       } else if(this.currentStep==4){
+         // this.map.setPaintProperty('shenzhen1979', 'raster-opacity', 0);
+         this.map.setPaintProperty('shenzhen1988', 'raster-opacity', 1);
+         this.map.setPaintProperty('shenzhen1999', 'raster-opacity', 0);
+       }else if(this.currentStep==5){
+         // this.map.setPaintProperty('shenzhen1988', 'raster-opacity', 0);
+         this.map.setPaintProperty('shenzhen1999', 'raster-opacity', 1);
+         this.map.setPaintProperty('shenzhen2010', 'raster-opacity', 0);
+       }else if(this.currentStep==6){
+         // this.map.setPaintProperty('shenzhen1999', 'raster-opacity', 0);
+         this.map.setPaintProperty('shenzhen2010', 'raster-opacity', 1);
+         this.map.setPaintProperty('shenzhen2019', 'raster-opacity', 0);
+       }else if(this.currentStep==7){
+         // this.map.setPaintProperty('shenzhen2010', 'raster-opacity', 0);
+         this.map.setPaintProperty('shenzhen2019', 'raster-opacity', 1);
+
        }
+
+
+       // if(this.currentStep==2){
+       //   this.map.setLayoutProperty('sz1999Data','visibility', 'none', );
+       //
+       // }else{
+       //   this.map.setLayoutProperty('sz1999Data','visibility', 'visible');
+       // }
 
     }
 
@@ -80,52 +133,35 @@ export default {
       container: 'map',
       style: this.mapStyle,
       scrollZoom: false,
-      attributionControl: false
+      attributionControl: false,
+      fadeDuration:1000
       // zoom:2,
       // accessToken:'
     })
     // let scroller = scrollama();
     let map = this.map;
     map.on('load', function() {
-      // map.addSource('mapbox-terrain', {
-      //   type: 'vector',
-      //   url: 'mapbox://mapbox.mapbox-terrain-v2'
+
+//souce examle
+      // map.addSource('mapbox-sz1999', {
+      //   type: 'raster',
+      //   url: 'mapbox://randanfx.akhtcs05'
       // });
       // map.addLayer({
-      //   'id': 'terrain-data',
-      //   'type': 'line',
-      //   'source': 'mapbox-terrain',
-      //   'source-layer': 'contour',
+      //   'id': 'sz1999Data',
+      //   'type': 'raster',
+      //   'source': 'mapbox-sz1999',
+      //   'source-layer': 'sz1999',
       //   'layout': {
-      //     'line-join': 'round',
-      //     'line-cap': 'round',
+      //     // 'line-join': 'round',
+      //     // 'line-cap': 'round',
       //     'visibility':'visible'
       //   },
       //   'paint': {
-      //     'line-color': '#ff69b4',
-      //     'line-width': 1
+      //     // 'line-color': '#ff69b4',
+      //     // 'line-width': 1
       //   }
       // });
-
-      map.addSource('mapbox-sz1999', {
-        type: 'raster',
-        url: 'mapbox://randanfx.akhtcs05'
-      });
-      map.addLayer({
-        'id': 'sz1999Data',
-        'type': 'raster',
-        'source': 'mapbox-sz1999',
-        'source-layer': 'sz1999',
-        'layout': {
-          // 'line-join': 'round',
-          // 'line-cap': 'round',
-          'visibility':'visible'
-        },
-        'paint': {
-          // 'line-color': '#ff69b4',
-          // 'line-width': 1
-        }
-      });
 
       var mapLayer = map.getLayer('HospitalDots');
       // console.log(mapLayer)

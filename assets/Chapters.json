@@ -1,59 +1,89 @@
-[
-  {
-    chapter: 0,
-    description: "ssds sdsadsdqwewewqewqew sffwqweqeqwe",
-    location: {
-            center: [138.70156, 15.82343],
-            zoom: 2.73,
-            pitch: 18.00,
-            bearing: 0.00
-        }
+[{
+    "chapter": 0,
+    "description": " Today more than 55% of the world population lives in cities-70% of the world population will reside in cities by 2050. In the past decades, numerous special economic zones and free trade zones helped the tremendous growth in the third world.",
+    "location": {
+      "center": [115.695092, 21.020431],
+      "zoom": 3.03,
+      "pitch": 34.00,
+      "bearing": -6.40,
+      "speed":0.6
+    }
   },
   {
-    chapter: 1,
-    description: "ssds sdsadsdqwewewqewqew sffwqweqeqwe",
-    location: {
-            center: [114.167245, 22.650228],
-            zoom: 9.85,
-            pitch: 0.00,
-            bearing: 0.00
-        }
+    "chapter": 1,
+    "description": "Shenzhen serves as one of the best examples of the 21st-century urbanization in developing countries. After four decades of dramatic urbanization, was developed from a fish town to a modern mega-city. ",
+    "location": {
+      "center": [113.87860, 22.61496],
+      "zoom": 9.11,
+      "pitch": 18.50,
+      "bearing": -7.2,
+      "speed":0.4,
+      "essential": true
+    }
   },
   {
-    chapter: 2,
-    year: 1979,
-    GDP: 196,
-    population: 314,
-    description: "ssds sdsfss sffwqweqeqwe"
+    "chapter": 2,
+    "description": "Shenzhen is a coastal city, which covers 1997.3 square kilometers of land and more than 310 rivers. It is located on the east edge of the Zhujiang River(Pearl River) estuary, and neighboring Dongguan City and Hongkong. ",
+    "location": {
+      "center": [113.88568,  22.62120],
+      "zoom": 8.81,
+      "pitch": 51.50,
+      "bearing": 4.8,
+      "speed":0.05
+    }
+  },
+  {
+    "chapter": 3,
+    "year": 1979,
+    "GDP": 196,
+    "population": 314,
+    "description": " Shenzhen started with 310 thousand residents in 1979 and in the same year it became the first special economic zone in China.",
+    "location": {
+      "center": [114.167245, 22.650228],
+      "zoom": 9.85,
+      "pitch": 0.00,
+      "bearing": 0.00,
+      "speed":0.1
+    }
+  },
+  {
+    "chapter": 4,
+    "year": 1988,
+    "GDP": 8698,
+    "population": 1201,
+    "description": "In 1980, three years after the Cultural Revolution, Shenzhen was promoted by Deng Xiaoping, and its partial districts became the first experimental Special Economic Zone(SEZ) in China to practice the capitalist market economy under the communist government."
 
   },
   {
-    chapter: 3,
-    year: 1988,
-    GDP: 8698,
-    population: 1201,
-    description: "dffs sdsfss fdsfewfrwqsffwqweqeqwe"
+    "chapter": 5,
+    "year": 1999,
+    "GDP": 182468,
+    "population": 6325,
+    "description": "A large number of domestic migrants from all the places of China have been moving to Shenzhen. It is becaming a land of opportunity, and a 21st century city experimenting ground."
 
   },
   {
-    chapter: 4,
-    year: 1999,
-    GDP: 182468,
-    population: 6325,
-    description: "hfhfhfffs sdsfss sffwqweqeqwe"
+    "chapter": 6,
+    "year": 2010,
+    "GDP": 1000221,
+    "population": 10372,
+    "description": " In 2010, the Shenzhen SEZ expanded from its four of nine districts, which is around 396 km², to the whole city."
 
   },
   {
-    chapter: 5,
-    year: 2018,
-    GDP: 2422197,
-    population: 13026,
-    description: "hfbcvbgbsds sdhfgdhfsfss sffwqweqeqwe"
+    "chapter": 7,
+    "year": 2018,
+    "GDP": 2422197,
+    "population": 13026,
+    "description": "The Gross Domestic Product(GDP) of Shenzhen in 2018 is 12,000 times larger than the GDP in 1979. It was also the first time Shenzhen’s GDP has exceeded its neighbour Hongkong."
+
+  },
+  {
+    "chapter": 8,
+
+    "description": "What will be the challenges that come with the fast urban development and rapid growth of the economy?  "
 
   }
-
-
-
 
 
 

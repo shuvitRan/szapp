@@ -9,8 +9,9 @@
 
 <style>
 html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
+  /* font-family: 'Helvetica Neue', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto,  Arial, sans-serif; */
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -18,6 +19,12 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+}
+
+h1{
+  /* font-family: 'Noto Serif JP', serif; */
+
+
 }
 
 *,
@@ -38,21 +45,22 @@ html {
 
 .button--green:hover {
   color: #fff;
-  background-color: #3b8070;
+  background-color: #ffffff;
 }
 
 .button--grey {
+
   display: inline-block;
   border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
+  border: 1px solid #fbfbfb;
+  color: #ffffff;
   text-decoration: none;
-  padding: 10px 30px;
+  padding: 5px 40px;
   margin-left: 15px;
 }
 
 .button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+  color: #3d3d3d;
+  background-color: #c9c9c9;
 }
 </style>

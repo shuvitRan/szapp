@@ -1,6 +1,6 @@
 <template >
   <div>
-  <!-- <Map/> -->
+  <Map/>
   <!-- <vMapbox/> -->
   <ScrollText/>
   </div>
@@ -27,7 +27,7 @@ import ScrollText from '~/components/ScrollText'
 
 
 
-<style >
+<style scoped>
   body {
     background-color: black;
   }
