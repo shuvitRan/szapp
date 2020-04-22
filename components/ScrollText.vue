@@ -138,11 +138,15 @@ export default {
   }
 } */
 
+.intro{
+  background-color: rgba(20, 20, 20, 0.52);
 
+
+}
 
 .intro,
 .outro {
-  padding: 40vh;
+  padding: 50vh;
     font-size: 1rem;
     /* text-align: left; */
     /* float: left; */
@@ -155,7 +159,7 @@ export default {
   margin: 5rem 3rem;
   /* border: 1px solid #ccc; */
   /* background-color: #eee; */
-  color: rgba(255, 255, 255,0.8);
+  color: rgba(255, 255, 255,1);
   display: inline-block;
   text-align: left;
   float: right;
@@ -188,6 +192,7 @@ export default {
   opacity: 0;
   transition : all 700ms;
   visibility: hidden;
+   text-shadow: 2px 2px 4px rgba(#000000, 0.8);
   /* transform: scale(0.9); */
 }
 
