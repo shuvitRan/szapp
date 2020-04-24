@@ -146,7 +146,9 @@ export default {
 
 .intro,
 .outro {
-  padding: 50vh;
+  padding-left:  10vw;
+  padding-top: 50vh;
+  padding-bottom: 50vh;
     font-size: 1rem;
     /* text-align: left; */
     /* float: left; */
