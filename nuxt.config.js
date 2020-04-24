@@ -1,7 +1,15 @@
   // const webpack = require('webpack')
 
-export default {
+  const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+    router: {
+      base: '/szapp/'
+    }
+  } : {}
 
+
+
+export default {
+  ...routerBase,
   mode: 'spa',
   // mode: 'universal',
   /*
@@ -74,9 +82,10 @@ export default {
     }
   },
 
-  router: {
-    base: './'
-  }
+  // router: {
+  //   base: '/ShenzhenLivability/dist'
+  //   // mode: 'hash'
+  // }
 
 
 }
