@@ -2,7 +2,8 @@
 <div >
 
 
-  <Map mapStyle="mapbox://styles/randanfx/ck99glwc30uwk1ipbue3ie1hb" />
+  <!-- <Map mapStyle="mapbox://styles/randanfx/ck99glwc30uwk1ipbue3ie1hb" /> -->
+    <vueMap mapStyle="mapbox://styles/randanfx/ck99glwc30uwk1ipbue3ie1hb" />
   <div class="container">
     <!-- <client-only> -->
 
@@ -41,11 +42,11 @@
 
 <script>
 // import Logo from '~/components/Logo.vue'
-import Map from '~/components/Map'
+import vueMap from '~/components/vueMap'
 
 export default {
   components: {
-    Map
+    vueMap
   }
 }
 </script>
