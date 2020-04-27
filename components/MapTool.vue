@@ -1,69 +1,115 @@
 <template>
-  <div >
-    <MglMap
-      id='maptool'
-          :access-token="accessToken"
-          :mapStyle="mapStyle"
-          :attributionControl="false"
-          :scrollZoom= 'enableScrollZoom'
-          @load = "onMapLoaded"
-          @mousemove="mapMouseMoved"
-          >
+<div>
 
-     <MglScaleControl position ="bottom-right" />
-   </MglMap>
+  <el-container>
 
-   <div class="loadingmap">
+          <MglMap
+                id='maptool'
+                :access-token="accessToken"
+                :mapStyle="mapStyle"
+                :attributionControl="false"
+                :scrollZoom='enableScrollZoom'
+                @load="onMapLoaded"
+                @mousemove="mapMouseMoved">
 
-   </div>
+            <MglScaleControl position="bottom-right" />
+          </MglMap>
+
+
+<div class="control-bar">
+
+
+  <div class="barButton" @click="controlPanelisActive =! controlPanelisActive">
+        <!-- <el-button > toggle</el-button> -->
+    <i :class="controlPanelisActive? 'el-icon-arrow-left': 'el-icon-arrow-right'"></i>
+    <p> control </p>
+    </div>
+
+  <div class="bg-purple grid-content" :style='{"width": (controlPanelisActive? "0px":"40vw")}'>
+  <!-- <div class="bg-purple grid-content" > -->
+  <div class="contro-pannel">
+    <H1>Green</H1>
+
+    <el-switch
+        v-model="isParkShow"
+        @change='IsParkShow'
+        active-color="#13ce66"
+        inactive-color="#ff4949"
+        active-text="Show Park">
+    </el-switch>
+    <el-switch
+        v-model="isParkShow"
+        @change='IsParkShow'
+        active-color="#13ce66"
+        inactive-color="#ff4949"
+        active-text="Show Park">
+    </el-switch>
   </div>
+  </div>
+</div>
 
+
+
+
+
+
+  </el-container>
+
+
+
+
+
+</div>
 </template>
 
 
 
 <script>
 import Mapbox from "mapbox-gl";
-import { MglMap,
+import {
+  MglMap,
   MglAttributionControl,
   MglNavigationControl,
   MglGeolocateControl,
   MglFullscreenControl,
-  MglScaleControl } from "vue-mapbox";
+  MglScaleControl
+} from "vue-mapbox";
 
 export default {
 
-  name:'vueMap',
+  name: 'vueMap',
 
   props: {
-    currentTopic:{
+    currentTopic: {
       type: Number,
       require: false
     },
-    mapStyle:{
+    mapStyle: {
       type: String,
-      requre:true
+      requre: true
     },
-    enableScrollZoom:{
+    enableScrollZoom: {
       type: Boolean,
-      require:true
+      require: true
 
     }
-    },
+  },
 
 
 
   components: {
-      MglMap,
-      MglAttributionControl,
-      MglNavigationControl,
-      MglGeolocateControl,
-      MglFullscreenControl,
-      MglScaleControl
+    MglMap,
+    MglAttributionControl,
+    MglNavigationControl,
+    MglGeolocateControl,
+    MglFullscreenControl,
+    MglScaleControl
   },
   data() {
     return {
-      accessToken: 'pk.eyJ1IjoicmFuZGFuZngiLCJhIjoiY2pwaXdqeHU1MDBtNTNxdGU5bmthMGw0YyJ9.XUsxpyY7bNWN0XUzrpAtxg'
+      controlPanelisActive:false,
+      isParkShow: true,
+      accessToken: 'pk.eyJ1IjoicmFuZGFuZngiLCJhIjoiY2s5Z2t6ejhuMHAwZzNocXRic3Y3ZzczcyJ9.V0hw9NUKKXqgH-pLYROePA'
     }
   },
 
@@ -73,29 +119,47 @@ export default {
   },
 
   methods: {
-        onMapLoaded(event){
-         this.map = event.map;
+    onMapLoaded(event) {
+      this.map = event.map;
 
 
     },
+    IsParkShow (){
+      if(this.isParkShow == false){
+        this.map.setPaintProperty('parks', 'fill-opacity', 0);
+      } else{
+        this.map.setPaintProperty('parks', 'fill-opacity', 0.6);
+      }
+    },
 
     mapMouseMoved(e) {
-    // console.log('moved!')
-    // console.log(e.mapboxEvent.point)
-  }
+      // console.log('moved!')
+      // console.log(e.mapboxEvent.point)
+    }
 
 
 
   },
   watch: {
 
-    async currentTopic(newVale, oldVal){
+    async currentTopic(newVale, oldVal) {
 
 
 
     }
+
+
+
+
+
+
+
+
+
+
+
   },
-  mounted(){
+  mounted() {
 
   }
 
@@ -103,27 +167,115 @@ export default {
 
 
 }
-
 </script>
 
 <style src="mapbox-gl/dist/mapbox-gl.css">
 </style>
 
 <style scoped>
+.el-aside{
 
-.textCheck{
-position: fixed;
-z-index: 1;
-color:white;
+  float: right;
 }
+
+  el-switch {
+    color:white;
+
+  }
+.barButton {
+  width: 2rem;
+  height: 60vh;
+  background: rgba(69, 194, 57, 0.55);
+  display: flex;
+  align-items: center;
+  /* text-align: right; */
+  justify-content: center;
+  float: left;
+  position: relative;
+  cursor: pointer;
+  transition: 2s;
+    border-radius:  10px 0px 0px 10px;
+}
+
+.barButton:hover{
+  height: 60vh;
+  background: rgba(69, 0, 57, 0.55);
+  color:white;
+}
+.el-icon-arrow-left{
+   font-size: 1.5rem;
+  color: black;
+  position: fixed;
+  padding-right: 20px;
+}
+.el-icon-arrow-right{
+
+  color: white;
+  position: fixed;
+  padding-right: 20px;
+}
+.barButton p{
+  transform: rotate(-90deg);
+  padding: 0;
+  margin: 0;
+}
+
+.bg-purple {
+  background: rgba(20, 20, 20, 0.72);
+}
+
+.grid-content {
+display: inline-block;
+ /* overflow: hidden; */
+/* position: absolute; */
+  right: 0px;
+ /* text-align: center; */
+  border-radius: 2px;
+/* float: right; */
+
+  transition: width 2s;
+  height: 60vh;
+/* visibility:hidden; */
+  /* display :none; */
+
+
+}
+.contro-pannel {
+padding: 2vh;
+
+}
+
+.popupbutton{
+/* float: right; */
+
+padding: none;
+display: inline-block;
+right: 0;
+position: relative;
+}
+
+.control-bar{
+position: fixed;
+/* position: block; */
+right: 0;
+top:20vh;
+white-space: nowrap;
+/* display: inline-block; */
+/* position: relative */
+
+}
+
+
+
+
+
 
 #maptool {
   width: 100%;
   height: 100vh;
-  z-index: -1;
+  z-index: 0;
   position: fixed;
   top: 0;
 
 }
-
 </style>
