@@ -9,6 +9,8 @@
                 :mapStyle="mapStyle"
                 :attributionControl="false"
                 :scrollZoom='enableScrollZoom'
+                :maxBounds='mapBounds'
+
                 @load="onMapLoaded"
                 @mousemove="mapMouseMoved">
 
@@ -16,35 +18,136 @@
           </MglMap>
 
 
+
+
+
+
 <div class="control-bar">
 
-
   <div class="barButton" @click="controlPanelisActive =! controlPanelisActive">
-        <!-- <el-button > toggle</el-button> -->
-    <i :class="controlPanelisActive? 'el-icon-arrow-left': 'el-icon-arrow-right'"></i>
+    <i :class="controlPanelisActive? 'el-icon-arrow-right': 'el-icon-arrow-left'"></i>
     <p> control </p>
+  </div>
+
+
+  <div class="bg-purple grid-content" :style='{"width": (controlPanelisActive? "400px":"0px")}'>
+
+
+  <!-- <div class="bg-purple grid-content" > -->
+  <div class="contro-pannel"  v-if="mapRadio=='green'">
+
+
+    <div style="padding-bottom:1rem">
+      <H1 >Map Setting</H1>
     </div>
 
-  <div class="bg-purple grid-content" :style='{"width": (controlPanelisActive? "0px":"40vw")}'>
-  <!-- <div class="bg-purple grid-content" > -->
-  <div class="contro-pannel">
-    <H1>Green</H1>
+      <div>
+        <span class="pannelText">Parks</span>
+        <el-switch
+            v-model="isParkShow"
+            active-color="#13ce66"
+            inactive-color="#959595">
+        </el-switch>
+      </div>
+      <el-divider></el-divider>
+      <div>
+        <span class="pannelText"> Grass and Wood</span>
+        <el-switch
+            v-model="isLandUseShow"
+            active-color="#13ce66"
+            inactive-color="#959595">
+        </el-switch>
+      </div>
+      <el-divider></el-divider>
+      <div>
+        <span class="pannelText">HillShade</span>
+        <el-switch
+            v-model="isHillShow"
+            active-color="#13ce66"
+            inactive-color="#959595">
+        </el-switch>
+      </div>
 
-    <el-switch
-        v-model="isParkShow"
-        @change='IsParkShow'
-        active-color="#13ce66"
-        inactive-color="#ff4949"
-        active-text="Show Park">
-    </el-switch>
-    <el-switch
-        v-model="isParkShow"
-        @change='IsParkShow'
-        active-color="#13ce66"
-        inactive-color="#ff4949"
-        active-text="Show Park">
-    </el-switch>
+      <el-divider></el-divider>
+
+      <div>
+        <b>Satellite Image</b>
+
+    <div>
+      <span class="pannelText">Opacity</span>
+
+        <div style="width:155px; display: inline-block;  position:absolute "  >
+          <el-slider v-model="sateOpacity"
+                  :step='0.01'
+                :max='1' ></el-slider>
+        </div>
+    </div>
+
+      </div>
+
+
+
+
+
   </div>
+
+  <div class="contro-pannel"  v-if="mapRadio=='hospital'">
+    <div style="padding-bottom:1rem">
+      <H1 >Map Setting</H1>
+    </div>
+
+      <div>
+        <span class="pannelText">Hospitals</span>
+        <el-switch
+            v-model="isHosShow"
+            active-color="#13ce66"
+            inactive-color="#959595">
+        </el-switch>
+      </div>
+
+      <el-divider></el-divider>
+      <div>
+        <span class="pannelText">Level 3 Only</span>
+        <el-switch
+            v-model="showLevel3Only"
+            active-color="#13ce66"
+            inactive-color="#959595">
+        </el-switch>
+      </div>
+
+      <el-divider></el-divider>
+      <div>
+        <span class="pannelText">Emergency Services</span>
+        <el-switch
+            v-model="emcOnly"
+            active-color="#13ce66"
+            inactive-color="#959595">
+        </el-switch>
+      </div>
+
+      <el-divider></el-divider>
+
+      <div>
+        <b>Isochrone</b>
+          <p>10 minutes driving reachable reagions <br>around hospitals.</p>
+      <div>
+      <span class="pannelText">Opacity</span>
+
+        <div style="width:155px; display: inline-block; position:absolute "  >
+          <el-slider v-model="Hos10minOpacity"
+                    :step='0.01'
+                    :max='1' ></el-slider>
+        </div>
+    </div>
+
+      </div>
+  </div>
+
+
+
+
+
+
   </div>
 </div>
 
@@ -80,13 +183,13 @@ export default {
   name: 'vueMap',
 
   props: {
-    currentTopic: {
-      type: Number,
-      require: false
+    mapRadio: {
+      type: String,
+      require:true
     },
     mapStyle: {
       type: String,
-      requre: true
+      require: true
     },
     enableScrollZoom: {
       type: Boolean,
@@ -107,8 +210,18 @@ export default {
   },
   data() {
     return {
+
+      Seen: 'EnvSection',
       controlPanelisActive:false,
       isParkShow: true,
+      isLandUseShow: true,
+      isHillShow:true,
+      sateOpacity:0.4,
+      Hos10minOpacity:1,
+      isHosShow:true,
+      showLevel3Only:false,
+      emcOnly:false,
+      mapBounds:[[113.26480,22.16109],[114.95236,23.23148]],
       accessToken: 'pk.eyJ1IjoicmFuZGFuZngiLCJhIjoiY2s5Z2t6ejhuMHAwZzNocXRic3Y3ZzczcyJ9.V0hw9NUKKXqgH-pLYROePA'
     }
   },
@@ -124,12 +237,53 @@ export default {
 
 
     },
-    IsParkShow (){
-      if(this.isParkShow == false){
+
+    isGreenSection(){
+      this.map.setPaintProperty('parks', 'fill-opacity', 0.6);
+      this.map.setLayoutProperty('mapbox-terrain-rgb', 'visibility', 'visible');
+      this.map.setPaintProperty('landuse', 'fill-opacity', 0.6);
+      this.isParkShow= true;
+      this.isLandUseShow= true;
+      this.isHillShow=true;
+
+      this.map.setPaintProperty('traffic', 'line-opacity', 0);
+      this.map.setPaintProperty('HospitalDots', 'circle-opacity', 0);
+      this.map.setPaintProperty('HospitalLabels', 'text-opacity', 0);
+      this.map.setPaintProperty('hosAcess10min', 'fill-opacity', 0);
+
+      this.map.setPaintProperty('szpd', 'circle-opacity', 0);
+      this.map.setPaintProperty('szpd5min', 'fill-opacity', 0);
+      this.map.setPaintProperty('shenzhenDistricts', 'line-opacity', 0);
+    },
+    isHospitalSection(){
+      this.map.setPaintProperty('parks', 'fill-opacity', 0);
+      this.map.setLayoutProperty('mapbox-terrain-rgb', 'visibility', 'none');
+      this.map.setPaintProperty('landuse', 'fill-opacity', 0);
+
+      this.map.setPaintProperty('traffic', 'line-opacity', 1);
+      this.map.setPaintProperty('HospitalDots', 'circle-opacity', 1);
+      this.map.setPaintProperty('HospitalLabels', 'text-opacity', 1);
+      this.map.setPaintProperty('hosAcess10min', 'fill-opacity', 1);
+
+
+      this.map.setPaintProperty('szpd', 'circle-opacity', 0);
+      this.map.setPaintProperty('szpd5min', 'fill-opacity', 0);
+
+    },
+    isCrimeSection(){
         this.map.setPaintProperty('parks', 'fill-opacity', 0);
-      } else{
-        this.map.setPaintProperty('parks', 'fill-opacity', 0.6);
-      }
+        this.map.setLayoutProperty('mapbox-terrain-rgb', 'visibility', 'none');
+        this.map.setPaintProperty('landuse', 'fill-opacity', 0);
+
+        this.map.setPaintProperty('HospitalDots', 'circle-opacity', 0);
+        this.map.setPaintProperty('HospitalLabels', 'text-opacity', 0);
+        this.map.setPaintProperty('hosAcess10min', 'fill-opacity', 0);
+
+        this.map.setPaintProperty('traffic', 'line-opacity', 1);
+        this.map.setPaintProperty('szpd', 'circle-opacity', 1);
+        this.map.setPaintProperty('szpd5min', 'fill-opacity', 1);
+        this.map.setPaintProperty('shenzhenDistricts', 'line-opacity', 1);
+
     },
 
     mapMouseMoved(e) {
@@ -142,12 +296,109 @@ export default {
   },
   watch: {
 
-    async currentTopic(newVale, oldVal) {
+    isParkShow (){
+          if(!this.isParkShow){
+            this.map.setPaintProperty('parks', 'fill-opacity', 0);
+          } else{
+            this.map.setPaintProperty('parks', 'fill-opacity', 0.6);
+          }
+    },
+    isLandUseShow (){
+          if(!this.isLandUseShow){
+            this.map.setPaintProperty('landuse', 'fill-opacity', 0);
+          } else{
+            this.map.setPaintProperty('landuse', 'fill-opacity', 0.6);
+          }
+    },
+    isHillShow (){
+      if(!this.isHillShow){
+      this.map.setLayoutProperty('mapbox-terrain-rgb', 'visibility', 'none');
+      } else{
+        this.map.setLayoutProperty('mapbox-terrain-rgb', 'visibility', 'visible');
+      }
+    },
+    sateOpacity(newVale, oldVal){
+
+      this.map.setPaintProperty('mapbox-satellite', 'raster-opacity', newVale);
+
+    },
+
+    Hos10minOpacity(newVale){
+      this.map.setPaintProperty('hosAcess10min', 'fill-opacity', newVale);
+    },
+    isHosShow(){
+      if(!this.isHosShow){
+        this.map.setPaintProperty('HospitalDots', 'circle-opacity', 0);
+      } else{
+        this.map.setPaintProperty('HospitalDots', 'circle-opacity', 1);
+      }
+
+    },
+    showLevel3Only(){
+      if(this.showLevel3Only){
+
+        this.map.setFilter('HospitalDots', ['==','ISLV3',true]);
+        this.map.setFilter('hosAcess10min', ['==','islv3', 'True']);
+
+      } else{
+        this.map.setFilter('HospitalDots', undefined);
+          this.map.setFilter('hosAcess10min', undefined);
+      }
+    },
+    emcOnly(){
+      if(this.emcOnly){
+        this.map.setFilter('HospitalDots', ['==','EMC',true]);
+        this.map.setFilter('hosAcess10min', ['==','emc', 'True']);
+      } else{
+        this.map.setFilter('HospitalDots', undefined);
+          this.map.setFilter('hosAcess10min', undefined);
+      }
+    },
+    async currentTopic() {
 
 
 
+    },
+
+     async mapRadio(){
+        if(this.mapRadio == "green"){
+          this.isGreenSection()
+          this.map.flyTo(
+            {
+              "center": [114.167245, 22.650228],
+              "zoom": 9.55,
+              "pitch": 0.00,
+
+              "speed":0.2
+            }
+          )
+
+        } else if(this.mapRadio== "hospital"){
+          this.isHospitalSection()
+
+          this.map.flyTo(
+            {
+              "center": [114.167245, 22.650228],
+              "zoom": 9.85,
+              "pitch": 25.00,
+              "bearing": 0.00,
+              "speed":0.2
+            }
+          )
+
+        } else if(this.mapRadio== "crime"){
+          this.isCrimeSection()
+          this.map.flyTo(
+            {
+              "center": [114.11075, 22.55859],
+              "zoom": 12.44,
+              "pitch": 10.50,
+              "bearing": 0.00,
+              "speed":0.2
+            }
+          )
+        }
     }
-
 
 
 
@@ -173,10 +424,23 @@ export default {
 </style>
 
 <style scoped>
-.el-aside{
 
-  float: right;
+/* .el-slider__Runway{
+margin: 0px !important;
+
+} */
+
+.el-divider{
+margin:10px 0px;
+background-color: rgb(224, 222, 222);
 }
+
+.pannelText{
+  display: inline-block;
+  width: 160px;
+
+}
+
 
   el-switch {
     color:white;
@@ -194,11 +458,12 @@ export default {
   position: relative;
   cursor: pointer;
   transition: 2s;
+  transition-timing-function: ease-out;
     border-radius:  10px 0px 0px 10px;
 }
 
 .barButton:hover{
-  height: 60vh;
+  /* height: 60vh; */
   background: rgba(69, 0, 57, 0.55);
   color:white;
 }
@@ -221,11 +486,12 @@ export default {
 }
 
 .bg-purple {
-  background: rgba(20, 20, 20, 0.72);
+  background: rgba(220, 220, 220, 0.9);
 }
 
 .grid-content {
 display: inline-block;
+
  /* overflow: hidden; */
 /* position: absolute; */
   right: 0px;
@@ -235,13 +501,14 @@ display: inline-block;
 
   transition: width 2s;
   height: 60vh;
-/* visibility:hidden; */
-  /* display :none; */
+
 
 
 }
 .contro-pannel {
 padding: 2vh;
+/* position: inherit;
+display: flex; */
 
 }
 
