@@ -56,7 +56,7 @@
   }
 
   .mapSwitch p{
-    /* font-size: 1rem; */
+    font-size: 1.4rem;
     text-align: right;
     padding-bottom:  0.1rem;
 
