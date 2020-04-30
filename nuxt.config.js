@@ -33,10 +33,12 @@ export default {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#000000' },
-  loadingIndicator:{
-    name:'folding-cube'
-  },
+  // loading: { color: '#000000' },
+  loading: '~/components/LoadingCover',
+
+  // loadingIndicator:{
+  //   name:'folding-cube'
+  // },
 
   /*
   ** Global CSS

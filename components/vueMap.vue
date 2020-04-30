@@ -1,5 +1,7 @@
 <template>
   <div >
+
+      <LoadingCover :isloading='isMapLoading' />
     <MglMap
     id='vmap'
           container="vmap"
@@ -27,6 +29,8 @@
 import Mapbox from "mapbox-gl";
 import { MglMap } from "vue-mapbox";
 
+import LoadingCover from '~/components/LoadingCover';
+
 export default {
 
   name:'vueMap',
@@ -53,11 +57,14 @@ export default {
 
 
   components: {
-      MglMap
+
+    LoadingCover,
+    MglMap
 
   },
   data() {
     return {
+        isMapLoading: true,
       accessToken: 'pk.eyJ1IjoicmFuZGFuZngiLCJhIjoiY2s5Z2t6ejhuMHAwZzNocXRic3Y3ZzczcyJ9.V0hw9NUKKXqgH-pLYROePA'
 
       // map:{}
@@ -73,6 +80,7 @@ export default {
   methods: {
         onMapLoaded(event){
          this.map = event.map;
+        this.isMapLoading = false;
       // const asyncActions = event.component.actions
       //
       // const newParams = await asyncActions.flyTo(this.chapterData[1].location)

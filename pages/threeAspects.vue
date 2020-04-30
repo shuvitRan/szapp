@@ -1,15 +1,13 @@
 <template >
   <div>
 
-
-
   <MapTool
       :enableScrollZoom='true'
       :mapStyle="'mapbox://styles/randanfx/ck9hijte53wtd1imxjlntcr61'"
       :mapRadio='mapRadio'
       />
   <!-- switch -->
-  <div class = 'mapSwitch'>
+  <div class = 'mapSwitch noselect'>
     <p>selecting a map to explore</p>
      <el-radio-group v-model="mapRadio" size="small" fill="rgba(54, 50, 59,0.7)">
        <el-radio-button label="green">Green Coverage</el-radio-button>
@@ -18,17 +16,24 @@
      </el-radio-group>
    </div>
 
+   <InfoPanel :mapRadio='mapRadio' />
+
+
+
+
   </div>
 </template>
 
 
 <script>
   import MapTool from '~/components/MapTool'
+  import InfoPanel from '~/components/InfoPanel'
 
   export default {
     name:'threeAspects',
     components:{
-      MapTool
+      MapTool,
+      InfoPanel
     },
     data(){
       return{

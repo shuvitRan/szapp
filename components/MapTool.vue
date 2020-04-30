@@ -1,7 +1,14 @@
 <template>
 <div>
 
+
+
   <el-container>
+
+
+    <LoadingCover :isloading='isMapLoading' />
+
+
 
           <MglMap
                 id='maptool'
@@ -17,28 +24,28 @@
             <MglScaleControl position="bottom-right" />
           </MglMap>
 
-  <div class="control-bar">
+  <div class="control-bar noselect">
     <div class="barButton"  @click="controlPanelisActive =! controlPanelisActive">
     <i :class="controlPanelisActive? 'el-icon-arrow-right': 'el-icon-arrow-left'"></i>
     <p> control </p>
   </div>
 
 
-  <div class="bg-purple grid-content" :style='{"width": (controlPanelisActive? "400px":"0px")}'>
+  <div class="bg-purple grid-content" :style='{"width": (controlPanelisActive? "30vw":"0px")}'>
 
 
   <!-- <div class="bg-purple grid-content" > -->
 
 
-  <div class="contro-pannel"  >
-    <div class="contro-pannel-header">
+  <div class="contro-panel"  >
+    <div class="contro-panel-header">
       <H1 >Map Setting</H1>
   </div>
   <transition name = "fade" mode="out-in">
    <div v-if="mapRadio=='green'"  key="1">
 
         <div >
-          <span class="pannelText" >Parks</span>
+          <span class="panelText" >Parks</span>
           <el-switch
               v-model="isParkShow"
               active-color="#13ce66"
@@ -47,7 +54,7 @@
         </div>
         <el-divider></el-divider>
         <div>
-          <span class="pannelText"> Grass and Wood</span>
+          <span class="panelText"> Grass and Wood</span>
           <el-switch
               v-model="isLandUseShow"
               active-color="#13ce66"
@@ -56,7 +63,7 @@
         </div>
         <el-divider></el-divider>
         <div>
-          <span class="pannelText">HillShade</span>
+          <span class="panelText">HillShade</span>
           <el-switch
               v-model="isHillShow"
               active-color="#13ce66"
@@ -88,7 +95,7 @@
         <b>Isochrone</b>
           <p>10 minutes driving reachable reagions <br>around hospitals.</p>
       <div>
-      <span class="pannelText">Opacity</span>
+      <span class="panelText">Opacity</span>
 
         <div class="customSlider" >
           <el-slider v-model="Hos10minOpacity"
@@ -101,7 +108,7 @@
 
    <div v-if="mapRadio=='crime'" key="3">
     <div>
-      <span class="pannelText">Police Stations</span>
+      <span class="panelText">Police Stations</span>
       <el-switch
           v-model="isSzpdShow"
           active-color="#13ce66"
@@ -115,7 +122,7 @@
       <b>Isochrone</b>
         <p>5 minutes driving reachable reagions <br>around police stations.</p>
     <div>
-    <span class="pannelText">Opacity</span>
+    <span class="panelText">Opacity</span>
 
       <div class="customSlider"   >
         <el-slider v-model="szpd5minOpacity"
@@ -154,7 +161,7 @@
     <el-divider></el-divider>
       <b>Satellite Map</b>
     <div>
-      <span class="pannelText">Opacity</span>
+      <span class="panelText">Opacity</span>
 
         <div class="customSlider"  >
           <el-slider v-model="sateOpacity"
@@ -163,7 +170,7 @@
         </div>
     </div>
     <div>
-      <span class="pannelText">Saturation</span>
+      <span class="panelText">Saturation</span>
 
         <div class="customSlider"   >
           <el-slider v-model="sateSaturation"
@@ -172,7 +179,7 @@
         </div>
     </div>
     <div>
-      <span class="pannelText">Brightness</span>
+      <span class="panelText">Brightness</span>
 
         <div class="customSlider">
           <el-slider v-model="sateBrightness"
@@ -183,7 +190,7 @@
 
     <el-divider></el-divider>
     <div>
-      <span class="pannelText">Road Opacity</span>
+      <span class="panelText">Road Opacity</span>
 
         <div class="customSlider"   >
           <el-slider v-model="roadOpacity"
@@ -225,6 +232,8 @@
 
 
 <script>
+import LoadingCover from '~/components/LoadingCover';
+
 import Mapbox from "mapbox-gl";
 import {
   MglMap,
@@ -260,6 +269,7 @@ export default {
 
 
   components: {
+    LoadingCover,
     MglMap,
     MglAttributionControl,
     MglNavigationControl,
@@ -269,6 +279,9 @@ export default {
   },
   data() {
     return {
+
+      isMapLoading: true,
+
       poiListData:poilist,
       Seen: 'EnvSection',
 
@@ -299,6 +312,7 @@ export default {
     onMapLoaded(event) {
       this.map = event.map;
 
+      this.isMapLoading = false;
 
     },
 
@@ -417,8 +431,11 @@ export default {
         this.map.setFilter('HospitalDots', undefined);
         this.map.setFilter('hosAcess10min', undefined);
 
-         //TODO: ['==',['get','EMC'],['get','ISLV3'],true, false],'#f8a516',
-         
+
+         // TODO: turn if(EMC==true && ISLV3==false) into Mapbox expression
+         // ['==',['get','EMC'],['get','ISLV3'],true, false],'#f8a516',
+
+
         this.map.setPaintProperty('HospitalDots', 'circle-color', ["case",
                                                                   ["==",["get", "ISLV3"],true],"#c3045d",
                                                                   ['==',['get','EMC'],true],'#f8a516',
@@ -517,6 +534,9 @@ export default {
 
 <style scoped>
 
+
+
+
 .fade-enter-active,
 .fade-leave-active
 {
@@ -560,7 +580,21 @@ background-color: rgb(224, 222, 222);
   display: inline-block;
   vertical-align: middle
 }
-.pannelText{
+
+.control-bar{
+position: fixed;
+/* position: block; */
+right: 0;
+top:20vh;
+white-space: nowrap;
+transition: 2s;
+transition-timing-function: ease-out;
+/* display: inline-block; */
+/* position: relative */
+
+}
+
+.panelText{
   display: inline-block;
   width: 160px;
 
@@ -583,8 +617,7 @@ background-color: rgb(224, 222, 222);
   float: left;
   position: relative;
   cursor: pointer;
-  transition: 2s;
-  transition-timing-function: ease-out;
+
     border-radius:  10px 0px 0px 10px;
 }
 
@@ -625,20 +658,20 @@ display: inline-block;
   border-radius: 2px;
 /* float: right; */
 
-  transition: width 2s;
+  transition: width 1.5s;
   height: 60vh;
 
 
 
 }
-.contro-pannel {
+.contro-panel {
 padding: 2vh;
 
 overflow: scroll;
   height: 60vh;
 
 }
-.contro-pannel-header{
+.contro-panel-header{
   padding-bottom:1rem;
 }
 .popupbutton{
@@ -650,16 +683,7 @@ right: 0;
 position: relative;
 }
 
-.control-bar{
-position: fixed;
-/* position: block; */
-right: 0;
-top:20vh;
-white-space: nowrap;
-/* display: inline-block; */
-/* position: relative */
 
-}
 
 
 
