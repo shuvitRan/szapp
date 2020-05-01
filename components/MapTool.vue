@@ -79,12 +79,18 @@
         <div>
               <el-radio v-model='hosSwitch' label="alllHos">All Hospitals</el-radio>
         </div>
-        <div >
-            <el-radio v-model='hosSwitch' label="emcOnly">Emergency Services</el-radio>
-        </div>
+        <el-tooltip class='noselect' effect="dark" content="The hospitals responding to emergency call." placement="left">
           <div >
+              <el-radio v-model='hosSwitch' label="emcOnly">Emergency Services</el-radio>
+              <!-- <p style='font-size:10px;'></p> -->
+          </div>
+        </el-tooltip>
+          <el-tooltip class='noselect' effect="dark"  placement="left">
+            <div slot="content">The top hospitals in the Chinese health sytem. They are <br/> general hospitals at the city. Normally they are provincial <br>or national level with more expertise and bed capacity </div>
+          <div>
                 <el-radio v-model='hosSwitch' label="lv3Only">Level 3 Only</el-radio>
           </div>
+          </el-tooltip>
       </div>
 
 
@@ -349,6 +355,7 @@ export default {
       this.map.setPaintProperty('HospitalLabels', 'text-opacity', 0);
       this.map.setPaintProperty('hosAcess10min', 'fill-opacity', 0);
 
+
       this.map.setPaintProperty('szpd', 'circle-opacity', 0);
       this.map.setPaintProperty('szpd5min', 'fill-opacity', 0);
       this.map.setPaintProperty('shenzhenDistricts', 'line-opacity', 0);
@@ -364,6 +371,7 @@ export default {
       this.map.setPaintProperty('hosAcess10min', 'fill-opacity', 1);
 
 
+
       this.map.setPaintProperty('szpd', 'circle-opacity', 0);
       this.map.setPaintProperty('szpd5min', 'fill-opacity', 0);
 
@@ -376,6 +384,7 @@ export default {
         this.map.setPaintProperty('HospitalDots', 'circle-opacity', 0);
         this.map.setPaintProperty('HospitalLabels', 'text-opacity', 0);
         this.map.setPaintProperty('hosAcess10min', 'fill-opacity', 0);
+
 
         // this.map.setPaintProperty('traffic', 'line-opacity', 1);
         this.map.setPaintProperty('szpd', 'circle-opacity', 1);
@@ -430,22 +439,31 @@ export default {
       if(this.hosSwitch=='alllHos'){
         this.map.setFilter('HospitalDots', undefined);
         this.map.setFilter('hosAcess10min', undefined);
+        this.map.setFilter('HospitalLabels', undefined);
 
 
          // TODO: turn if(EMC==true && ISLV3==false) into Mapbox expression
-         // ['==',['get','EMC'],['get','ISLV3'],true, false],'#f8a516',
+         this.map.setPaintProperty('HospitalDots', 'circle-color', ["case",
+                                                                      ["==",["boolean",["get","ISLV3"]],true],"#c3045d",
+                                                                      ["all",
+                                                                      ["==",["boolean",["get", "EMC"]],true],
+                                                                      ["==",["boolean",["get", "ISLV3"]],false]],"#f8a516",
+                                                                      "hsl(6, 31%, 54%)"]
+                                                                   );
 
 
-        this.map.setPaintProperty('HospitalDots', 'circle-color', ["case",
-                                                                  ["==",["get", "ISLV3"],true],"#c3045d",
-                                                                  ['==',['get','EMC'],true],'#f8a516',
-                                                                  "hsl(6, 31%, 54%)"]
-                                                                  );
+        // this.map.setPaintProperty('HospitalDots', 'circle-color', ["case",
+        //                                                           ["==",["get", "ISLV3"],true],"#c3045d",
+        //                                                           ['==',['get','EMC'],true],'#f8a516',
+        //                                                           "hsl(6, 31%, 54%)"]
+        //                                                           );
       } else if(this.hosSwitch=='emcOnly'){
         this.map.setFilter('HospitalDots', ['==','EMC',true]);
         this.map.setFilter('hosAcess10min', ['==','emc', 'True']);
+            this.map.setFilter('HospitalLabels', ['==','EMC',true]);
         this.map.setPaintProperty('HospitalDots', 'circle-color', ["case",['==',['get','EMC'],true],'#f8a516',"hsl(6, 31%, 54%)"]);
       }else if(this.hosSwitch=='lv3Only'){
+          this.map.setFilter('HospitalLabels', ['==','ISLV3',true]);
         this.map.setFilter('HospitalDots', ['==','ISLV3',true]);
         this.map.setFilter('hosAcess10min', ['==','islv3', 'True']);
         this.map.setPaintProperty('HospitalDots', 'circle-color', ["case",['==',['get','ISLV3'],true],'#c3045d',"hsl(6, 31%, 54%)"]);
@@ -617,8 +635,10 @@ transition-timing-function: ease-out;
   float: left;
   position: relative;
   cursor: pointer;
+  transition: background 1.5s;
 
-    border-radius:  10px 0px 0px 10px;
+
+  border-radius:  10px 0px 0px 10px;
 }
 
 .barButton:hover{
@@ -628,13 +648,13 @@ transition-timing-function: ease-out;
 }
 .el-icon-arrow-left{
    /* font-size: 1.5rem; */
-  color: white;
+  /* color: white; */
   position: fixed;
   padding-right: 20px;
 }
 .el-icon-arrow-right{
 
-  color: white;
+  /* color: white; */
   position: fixed;
   padding-right: 20px;
 }
