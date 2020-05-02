@@ -43,7 +43,7 @@
     <p>Select a section</p>
     <div class="links">
 
-      <nuxt-link to="/threeAspects" class="button--grey">Livability in Three Aspects</nuxt-link>
+      <!-- <nuxt-link to="/threeAspects" class="button--grey">Livability in Three Aspects</nuxt-link> -->
     </div>
     <nuxt-link to="/index" class="button--grey">Statistic </nuxt-link>
   </div>

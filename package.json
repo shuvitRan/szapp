@@ -24,5 +24,7 @@
     "vue-mapbox": "^0.4.1",
     "vue-scrollama": "^1.1.9"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "raw-loader": "^4.0.1"
+  }
 }
