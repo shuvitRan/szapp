@@ -10,6 +10,7 @@
     <!-- <div class="infoFrame" :style='{"width": (!infoPanelIsAcive? "50vw":"0px")}' > -->
     <div  :class="{'infoFrame':infoPanelIsAcive, 'infoFrameOpen':!infoPanelIsAcive}" >
       <transition name = "fade" mode="out-in">
+
         <div class='infoContent' v-if="mapRadio=='green'"  key="1">
           <H1>Green Coverage in Shenzhen</H1>
 
@@ -19,18 +20,7 @@
               </div>
 
 
-
-
         </div>
-
-
-
-
-
-
-
-
-
 
       </transition>
 

@@ -1,15 +1,21 @@
 <template >
-  <lineGraph />
+  <div >
+    <!-- <lineGraph /> -->
+
+    <lineGraphGDP />
+  </div>
+
 </template>
 
 
 <script>
 
 import lineGraph from '~/components/chart/lineGraph';
+import lineGraphGDP from '~/components/chart/lineGraphGDP';
 export default{
 
 components:{
-  lineGraph
+  lineGraph,lineGraphGDP
 
 }
 

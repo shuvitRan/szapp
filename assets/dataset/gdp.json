@@ -1,0 +1,402 @@
+[
+  {
+    "Year": 1979,
+    "GDP": 19638,
+    "primary": 7273,
+    "secondary": 4017,
+    "tertiary": 8348,
+    "GDPperCapita": 606,
+    "gudingTouzhi": 5938,
+    "RealEstateDeve": 0
+  },
+  {
+    "Year": 1980,
+    "GDP": 27012,
+    "primary": 7803,
+    "secondary": 7036,
+    "tertiary": 12173,
+    "GDPperCapita": 835,
+    "gudingTouzhi": 13801,
+    "RealEstateDeve": 0
+  },
+  {
+    "Year": 1981,
+    "GDP": 49576,
+    "primary": 13343,
+    "secondary": 16019,
+    "tertiary": 20214,
+    "GDPperCapita": 1417,
+    "gudingTouzhi": 29684,
+    "RealEstateDeve": 0
+  },
+  {
+    "Year": 1982,
+    "GDP": 82573,
+    "primary": 18960,
+    "secondary": 31439,
+    "tertiary": 32174,
+    "GDPperCapita": 2023,
+    "gudingTouzhi": 73750,
+    "RealEstateDeve": 0
+  },
+  {
+    "Year": 1983,
+    "GDP": 131212,
+    "primary": 22614,
+    "secondary": 55848,
+    "tertiary": 52750,
+    "GDPperCapita": 2512,
+    "gudingTouzhi": 108320,
+    "RealEstateDeve": 0
+  },
+  {
+    "Year": 1984,
+    "GDP": 234161,
+    "primary": 25932,
+    "secondary": 106606,
+    "tertiary": 101623,
+    "GDPperCapita": 3504,
+    "gudingTouzhi": 194572,
+    "RealEstateDeve": 0
+  },
+  {
+    "Year": 1985,
+    "GDP": 390222,
+    "primary": 26111,
+    "secondary": 163586,
+    "tertiary": 200525,
+    "GDPperCapita": 4809,
+    "gudingTouzhi": 333235,
+    "RealEstateDeve": 0
+  },
+  {
+    "Year": 1986,
+    "GDP": 416451,
+    "primary": 32907,
+    "secondary": 163185,
+    "tertiary": 220359,
+    "GDPperCapita": 4584,
+    "gudingTouzhi": 248551,
+    "RealEstateDeve": 0
+  },
+  {
+    "Year": 1987,
+    "GDP": 559015,
+    "primary": 46519,
+    "secondary": 220463,
+    "tertiary": 292033,
+    "GDPperCapita": 5349,
+    "gudingTouzhi": 285193,
+    "RealEstateDeve": 0
+  },
+  {
+    "Year": 1988,
+    "GDP": 869807,
+    "primary": 57005,
+    "secondary": 359230,
+    "tertiary": 453572,
+    "GDPperCapita": 6477,
+    "gudingTouzhi": 436191,
+    "RealEstateDeve": 0
+  },
+  {
+    "Year": 1989,
+    "GDP": 1156565,
+    "primary": 68615,
+    "secondary": 505361,
+    "tertiary": 582589,
+    "GDPperCapita": 6710,
+    "gudingTouzhi": 499919,
+    "RealEstateDeve": 0
+  },
+  {
+    "Year": 1990,
+    "GDP": 1716665,
+    "primary": 70220,
+    "secondary": 769319,
+    "tertiary": 877126,
+    "GDPperCapita": 8724,
+    "gudingTouzhi": 623380,
+    "RealEstateDeve": 112000
+  },
+  {
+    "Year": 1991,
+    "GDP": 2366630,
+    "primary": 80836,
+    "secondary": 1126084,
+    "tertiary": 1159710,
+    "GDPperCapita": 11997,
+    "gudingTouzhi": 912324,
+    "RealEstateDeve": 255600
+  },
+  {
+    "Year": 1992,
+    "GDP": 3173194,
+    "primary": 105914,
+    "secondary": 1522432,
+    "tertiary": 1544848,
+    "GDPperCapita": 12827,
+    "gudingTouzhi": 1782322,
+    "RealEstateDeve": 714900
+  },
+  {
+    "Year": 1993,
+    "GDP": 4531445,
+    "primary": 108615,
+    "secondary": 2420214,
+    "tertiary": 2002616,
+    "GDPperCapita": 15005,
+    "gudingTouzhi": 2477875,
+    "RealEstateDeve": 1027700
+  },
+  {
+    "Year": 1994,
+    "GDP": 6346711,
+    "primary": 134152,
+    "secondary": 3357972,
+    "tertiary": 2854587,
+    "GDPperCapita": 16954,
+    "gudingTouzhi": 2819413,
+    "RealEstateDeve": 1304600
+  },
+  {
+    "Year": 1995,
+    "GDP": 8427933,
+    "primary": 124122,
+    "secondary": 4223744,
+    "tertiary": 4080067,
+    "GDPperCapita": 19558,
+    "gudingTouzhi": 2758243,
+    "RealEstateDeve": 1030368
+  },
+  {
+    "Year": 1996,
+    "GDP": 10505121,
+    "primary": 148796,
+    "secondary": 5081045,
+    "tertiary": 5275280,
+    "GDPperCapita": 22542,
+    "gudingTouzhi": 3275270,
+    "RealEstateDeve": 1248251
+  },
+  {
+    "Year": 1997,
+    "GDP": 13023008,
+    "primary": 147660,
+    "secondary": 6209018,
+    "tertiary": 6666330,
+    "GDPperCapita": 25772,
+    "gudingTouzhi": 3930657,
+    "RealEstateDeve": 1366545
+  },
+  {
+    "Year": 1998,
+    "GDP": 15449472,
+    "primary": 151764,
+    "secondary": 7508019,
+    "tertiary": 7789689,
+    "GDPperCapita": 27885,
+    "gudingTouzhi": 4803901,
+    "RealEstateDeve": 1674854
+  },
+  {
+    "Year": 1999,
+    "GDP": 18246876,
+    "primary": 150445,
+    "secondary": 9154443,
+    "tertiary": 8941988,
+    "GDPperCapita": 30088,
+    "gudingTouzhi": 5695878,
+    "RealEstateDeve": 2152541
+  },
+  {
+    "Year": 2000,
+    "GDP": 22192015,
+    "primary": 155656,
+    "secondary": 11087644,
+    "tertiary": 10948715,
+    "GDPperCapita": 33276,
+    "gudingTouzhi": 6771205,
+    "RealEstateDeve": 2609694
+  },
+  {
+    "Year": 2001,
+    "GDP": 25229474,
+    "primary": 160413,
+    "secondary": 12583983,
+    "tertiary": 12485078,
+    "GDPperCapita": 35390,
+    "gudingTouzhi": 6863749,
+    "RealEstateDeve": 3156364
+  },
+  {
+    "Year": 2002,
+    "GDP": 30172384,
+    "primary": 166587,
+    "secondary": 14980113,
+    "tertiary": 15025684,
+    "GDPperCapita": 41018,
+    "gudingTouzhi": 7881459,
+    "RealEstateDeve": 3884445
+  },
+  {
+    "Year": 2003,
+    "GDP": 36401435,
+    "primary": 142048,
+    "secondary": 18562162,
+    "tertiary": 17697225,
+    "GDPperCapita": 47743,
+    "gudingTouzhi": 9491016,
+    "RealEstateDeve": 4126636
+  },
+  {
+    "Year": 2004,
+    "GDP": 43502928,
+    "primary": 123264,
+    "secondary": 22643124,
+    "tertiary": 20736540,
+    "GDPperCapita": 55099,
+    "gudingTouzhi": 10925571,
+    "RealEstateDeve": 4342432
+  },
+  {
+    "Year": 2005,
+    "GDP": 50357678,
+    "primary": 97385,
+    "secondary": 27096861,
+    "tertiary": 23163432,
+    "GDPperCapita": 61844,
+    "gudingTouzhi": 11823245,
+    "RealEstateDeve": 4236865
+  },
+  {
+    "Year": 2006,
+    "GDP": 59206612,
+    "primary": 68851,
+    "secondary": 31449697,
+    "tertiary": 27688064,
+    "GDPperCapita": 69702,
+    "gudingTouzhi": 12736693,
+    "RealEstateDeve": 4620940
+  },
+  {
+    "Year": 2007,
+    "GDP": 69252268,
+    "primary": 77374,
+    "secondary": 35135153,
+    "tertiary": 34039741,
+    "GDPperCapita": 77660,
+    "gudingTouzhi": 13450037,
+    "RealEstateDeve": 4610422
+  },
+  {
+    "Year": 2008,
+    "GDP": 79414328,
+    "primary": 83804,
+    "secondary": 39799045,
+    "tertiary": 39531479,
+    "GDPperCapita": 85088,
+    "gudingTouzhi": 14676043,
+    "RealEstateDeve": 4404897
+  },
+  {
+    "Year": 2009,
+    "GDP": 84858247,
+    "primary": 69599,
+    "secondary": 40095728,
+    "tertiary": 44692920,
+    "GDPperCapita": 87066,
+    "gudingTouzhi": 17091514,
+    "RealEstateDeve": 4374590
+  },
+  {
+    "Year": 2010,
+    "GDP": 100022183,
+    "primary": 68391,
+    "secondary": 47379750,
+    "tertiary": 52574042,
+    "GDPperCapita": 98437,
+    "gudingTouzhi": 19447008,
+    "RealEstateDeve": 4584693
+  },
+  {
+    "Year": 2011,
+    "GDP": 118072348,
+    "primary": 69491,
+    "secondary": 56128559,
+    "tertiary": 61874298,
+    "GDPperCapita": 113316,
+    "gudingTouzhi": 20609180,
+    "RealEstateDeve": 5147362
+  },
+  {
+    "Year": 2012,
+    "GDP": 133196818,
+    "primary": 68164,
+    "secondary": 60559131,
+    "tertiary": 72569523,
+    "GDPperCapita": 126765,
+    "gudingTouzhi": 23144319,
+    "RealEstateDeve": 7368421
+  },
+  {
+    "Year": 2013,
+    "GDP": 149794486,
+    "primary": 63504,
+    "secondary": 66579909,
+    "tertiary": 83151073,
+    "GDPperCapita": 141474,
+    "gudingTouzhi": 24901970,
+    "RealEstateDeve": 8769002
+  },
+  {
+    "Year": 2014,
+    "GDP": 164494770,
+    "primary": 57579,
+    "secondary": 72242462,
+    "tertiary": 92194729,
+    "GDPperCapita": 153677,
+    "gudingTouzhi": 27174226,
+    "RealEstateDeve": 10694855
+  },
+  {
+    "Year": 2015,
+    "GDP": 180140720,
+    "primary": 72084,
+    "secondary": 76780987,
+    "tertiary": 103287649,
+    "GDPperCapita": 162599,
+    "gudingTouzhi": 32983076,
+    "RealEstateDeve": 13310333
+  },
+  {
+    "Year": 2016,
+    "GDP": 200797043,
+    "primary": 82840,
+    "secondary": 83106513,
+    "tertiary": 117607690,
+    "GDPperCapita": 172453,
+    "gudingTouzhi": 40781638,
+    "RealEstateDeve": 17565209
+  },
+  {
+    "Year": 2017,
+    "GDP": 224900586,
+    "primary": 195721,
+    "secondary": 93180979,
+    "tertiary": 131523886,
+    "GDPperCapita": 183544,
+    "gudingTouzhi": 51473152,
+    "RealEstateDeve": 21358565
+  },
+  {
+    "Year": 2018,
+    "GDP": 242219771,
+    "primary": 220935,
+    "secondary": 99619472,
+    "tertiary": 142379364,
+    "GDPperCapita": 189568,
+    "gudingTouzhi": 0,
+    "RealEstateDeve": 0
+  }
+]
