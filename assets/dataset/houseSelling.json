@@ -1,0 +1,170 @@
+[
+  {
+    "Year": 1998,
+    "AverageSellingPrice": 5927,
+    "ResidentialBuildings": 5191,
+    "OfficeBuildings": 11995,
+    "HousesForBusinessUse": 10241,
+    "Others": 3468
+  },
+  {
+    "Year": 1999,
+    "AverageSellingPrice": 5503,
+    "ResidentialBuildings": 5004,
+    "OfficeBuildings": 10504,
+    "HousesForBusinessUse": 11195,
+    "Others": 3743
+  },
+  {
+    "Year": 2000,
+    "AverageSellingPrice": 5718,
+    "ResidentialBuildings": 5275,
+    "OfficeBuildings": 10954,
+    "HousesForBusinessUse": 10306,
+    "Others": 3186
+  },
+  {
+    "Year": 2001,
+    "AverageSellingPrice": 5779,
+    "ResidentialBuildings": 5517,
+    "OfficeBuildings": 13717,
+    "HousesForBusinessUse": 11916,
+    "Others": 4126
+  },
+  {
+    "Year": 2002,
+    "AverageSellingPrice": 6074,
+    "ResidentialBuildings": 5641,
+    "OfficeBuildings": 8145,
+    "HousesForBusinessUse": 12175,
+    "Others": 5000
+  },
+  {
+    "Year": 2003,
+    "AverageSellingPrice": 6215,
+    "ResidentialBuildings": 5879,
+    "OfficeBuildings": 8678,
+    "HousesForBusinessUse": 11624,
+    "Others": 2804
+  },
+  {
+    "Year": 2004,
+    "AverageSellingPrice": 6771,
+    "ResidentialBuildings": 6419,
+    "OfficeBuildings": 9670,
+    "HousesForBusinessUse": 12764,
+    "Others": 5672
+  },
+  {
+    "Year": 2005,
+    "AverageSellingPrice": 7582,
+    "ResidentialBuildings": 6996,
+    "OfficeBuildings": 12374,
+    "HousesForBusinessUse": 15083,
+    "Others": 6869
+  },
+  {
+    "Year": 2006,
+    "AverageSellingPrice": 10039,
+    "ResidentialBuildings": 9190,
+    "OfficeBuildings": 15762,
+    "HousesForBusinessUse": 18257,
+    "Others": 9714
+  },
+  {
+    "Year": 2007,
+    "AverageSellingPrice": 14050,
+    "ResidentialBuildings": 13370,
+    "OfficeBuildings": 23535,
+    "HousesForBusinessUse": 19103,
+    "Others": 10203
+  },
+  {
+    "Year": 2008,
+    "AverageSellingPrice": 12665,
+    "ResidentialBuildings": 12823,
+    "OfficeBuildings": 19071,
+    "HousesForBusinessUse": 11469,
+    "Others": 8286
+  },
+  {
+    "Year": 2009,
+    "AverageSellingPrice": 15214,
+    "ResidentialBuildings": 14858,
+    "OfficeBuildings": 23919,
+    "HousesForBusinessUse": 20826,
+    "Others": 12768
+  },
+  {
+    "Year": 2010,
+    "AverageSellingPrice": 20850,
+    "ResidentialBuildings": 20297,
+    "OfficeBuildings": 24797,
+    "HousesForBusinessUse": 23346,
+    "Others": 24787
+  },
+  {
+    "Year": 2011,
+    "AverageSellingPrice": 20674,
+    "ResidentialBuildings": 19038,
+    "OfficeBuildings": 39481,
+    "HousesForBusinessUse": 31654,
+    "Others": 28603
+  },
+  {
+    "Year": 2012,
+    "AverageSellingPrice": 20035,
+    "ResidentialBuildings": 18848,
+    "OfficeBuildings": 37814,
+    "HousesForBusinessUse": 29859,
+    "Others": 27472
+  },
+  {
+    "Year": 2013,
+    "AverageSellingPrice": 23776,
+    "ResidentialBuildings": 21808,
+    "OfficeBuildings": 36402,
+    "HousesForBusinessUse": 18059,
+    "Others": 28337
+  },
+  {
+    "Year": 2014,
+    "AverageSellingPrice": 25700,
+    "ResidentialBuildings": 23955,
+    "OfficeBuildings": 32926,
+    "HousesForBusinessUse": 34911,
+    "Others": 30165
+  },
+  {
+    "Year": 2015,
+    "AverageSellingPrice": 35071,
+    "ResidentialBuildings": 33406,
+    "OfficeBuildings": 46327,
+    "HousesForBusinessUse": 42552,
+    "Others": 26273
+  },
+  {
+    "Year": 2016,
+    "AverageSellingPrice": 52777,
+    "ResidentialBuildings": 53455,
+    "OfficeBuildings": 52529,
+    "HousesForBusinessUse": 53090,
+    "Others": 43210
+  },
+  {
+    "Year": 2017,
+    "AverageSellingPrice": 54430,
+    "ResidentialBuildings": 54455,
+    "OfficeBuildings": 49977,
+    "HousesForBusinessUse": 60365,
+    "Others": 35514
+  },
+  {
+    "Year": 2018,
+    "AverageSellingPrice": 54090,
+    "ResidentialBuildings": 54120,
+    "OfficeBuildings": 55173,
+    "HousesForBusinessUse": 57382,
+    "Others": 36241
+  }
+]

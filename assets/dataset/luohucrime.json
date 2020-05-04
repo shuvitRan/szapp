@@ -1,0 +1,134 @@
+[
+  {
+    "Year": 2007,
+    "total_cases": 11398,
+    "homicide": 9,
+    "violentCrime": 209,
+    "robbery": 722,
+    "rape": 25,
+    "fraud": 1412,
+    "theft": 6919,
+    "other": 2102
+  },
+  {
+    "Year": 2008,
+    "total_cases": 12188,
+    "homicide": 6,
+    "violentCrime": 217,
+    "robbery": 580,
+    "rape": 51,
+    "fraud": 1903,
+    "theft": 7518,
+    "other": 1913
+  },
+  {
+    "Year": 2009,
+    "total_cases": 17672,
+    "homicide": 4,
+    "violentCrime": 245,
+    "robbery": 738,
+    "rape": 60,
+    "fraud": 3115,
+    "theft": 11054,
+    "other": 2456
+  },
+  {
+    "Year": 2010,
+    "total_cases": 22470,
+    "homicide": 5,
+    "violentCrime": 243,
+    "robbery": 656,
+    "rape": 64,
+    "fraud": 4162,
+    "theft": 15011,
+    "other": 2329
+  },
+  {
+    "Year": 2011,
+    "total_cases": 16301,
+    "homicide": 7,
+    "violentCrime": 165,
+    "robbery": 345,
+    "rape": 47,
+    "fraud": 2572,
+    "theft": 10734,
+    "other": 2431
+  },
+  {
+    "Year": 2012,
+    "total_cases": 18162,
+    "homicide": 12,
+    "violentCrime": 207,
+    "robbery": 269,
+    "rape": 44,
+    "fraud": 2224,
+    "theft": 12659,
+    "other": 664
+  },
+  {
+    "Year": 2012,
+    "total_cases": 18162,
+    "homicide": 12,
+    "violentCrime": 207,
+    "robbery": 269,
+    "rape": 44,
+    "fraud": 2224,
+    "theft": 12659,
+    "other": 664
+  },
+  {
+    "Year": 2013,
+    "total_cases": 14769,
+    "homicide": 4,
+    "violentCrime": 227,
+    "robbery": 158,
+    "rape": 34,
+    "fraud": 2254,
+    "theft": 10405,
+    "other": 1687
+  },
+  {
+    "Year": 2014,
+    "total_cases": 11870,
+    "homicide": 5,
+    "violentCrime": 134,
+    "robbery": 70,
+    "rape": 37,
+    "fraud": 2442,
+    "theft": 7253,
+    "other": 1929
+  },
+  {
+    "Year": 2015,
+    "total_cases": 11324,
+    "homicide": 11,
+    "violentCrime": 138,
+    "robbery": 90,
+    "rape": 21,
+    "fraud": 2561,
+    "theft": 6538,
+    "other": 1965
+  },
+  {
+    "Year": 2016,
+    "total_cases": 8959,
+    "homicide": 6,
+    "violentCrime": 107,
+    "robbery": 58,
+    "rape": 40,
+    "fraud": 2020,
+    "theft": 5109,
+    "other": 1619
+  },
+  {
+    "Year": 2017,
+    "total_cases": 7926,
+    "homicide": 3,
+    "violentCrime": 126,
+    "robbery": 37,
+    "rape": 21,
+    "fraud": 2741,
+    "theft": 2841,
+    "other": 2157
+  }
+]

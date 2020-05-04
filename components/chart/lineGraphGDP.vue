@@ -1,20 +1,28 @@
 <template>
-<div  style="background:rgba(240, 240, 240,0.5)"ref="container">
-  <div style="display:flex;margin:0;padding:0;">
+<div >
 
+<div  style="background:rgba(240, 240, 240,0); height:500; width:58vw"ref="container" >
+  <!-- <div style="display:flex;margin:0;padding:0;"> -->
 
-    <el-tabs v-model="activeName" @tab-click="handleClick">
-      <el-tab-pane label="Public Green Spaces Rate" name="PerCapitaPublicGreenAreas_sqm">Per Capita Public Green Areas in m²</el-tab-pane>
-      <el-tab-pane label="Public Green Spaces" name="PublicGreenAreas_hectare">Public Green Space in Hectare</el-tab-pane>
-      <el-tab-pane label="Parks" name="NumberofParks_unit">Number of Parks(unit)</el-tab-pane>
+<div class="lineGraph">
+  <el-tabs v-model="activeName" @tab-click="handleClick" class="graphStyle" >
+    <el-tab-pane label="Public Green Spaces Rate" name="PerCapitaPublicGreenAreas_sqm">
+      <p>sdsads sdasdhsdhs</p>
 
-    <el-tab-pane label="GDP per-Capita" name="GDPperCapita">USD($) exchange rates 1:7</el-tab-pane>
-    <el-tab-pane label="GDP" name="GDP">Million USD($) exchange rates 1:7</el-tab-pane>
-    <!-- <el-tab-pane label="pri" name="primary">10,000 CHY(￥)</el-tab-pane> -->
+    </el-tab-pane>
+    <el-tab-pane label="Public Green Spaces" name="PublicGreenAreas_hectare"></el-tab-pane>
+    <el-tab-pane label="Parks" name="NumberofParks_unit"></el-tab-pane>
+
+  <el-tab-pane label="GDP per-Capita" name="GDPperCapita">USD($) exchange rates 1:7</el-tab-pane>
+  <el-tab-pane label="GDP" name="GDP"></el-tab-pane>
+  <!-- <el-tab-pane label="pri" name="primary">10,000 CHY(￥)</el-tab-pane> -->
   </el-tabs>
 
+</div>
 
-    </div>
+
+
+    <!-- </div> -->
 
 
     <svg
@@ -22,11 +30,25 @@
       :viewBox="[0, 0, width, height]"
       :width="width"
       :height="height"
+      class="graphStyle"
       >
       <g>
 
+        <!-- legend -->
+        <g
+          :transform="`translate(50, 70)`"
+          fill="white"
+          font-size="0.8em"
+          font-style="bold"
+          text-anchor="left"
+        >
+        <text>{{lengendInfo}}</text>
+        </g>
+
+
+
         <path fill='none'
-              stroke='blue'
+              stroke='rgb(221, 30, 134)'
               stroke-width='1'
               :d= "lineGenerator(szDataset)" />
 
@@ -36,83 +58,85 @@
           :key="i"
 
         >
-        <!-- <g
-          v-for="({Year,activeName},i) in szDataset"
-          :key="i"
-        > -->
-        <!-- <rect
-          :x="xScale(Year)"
-          :y="margin.top + (height - yScale(szDataset[i][activeName]) - margin.bottom)"
-          :width="xScale.bandwidth() * 0.4"
-          :height="yScale(szDataset[i][activeName]) - margin.top"
-          :fill="'rgba(153, 79, 49, 1)'"
-        /> -->
+
         <rect
           @mouseover="showTips"
           @mouseleave="selectedCircle='none'"
           :id="i"
-          :x="xScale(Year)"
+          :x="scale.x(Year)"
           :y="0"
-          :width="xScale.bandwidth() * 0.8"
+          :width="scale.x.bandwidth() * 0.8"
           :height="height"
           :fill="'rgba(0, 0, 0, 0)'"
         />
         <!-- reverse -->
-        <!-- :cy= "margin.top + (height - yScale(PerCapitaPublicGreenAreas_sqm) - margin.bottom)" -->
+        <!-- :cy= "margin.top + (height - scale.y(PerCapitaPublicGreenAreas_sqm) - margin.bottom)" -->
 
          <!-- <el-tooltip class="item" effect="dark" content="Top Left prompts info" placement="top-start"> -->
         <circle
         v-if="selectedCircle==i && (activeName=='GDP'|| activeName=='GDPperCapita')"
         r="4"
         fill="rgb(157, 53, 31)"
-        :cx="xScale(Year)+(xScale.bandwidth())*0.4"
-        :cy= "margin.top + (yScale(szDataset[i][activeName]) - margin.bottom)"
+        :cx="scale.x(Year)+(scale.x.bandwidth())*0.4"
+        :cy= "margin.top + (scale.y(szDataset[i][activeName]) - margin.bottom)"
 
         />
         <!-- <circle
         v-else-if="selectedCircle==i && activeName=='GDPperCapita'""
         r="4"
         fill="rgb(157, 53, 31)"
-        :cx="xScale(Year)+(xScale.bandwidth())*0.4"
-        :cy= "margin.top + (yScale(szDataset[i][activeName]) - margin.bottom)"
+        :cx="scale.x(Year)+(scale.x.bandwidth())*0.4"
+        :cy= "margin.top + (scale.y(szDataset[i][activeName]) - margin.bottom)"
 
         /> -->
         <circle
         v-else-if="selectedCircle==i"
         r="4"
         fill="rgb(97, 180, 32)"
-        :cx="xScale(Year)+(xScale.bandwidth())*0.4"
-        :cy= "margin.top + (yScale(szDataset[i][activeName]) - margin.bottom)"
+        :cx="scale.x(Year)+(scale.x.bandwidth())*0.4"
+        :cy= "margin.top + (scale.y(szDataset[i][activeName]) - margin.bottom)"
 
         />
         <circle
         v-else
         r="2"
-        fill="rgb(76, 83, 69)"
-        :cx="xScale(Year)+(xScale.bandwidth())*0.4"
-        :cy= "margin.top + (yScale(szDataset[i][activeName]) - margin.bottom)"
+        fill="rgb(0, 140, 255)"
+        :cx="scale.x(Year)+(scale.x.bandwidth())*0.4"
+        :cy= "margin.top + (scale.y(szDataset[i][activeName]) - margin.bottom)"
 
         />
+
+        <g font-size="0.8em" text-anchor="middle">
         <text
-        v-if="selectedCircle==i && activeName=='GDP'"
+          v-if="selectedCircle==i && activeName=='GDP'"
+          class="textGraphStyle"
           :id="i"
-          text-anchor="middle"
-          :x="xScale(Year)+(xScale.bandwidth())*0.4"
-          :y="margin.top + (yScale(szDataset[i][activeName]) - margin.bottom)-30" fill="black">{{Math.round(szDataset[i][activeName]*0.01/7)}} M</text>
+          :x="0"
+          :y="margin.top + (scale.y(szDataset[i][activeName]) - margin.bottom)-30" fill="black">
+          <tspan :x="scale.x(Year)+(scale.x.bandwidth())*0.4" dy="-1em">￥{{szDataset[i][activeName]}} M</tspan>
+          <tspan :x="scale.x(Year)+(scale.x.bandwidth())*0.4" dy="-1em">${{Math.round(szDataset[i][activeName]*0.01/7)}} M </tspan>
+        </text>
 
-          <text
-          v-else-if="selectedCircle==i && activeName=='GDPperCapita'""
-            :id="i"
-            text-anchor="middle"
-            :x="xScale(Year)+(xScale.bandwidth())*0.4"
-            :y="margin.top + (yScale(szDataset[i][activeName]) - margin.bottom)-30" fill="black">{{Math.round(szDataset[i][activeName]/7)}} $</text>
-            <text
-            v-else-if="selectedCircle==i""
-              :id="i"
-              text-anchor="middle"
-              :x="xScale(Year)+(xScale.bandwidth())*0.4"
-              :y="margin.top + (yScale(szDataset[i][activeName]) - margin.bottom)-30" fill="black">{{szDataset[i][activeName]}} </text>
+        <text
+        v-else-if="selectedCircle==i && activeName=='GDPperCapita'""
+          class="textGraphStyle"
+          :id="i"
 
+          :x="scale.x(Year)+(scale.x.bandwidth())*0.4"
+          :y="margin.top + (scale.y(szDataset[i][activeName]) - margin.bottom)-30" fill="black">
+          <tspan :x="scale.x(Year)+(scale.x.bandwidth())*0.4" dy="-1em">￥{{szDataset[i][activeName]}} </tspan>
+          <tspan :x="scale.x(Year)+(scale.x.bandwidth())*0.4" dy="-1em"> ${{Math.round(szDataset[i][activeName]/7)}} </tspan>
+
+        </text>
+
+        <text
+          class="textGraphStyle"
+        v-else-if="selectedCircle==i""
+          :id="i"
+
+          :x="scale.x(Year)+(scale.x.bandwidth())*0.4"
+          :y="margin.top + (scale.y(szDataset[i][activeName]) - margin.bottom)-30" fill="black">{{szDataset[i][activeName]}} </text>
+        </g>
 
         </g>
 
@@ -126,29 +150,59 @@
 
       <g>
         <!-- X AXIS -->
+
+        <!-- stroke-opacity="0.5"
+        stroke-dasharray="1,1" -->
+         <g v-axis:x="scale"
+              :transform="`translate(${-(scale.x.bandwidth())*0.1},${height-margin.bottom-20})`"
+
+              ></g>
         <g
           v-for="({Year},i) in szDataset"
           :key="i"
-          :transform="`translate(${xScale(Year)+(xScale.bandwidth())*0.4}, ${height-margin.bottom + 20})`"
+
+          :transform="`translate(${scale.x(Year)+(scale.x.bandwidth())*0.4}, ${height-margin.bottom })`"
         >
-        <text
-        v-if="selectedCircle==i "
-          :key="i"
-          font-size="1em"
-          text-anchor="middle"
-          transform="rotate(-45)"
-        >{{Year}}</text>
-        <text
-        v-else
-          :key="i"
-          font-size="0.6em"
-          text-anchor="middle"
-          transform="rotate(-45)"
-        >{{Year}}</text>
+          <text
+          v-if="selectedCircle==i "
+            :key="i"
+            class="textGraphStyle"
+            font-size="1em"
+            font-style="bold"
+            text-anchor="middle"
+            transform=" translate(-0,-22)"
+          >{{Year}}</text>
+          <text
+          v-else
+            :key="i"
+            class="textGraphStyle"
+            font-size="0.6em"
+            text-anchor="middle"
+            transform="rotate(-45)"
+          >{{Year}}</text>
         </g>
+
+
       </g>
 
+      <!-- Y axis -->
+      <!-- stroke-dasharray="5,2"
+      stroke-opacity="0.5" -->
+ <g
+  :transform="`translate(${scale.x(szDataset[0]['Year'])+(scale.x.bandwidth())*0.1}, 0)`"
+
+
+  v-axis:y="scale"></g>
+<!--
+      <g v-for="({activeName},i) in szDataset"
+        class="yaxis"
+        :b="axesGenerator(scale.yNew[i][activeName])"
+      >
+      </g> -->
+
     </svg>
+
+</div>
 
 </div>
 </template>
@@ -191,6 +245,7 @@ import szGDPData from "~/assets/dataset/gdp.json"
         height: 500,
         width: 0,
         showTip:false,
+        lengendInfo:"Per Capita Public Green Areas in m²",
         yExtent: [],
         xExtent: []
 
@@ -198,24 +253,24 @@ import szGDPData from "~/assets/dataset/gdp.json"
       }
     },
     created() {
-  window.addEventListener("resize", this.myResizeHandler);
-  },
-destroyed() {
-  window.removeEventListener("resize", this.myResizeHandler);
-},
+    window.addEventListener("resize", this.myResizeHandler);
+    },
+    destroyed() {
+    window.removeEventListener("resize", this.myResizeHandler);
+    },
 
     mounted(){
 // console.log(szGreenData)
 
-      // this.width = this.$refs.container.offsetWidth - 40
-      this.width = this.$refs.container.clientWidth - 40
+      this.width = this.$refs.container.offsetWidth - 40
+      // this.width = this.$refs.container.clientWidth-40
 
-        // this.width = 500
+        // this.width = 500;
       // this.width= 1000;
-      this.height = 500;
-      console.log(this.szDataset)
+      this.height = 400;
+      // console.log(this.szDataset)
       // console.log(d3.extent(this.szDataset, (d) => d[this.activeName]))
-        console.log(d3.extent(this.szDataset, d => d[this.activeName]))
+        // console.log(d3.extent(this.szDataset, d => d[this.activeName]))
 
       // let svg = d3.select(this.$refs.viz)
 
@@ -225,7 +280,7 @@ destroyed() {
         // this.width = this.$refs.container.offsetWidth - 40
         // this.width = 500
         // this.height = this.$refs.container.offsetHeight
-        // this.height = 500
+        // this.height = 400
   })
 
     },
@@ -234,9 +289,22 @@ destroyed() {
 
         if(this.activeName=="PerCapitaPublicGreenAreas_sqm"||this.activeName=="PublicGreenAreas_hectare"||this.activeName=="NumberofParks_unit"){
           this.szDataset=szGreenData;
+          if(this.activeName=="PerCapitaPublicGreenAreas_sqm"){
+            this.lengendInfo="Per Capita Public Green Areas in m²";
+          }else if(this.activeName=="PublicGreenAreas_hectare"){
+            this.lengendInfo="Public Green Space in Hectare";
+          }else if(this.activeName=="NumberofParks_unit"){
+            this.lengendInfo="Number of Parks(unit)";
+          }
 
         }else if (this.activeName=="GDPperCapita"|| this.activeName=="GDP") {
           this.szDataset=szGDPData;
+
+          if(this.activeName=="GDPperCapita"){
+            this.lengendInfo="CHY(￥)  | Mouse Over in USD($) exchange rates 1:7";
+          }else if(this.activeName=="GDP"){
+            this.lengendInfo="CHY(￥) in Million| Mouse Over in USD($) exchange rates 1:7";
+          }
         }
 
 
@@ -256,10 +324,11 @@ destroyed() {
       },
       myResizeHandler(e) {
     // your code for handling resize...
-      this.width = document.documentElement.clientWidth - 40
+      // this.width = this.$refs.container.clientWidth-40
+      this.width = this.$refs.container.clientWidth
       // this.height = this.$refs.container.clientHeight*0.4
       // console.log(document.documentElement.clientHeight)
-    },
+      },
       showTips(event){
       // console.log(this.$el)
       // console.log(this)
@@ -267,7 +336,7 @@ destroyed() {
             // console.log(this.selectedCircle);
       // this.selectedCircle=index;
 
-    }
+      }
 
 
 
@@ -288,28 +357,18 @@ destroyed() {
 
     computed:{
 
-      xScale(){
-      return d3
+      scale() {
+      const x = d3
             .scaleBand()
             .domain(this.szDataset.map(d => d["Year"] ))
-            .range([this.margin.left+40, this.width - this.margin.right-40])
-      },
-      yScale(){
-        return d3
+            .range([this.margin.left+80, this.width - this.margin.right-20])
+      const y = d3
         .scaleLinear()
-        // .domain(d3.extent(this.szDataset, (d) => d[this.activeName]))
-        // .domain([600,189568])
         .domain(d3.extent(this.szDataset, (d) => d[this.activeName]))
-
-
-        // .domain(d3.extent(this.szDataset, (d) => { return d["PerCapitaPublicGreenAreas_sqm"]}).reverse())
-        // .domain([d3.min(this.szDataset, d=>d["RateofGreenAreasinDevelopedAreas"]),20])
-        // .domain(this.szDataset.map(d => d["RateofGreenAreasinDevelopedAreas"] ))
         .nice()
         .range([this.height + this.margin.bottom-140, this.margin.top+40])
-        // .range([0, 100])
-        // .range([this.height - this.margin.bottom, this.margin.top])
-      },
+      return { x, y };
+    },
       lineGenerator(){
 
 
@@ -318,8 +377,8 @@ destroyed() {
                   // .transition() // Call Transition Method
                   // .duration(4000) // Set Duration timing (ms)
                   // .ease(d3.easeLinear) // Set Easing option
-                  .x(d => this.xScale(d["Year"])+(this.xScale.bandwidth())*0.4)
-                  .y(d => this.yScale(d[this.activeName]))
+                  .x(d => this.scale.x(d["Year"])+(this.scale.x.bandwidth())*0.4)
+                  .y(d => this.scale.y(d[this.activeName]))
 
 
 
@@ -328,12 +387,30 @@ destroyed() {
       lineCreate(){
         return  this.lineGenerator(this.szDataset)
 
+      },
+
+      axesGenerator(){
+        return d3.axisLeft()
+
       }
 
 
 
 
-    }
+    },
+    directives: {
+     axis(el, binding) {
+       const axis = binding.arg;
+       const axisMethod = { x: "axisBottom",y: "axisLeft" }[axis];
+       const methodArg = binding.value[axis];
+
+       var text=d3.select(el).call(d3[axisMethod](methodArg));
+       if(axisMethod=="axisBottom"){
+                text.selectAll("text").remove();
+                // text.selectAll("text").attr("transform",'rotate(-45) translate(-10,0) ');
+        }
+   }
+ }
 
 
 
@@ -343,7 +420,34 @@ destroyed() {
 
 </script>
 
-<style scoped>
+<style>
+.graphStyle{
+  color:white;
+
+}
+.textGraphStyle{
+  fill:white;
+
+
+}
+
+.lineGraph .el-tabs__item{
+
+
+
+    color:white;
+
+
+}
+.lineGraph .el-tabs__item.is-active{
+
+
+
+    color:#409EFF;
+
+
+}
+
 .item{
   z-index: 10;
   position: absolute;
@@ -370,7 +474,7 @@ svg text{
 }
 
 div{
-  margin-top: 3rem;
-  padding:0 20px;
+  /* margin-top: 3rem; */
+  /* padding:0 20px; */
 }
 </style>

@@ -18,6 +18,10 @@
               <div class = "p-description">
                     <p >In the matter of Per individual Public Green Areas rate, the number from Shenzhen was going down from 2015's 16.9m² to 15.4m² in 2018. 9m² per capita is the bottom line for public green spaces, and 50m² is ideal according to some earlier studies.</p>
               </div>
+              <div class="graphContainer">
+              <lineGraphGDP />
+              </div>
+
 
 
         </div>
@@ -38,9 +42,14 @@
 
 
 <script>
-
+import lineGraphGDP from '~/components/chart/lineGraphGDP';
 export default{
-name:'InfoPanel',
+  name:'InfoPanel',
+
+
+components:{
+  lineGraphGDP
+},
 
   props:{
     mapRadio:{
@@ -90,7 +99,7 @@ name:'InfoPanel',
   position: fixed;
   /* position: block; */
   left: 0;
-  top:20vh;
+  top:10vh;
   /* white-space: nowrap; */
   transition: 2s;
   transition-timing-function: ease-out;
@@ -179,7 +188,8 @@ name:'InfoPanel',
 .infoFrame{
 
   /* display: inline-block; */
-  width: 40vw;
+  width: 60vw;
+  height: 80vh;
   /* right:140vw; */
   opacity: 0;
   visibility: hidden;
@@ -194,7 +204,7 @@ name:'InfoPanel',
      transition: 1s ;
     -webkit-transition:  1s;
     transition-timing-function: ease-out;
-    height: 60vh;
+
 
 
 
@@ -208,7 +218,8 @@ name:'InfoPanel',
    opacity: 1;
    visibility: visible;
    overflow: hidden;
-   width: 40vw;
+   width: 60vw;
+   height: 80vh;
    /* left: 0px; */
    /* text-align: center; */
     border-radius: 2px;
@@ -216,7 +227,7 @@ name:'InfoPanel',
     transition:  1s;
     -webkit-transition:  1s;
     transition-timing-function: ease-out;
-    height: 60vh;
+
     border-radius:  0px 10px 10px 0px;
     background: rgba(15, 15, 15, 0.8);
     /* background: rgba(220, 220, 220, 0.9); */
@@ -226,7 +237,8 @@ name:'InfoPanel',
 .infoContent{
   padding: 2vh;
   overflow: auto;
-  height: 60vh;
+  height: 80vh;
+  /* width: 500px; */
   color:white;
 
 
@@ -250,5 +262,11 @@ margin:10px 0px;
   word-break: break-all;
 }
 
+.graphContainer{
+  display: inline-block;
+  /* position: absolute; */
+
+
+}
 
 </style>

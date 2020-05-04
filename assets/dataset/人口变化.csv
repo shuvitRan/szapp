@@ -1,4 +1,4 @@
-Year,PermanentPopulation(10000persons),Registered,NonRegistered,Employed,EmployedStaffnWorkers,SelfEmployed
+Year,PermanentPopulation10k,Registered,NonRegistered,Employed,EmployedStaffnWorkers,SelfEmployed
 1979,31.41,31.26,0.15,13.95,4.02,0.41
 1980,33.29,32.09,1.20,14.89,4.86,0.38
 1981,36.69,33.39,3.30,15.36,5.31,0.13

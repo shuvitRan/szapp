@@ -1,0 +1,90 @@
+[
+  {
+    "Year": 2007,
+    "Total": 75864,
+    "DisturbPublicOrder": 22790,
+    "ImpairmentOfPublicSecurity": 635,
+    "infringementofotherPersonsRights": 29766,
+    "DisruptingTheSocialSdministration": 22673
+  },
+  {
+    "Year": 2008,
+    "Total": 92120,
+    "DisturbPublicOrder": 19327,
+    "ImpairmentOfPublicSecurity": 2360,
+    "infringementofotherPersonsRights": 37722,
+    "DisruptingTheSocialSdministration": 32711
+  },
+  {
+    "Year": 2009,
+    "Total": 73978,
+    "DisturbPublicOrder": 14882,
+    "ImpairmentOfPublicSecurity": 1183,
+    "infringementofotherPersonsRights": 26000,
+    "DisruptingTheSocialSdministration": 31913
+  },
+  {
+    "Year": 2010,
+    "Total": 62009,
+    "DisturbPublicOrder": 14381,
+    "ImpairmentOfPublicSecurity": 637,
+    "infringementofotherPersonsRights": 25046,
+    "DisruptingTheSocialSdministration": 21015
+  },
+  {
+    "Year": 2011,
+    "Total": 17307,
+    "DisturbPublicOrder": 403,
+    "ImpairmentOfPublicSecurity": 361,
+    "infringementofotherPersonsRights": 13357,
+    "DisruptingTheSocialSdministration": 3186
+  },
+  {
+    "Year": 2012,
+    "Total": 17233,
+    "DisturbPublicOrder": 246,
+    "ImpairmentOfPublicSecurity": 257,
+    "infringementofotherPersonsRights": 13750,
+    "DisruptingTheSocialSdministration": 1338
+  },
+  {
+    "Year": 2013,
+    "Total": 16634,
+    "DisturbPublicOrder": 273,
+    "ImpairmentOfPublicSecurity": 224,
+    "infringementofotherPersonsRights": 13744,
+    "DisruptingTheSocialSdministration": 2393
+  },
+  {
+    "Year": 2014,
+    "Total": 17668,
+    "DisturbPublicOrder": 215,
+    "ImpairmentOfPublicSecurity": 339,
+    "infringementofotherPersonsRights": 14333,
+    "DisruptingTheSocialSdministration": 2781
+  },
+  {
+    "Year": 2015,
+    "Total": 15149,
+    "DisturbPublicOrder": 191,
+    "ImpairmentOfPublicSecurity": 266,
+    "infringementofotherPersonsRights": 12025,
+    "DisruptingTheSocialSdministration": 2667
+  },
+  {
+    "Year": 2016,
+    "Total": 13110,
+    "DisturbPublicOrder": 173,
+    "ImpairmentOfPublicSecurity": 243,
+    "infringementofotherPersonsRights": 9630,
+    "DisruptingTheSocialSdministration": 3064
+  },
+  {
+    "Year": 2017,
+    "Total": 9507,
+    "DisturbPublicOrder": 188,
+    "ImpairmentOfPublicSecurity": 225,
+    "infringementofotherPersonsRights": 7119,
+    "DisruptingTheSocialSdministration": 1975
+  }
+]

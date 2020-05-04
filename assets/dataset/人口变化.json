@@ -1,0 +1,362 @@
+[
+  {
+    "Year": 1979,
+    "PermanentPopulation10k": 31.41,
+    "Registered": 31.26,
+    "NonRegistered": 0.15,
+    "Employed": 13.95,
+    "EmployedStaffnWorkers": 4.02,
+    "SelfEmployed": 0.41
+  },
+  {
+    "Year": 1980,
+    "PermanentPopulation10k": 33.29,
+    "Registered": 32.09,
+    "NonRegistered": 1.2,
+    "Employed": 14.89,
+    "EmployedStaffnWorkers": 4.86,
+    "SelfEmployed": 0.38
+  },
+  {
+    "Year": 1981,
+    "PermanentPopulation10k": 36.69,
+    "Registered": 33.39,
+    "NonRegistered": 3.3,
+    "Employed": 15.36,
+    "EmployedStaffnWorkers": 5.31,
+    "SelfEmployed": 0.13
+  },
+  {
+    "Year": 1982,
+    "PermanentPopulation10k": 44.95,
+    "Registered": 35.45,
+    "NonRegistered": 9.5,
+    "Employed": 18.49,
+    "EmployedStaffnWorkers": 8.28,
+    "SelfEmployed": 0.11
+  },
+  {
+    "Year": 1983,
+    "PermanentPopulation10k": 59.52,
+    "Registered": 40.52,
+    "NonRegistered": 19,
+    "Employed": 22.37,
+    "EmployedStaffnWorkers": 12.57,
+    "SelfEmployed": 0.22
+  },
+  {
+    "Year": 1984,
+    "PermanentPopulation10k": 74.13,
+    "Registered": 43.52,
+    "NonRegistered": 30.61,
+    "Employed": 27.26,
+    "EmployedStaffnWorkers": 18.33,
+    "SelfEmployed": 0.5
+  },
+  {
+    "Year": 1985,
+    "PermanentPopulation10k": 88.15,
+    "Registered": 47.86,
+    "NonRegistered": 40.29,
+    "Employed": 32.61,
+    "EmployedStaffnWorkers": 22.66,
+    "SelfEmployed": 0.64
+  },
+  {
+    "Year": 1986,
+    "PermanentPopulation10k": 93.56,
+    "Registered": 51.45,
+    "NonRegistered": 42.11,
+    "Employed": 36.04,
+    "EmployedStaffnWorkers": 25.88,
+    "SelfEmployed": 0.93
+  },
+  {
+    "Year": 1987,
+    "PermanentPopulation10k": 105.44,
+    "Registered": 55.6,
+    "NonRegistered": 49.84,
+    "Employed": 44.3,
+    "EmployedStaffnWorkers": 32.29,
+    "SelfEmployed": 1.1
+  },
+  {
+    "Year": 1988,
+    "PermanentPopulation10k": 120.14,
+    "Registered": 60.14,
+    "NonRegistered": 60,
+    "Employed": 54.53,
+    "EmployedStaffnWorkers": 41.74,
+    "SelfEmployed": 1.69
+  },
+  {
+    "Year": 1989,
+    "PermanentPopulation10k": 141.6,
+    "Registered": 64.82,
+    "NonRegistered": 76.78,
+    "Employed": 93.65,
+    "EmployedStaffnWorkers": 48.24,
+    "SelfEmployed": 2.19
+  },
+  {
+    "Year": 1990,
+    "PermanentPopulation10k": 167.78,
+    "Registered": 68.65,
+    "NonRegistered": 99.13,
+    "Employed": 109.22,
+    "EmployedStaffnWorkers": 55.41,
+    "SelfEmployed": 3.36
+  },
+  {
+    "Year": 1991,
+    "PermanentPopulation10k": 226.76,
+    "Registered": 73.22,
+    "NonRegistered": 153.54,
+    "Employed": 149.32,
+    "EmployedStaffnWorkers": 64.89,
+    "SelfEmployed": 4.87
+  },
+  {
+    "Year": 1992,
+    "PermanentPopulation10k": 268.02,
+    "Registered": 80.22,
+    "NonRegistered": 187.8,
+    "Employed": 175.97,
+    "EmployedStaffnWorkers": 71.1,
+    "SelfEmployed": 12.33
+  },
+  {
+    "Year": 1993,
+    "PermanentPopulation10k": 335.97,
+    "Registered": 87.69,
+    "NonRegistered": 248.28,
+    "Employed": 220.81,
+    "EmployedStaffnWorkers": 78.11,
+    "SelfEmployed": 38.84
+  },
+  {
+    "Year": 1994,
+    "PermanentPopulation10k": 412.71,
+    "Registered": 93.97,
+    "NonRegistered": 318.74,
+    "Employed": 273,
+    "EmployedStaffnWorkers": 82.29,
+    "SelfEmployed": 54.63
+  },
+  {
+    "Year": 1995,
+    "PermanentPopulation10k": 449.15,
+    "Registered": 99.16,
+    "NonRegistered": 349.99,
+    "Employed": 298.51,
+    "EmployedStaffnWorkers": 88.75,
+    "SelfEmployed": 72.17
+  },
+  {
+    "Year": 1996,
+    "PermanentPopulation10k": 482.89,
+    "Registered": 103.38,
+    "NonRegistered": 379.51,
+    "Employed": 322.12,
+    "EmployedStaffnWorkers": 89.13,
+    "SelfEmployed": 87.14
+  },
+  {
+    "Year": 1997,
+    "PermanentPopulation10k": 527.75,
+    "Registered": 109.46,
+    "NonRegistered": 418.29,
+    "Employed": 353.53,
+    "EmployedStaffnWorkers": 91.18,
+    "SelfEmployed": 103.59
+  },
+  {
+    "Year": 1998,
+    "PermanentPopulation10k": 580.33,
+    "Registered": 114.6,
+    "NonRegistered": 465.73,
+    "Employed": 390.33,
+    "EmployedStaffnWorkers": 91.93,
+    "SelfEmployed": 114.79
+  },
+  {
+    "Year": 1999,
+    "PermanentPopulation10k": 632.56,
+    "Registered": 119.85,
+    "NonRegistered": 512.71,
+    "Employed": 426.89,
+    "EmployedStaffnWorkers": 92.52,
+    "SelfEmployed": 120.86
+  },
+  {
+    "Year": 2000,
+    "PermanentPopulation10k": 701.24,
+    "Registered": 124.92,
+    "NonRegistered": 576.32,
+    "Employed": 474.97,
+    "EmployedStaffnWorkers": 93.36,
+    "SelfEmployed": 139.88
+  },
+  {
+    "Year": 2001,
+    "PermanentPopulation10k": 724.57,
+    "Registered": 132.04,
+    "NonRegistered": 592.53,
+    "Employed": 491.3,
+    "EmployedStaffnWorkers": 94.88,
+    "SelfEmployed": 152.68
+  },
+  {
+    "Year": 2002,
+    "PermanentPopulation10k": 746.62,
+    "Registered": 139.45,
+    "NonRegistered": 607.17,
+    "Employed": 509.74,
+    "EmployedStaffnWorkers": 101.76,
+    "SelfEmployed": 166.88
+  },
+  {
+    "Year": 2003,
+    "PermanentPopulation10k": 778.27,
+    "Registered": 150.93,
+    "NonRegistered": 627.34,
+    "Employed": 535.89,
+    "EmployedStaffnWorkers": 108.2,
+    "SelfEmployed": 187.72
+  },
+  {
+    "Year": 2004,
+    "PermanentPopulation10k": 800.8,
+    "Registered": 165.13,
+    "NonRegistered": 635.67,
+    "Employed": 562.17,
+    "EmployedStaffnWorkers": 135.88,
+    "SelfEmployed": 204.16
+  },
+  {
+    "Year": 2005,
+    "PermanentPopulation10k": 827.75,
+    "Registered": 181.93,
+    "NonRegistered": 645.82,
+    "Employed": 576.26,
+    "EmployedStaffnWorkers": 165.38,
+    "SelfEmployed": 210.87
+  },
+  {
+    "Year": 2006,
+    "PermanentPopulation10k": 871.1,
+    "Registered": 196.83,
+    "NonRegistered": 674.27,
+    "Employed": 609.76,
+    "EmployedStaffnWorkers": 184.25,
+    "SelfEmployed": 250.77
+  },
+  {
+    "Year": 2007,
+    "PermanentPopulation10k": 912.37,
+    "Registered": 212.38,
+    "NonRegistered": 699.99,
+    "Employed": 647.11,
+    "EmployedStaffnWorkers": 193.04,
+    "SelfEmployed": 279.83
+  },
+  {
+    "Year": 2008,
+    "PermanentPopulation10k": 954.28,
+    "Registered": 228.07,
+    "NonRegistered": 726.21,
+    "Employed": 682.35,
+    "EmployedStaffnWorkers": 198.35,
+    "SelfEmployed": 301.97
+  },
+  {
+    "Year": 2009,
+    "PermanentPopulation10k": 995.01,
+    "Registered": 241.45,
+    "NonRegistered": 753.56,
+    "Employed": 723.61,
+    "EmployedStaffnWorkers": 220.16,
+    "SelfEmployed": 326.52
+  },
+  {
+    "Year": 2010,
+    "PermanentPopulation10k": 1037.2,
+    "Registered": 251.03,
+    "NonRegistered": 786.17,
+    "Employed": 758.14,
+    "EmployedStaffnWorkers": 251.09,
+    "SelfEmployed": 376.6
+  },
+  {
+    "Year": 2011,
+    "PermanentPopulation10k": 1046.74,
+    "Registered": 267.9,
+    "NonRegistered": 778.85,
+    "Employed": 764.54,
+    "EmployedStaffnWorkers": 261.43,
+    "SelfEmployed": 408.35
+  },
+  {
+    "Year": 2012,
+    "PermanentPopulation10k": 1054.74,
+    "Registered": 287.62,
+    "NonRegistered": 767.13,
+    "Employed": 771.2,
+    "EmployedStaffnWorkers": 277.9,
+    "SelfEmployed": 430.71
+  },
+  {
+    "Year": 2013,
+    "PermanentPopulation10k": 1062.89,
+    "Registered": 310.47,
+    "NonRegistered": 752.42,
+    "Employed": 899.24,
+    "EmployedStaffnWorkers": 445.84,
+    "SelfEmployed": 441.83
+  },
+  {
+    "Year": 2014,
+    "PermanentPopulation10k": 1077.89,
+    "Registered": 332.21,
+    "NonRegistered": 745.68,
+    "Employed": 899.66,
+    "EmployedStaffnWorkers": 448.93,
+    "SelfEmployed": 438.43
+  },
+  {
+    "Year": 2015,
+    "PermanentPopulation10k": 1137.87,
+    "Registered": 354.99,
+    "NonRegistered": 782.88,
+    "Employed": 906.14,
+    "EmployedStaffnWorkers": 447.41,
+    "SelfEmployed": 446.22
+  },
+  {
+    "Year": 2016,
+    "PermanentPopulation10k": 1190.84,
+    "Registered": 384.52,
+    "NonRegistered": 806.32,
+    "Employed": 926.38,
+    "EmployedStaffnWorkers": 442.55,
+    "SelfEmployed": 470.15
+  },
+  {
+    "Year": 2017,
+    "PermanentPopulation10k": 1252.83,
+    "Registered": 434.72,
+    "NonRegistered": 818.11,
+    "Employed": 943.29,
+    "EmployedStaffnWorkers": 447.32,
+    "SelfEmployed": 477.87
+  },
+  {
+    "Year": 2018,
+    "PermanentPopulation10k": 1302.66,
+    "Registered": 454.7,
+    "NonRegistered": 847.97,
+    "Employed": 1050.25,
+    "EmployedStaffnWorkers": 466.91,
+    "SelfEmployed": 562.19
+  }
+]

@@ -1,0 +1,282 @@
+[
+  {
+    "Year": 1979,
+    "HospitalUnit": 25,
+    "HospitalBeds": 597,
+    "MedicalPersonnel": 988,
+    "LicensedDoctrors": 364
+  },
+  {
+    "Year": 1980,
+    "HospitalUnit": 24,
+    "HospitalBeds": 643,
+    "MedicalPersonnel": 1088,
+    "LicensedDoctrors": 438
+  },
+  {
+    "Year": 1981,
+    "HospitalUnit": 24,
+    "HospitalBeds": 790,
+    "MedicalPersonnel": 1270,
+    "LicensedDoctrors": 518
+  },
+  {
+    "Year": 1982,
+    "HospitalUnit": 26,
+    "HospitalBeds": 717,
+    "MedicalPersonnel": 1609,
+    "LicensedDoctrors": 708
+  },
+  {
+    "Year": 1983,
+    "HospitalUnit": 30,
+    "HospitalBeds": 1023,
+    "MedicalPersonnel": 2343,
+    "LicensedDoctrors": 1073
+  },
+  {
+    "Year": 1984,
+    "HospitalUnit": 29,
+    "HospitalBeds": 1634,
+    "MedicalPersonnel": 3064,
+    "LicensedDoctrors": 1484
+  },
+  {
+    "Year": 1985,
+    "HospitalUnit": 31,
+    "HospitalBeds": 1885,
+    "MedicalPersonnel": 3857,
+    "LicensedDoctrors": 1862
+  },
+  {
+    "Year": 1986,
+    "HospitalUnit": 32,
+    "HospitalBeds": 2028,
+    "MedicalPersonnel": 4657,
+    "LicensedDoctrors": 2217
+  },
+  {
+    "Year": 1987,
+    "HospitalUnit": 34,
+    "HospitalBeds": 2225,
+    "MedicalPersonnel": 5117,
+    "LicensedDoctrors": 2408
+  },
+  {
+    "Year": 1988,
+    "HospitalUnit": 35,
+    "HospitalBeds": 2496,
+    "MedicalPersonnel": 5715,
+    "LicensedDoctrors": 2754
+  },
+  {
+    "Year": 1989,
+    "HospitalUnit": 35,
+    "HospitalBeds": 2838,
+    "MedicalPersonnel": 6451,
+    "LicensedDoctrors": 3103
+  },
+  {
+    "Year": 1990,
+    "HospitalUnit": 38,
+    "HospitalBeds": 3108,
+    "MedicalPersonnel": 6996,
+    "LicensedDoctrors": 3426
+  },
+  {
+    "Year": 1991,
+    "HospitalUnit": 41,
+    "HospitalBeds": 3498,
+    "MedicalPersonnel": 7618,
+    "LicensedDoctrors": 3737
+  },
+  {
+    "Year": 1992,
+    "HospitalUnit": 45,
+    "HospitalBeds": 4466,
+    "MedicalPersonnel": 8571,
+    "LicensedDoctrors": 4247
+  },
+  {
+    "Year": 1993,
+    "HospitalUnit": 45,
+    "HospitalBeds": 5168,
+    "MedicalPersonnel": 9888,
+    "LicensedDoctrors": 4798
+  },
+  {
+    "Year": 1994,
+    "HospitalUnit": 48,
+    "HospitalBeds": 6040,
+    "MedicalPersonnel": 11034,
+    "LicensedDoctrors": 5347
+  },
+  {
+    "Year": 1995,
+    "HospitalUnit": 63,
+    "HospitalBeds": 6640,
+    "MedicalPersonnel": 12449,
+    "LicensedDoctrors": 6050
+  },
+  {
+    "Year": 1996,
+    "HospitalUnit": 65,
+    "HospitalBeds": 7105,
+    "MedicalPersonnel": 14652,
+    "LicensedDoctrors": 7266
+  },
+  {
+    "Year": 1997,
+    "HospitalUnit": 72,
+    "HospitalBeds": 7813,
+    "MedicalPersonnel": 14932,
+    "LicensedDoctrors": 7400
+  },
+  {
+    "Year": 1998,
+    "HospitalUnit": 72,
+    "HospitalBeds": 8353,
+    "MedicalPersonnel": 14975,
+    "LicensedDoctrors": 7191
+  },
+  {
+    "Year": 1999,
+    "HospitalUnit": 71,
+    "HospitalBeds": 8720,
+    "MedicalPersonnel": 15143,
+    "LicensedDoctrors": 7062
+  },
+  {
+    "Year": 2000,
+    "HospitalUnit": 72,
+    "HospitalBeds": 9616,
+    "MedicalPersonnel": 15720,
+    "LicensedDoctrors": 7418
+  },
+  {
+    "Year": 2001,
+    "HospitalUnit": 75,
+    "HospitalBeds": 10542,
+    "MedicalPersonnel": 17135,
+    "LicensedDoctrors": 8097
+  },
+  {
+    "Year": 2002,
+    "HospitalUnit": 77,
+    "HospitalBeds": 11808,
+    "MedicalPersonnel": 18615,
+    "LicensedDoctrors": 7853
+  },
+  {
+    "Year": 2003,
+    "HospitalUnit": 85,
+    "HospitalBeds": 12607,
+    "MedicalPersonnel": 21234,
+    "LicensedDoctrors": 8909
+  },
+  {
+    "Year": 2004,
+    "HospitalUnit": 87,
+    "HospitalBeds": 14186,
+    "MedicalPersonnel": 22895,
+    "LicensedDoctrors": 9846
+  },
+  {
+    "Year": 2005,
+    "HospitalUnit": 97,
+    "HospitalBeds": 15577,
+    "MedicalPersonnel": 25681,
+    "LicensedDoctrors": 10961
+  },
+  {
+    "Year": 2006,
+    "HospitalUnit": 99,
+    "HospitalBeds": 16193,
+    "MedicalPersonnel": 43266,
+    "LicensedDoctrors": 16238
+  },
+  {
+    "Year": 2007,
+    "HospitalUnit": 101,
+    "HospitalBeds": 16766,
+    "MedicalPersonnel": 46877,
+    "LicensedDoctrors": 17450
+  },
+  {
+    "Year": 2008,
+    "HospitalUnit": 100,
+    "HospitalBeds": 18435,
+    "MedicalPersonnel": 50608,
+    "LicensedDoctrors": 18807
+  },
+  {
+    "Year": 2009,
+    "HospitalUnit": 101,
+    "HospitalBeds": 19872,
+    "MedicalPersonnel": 53778,
+    "LicensedDoctrors": 19963
+  },
+  {
+    "Year": 2010,
+    "HospitalUnit": 107,
+    "HospitalBeds": 21166,
+    "MedicalPersonnel": 54081,
+    "LicensedDoctrors": 20122
+  },
+  {
+    "Year": 2011,
+    "HospitalUnit": 110,
+    "HospitalBeds": 22322,
+    "MedicalPersonnel": 58059,
+    "LicensedDoctrors": 21517
+  },
+  {
+    "Year": 2012,
+    "HospitalUnit": 115,
+    "HospitalBeds": 26124,
+    "MedicalPersonnel": 61961,
+    "LicensedDoctrors": 22831
+  },
+  {
+    "Year": 2013,
+    "HospitalUnit": 117,
+    "HospitalBeds": 27079,
+    "MedicalPersonnel": 65782,
+    "LicensedDoctrors": 24221
+  },
+  {
+    "Year": 2014,
+    "HospitalUnit": 122,
+    "HospitalBeds": 28853,
+    "MedicalPersonnel": 69936,
+    "LicensedDoctrors": 25728
+  },
+  {
+    "Year": 2015,
+    "HospitalUnit": 123,
+    "HospitalBeds": 31425,
+    "MedicalPersonnel": 74884,
+    "LicensedDoctrors": 27834
+  },
+  {
+    "Year": 2016,
+    "HospitalUnit": 134,
+    "HospitalBeds": 38124,
+    "MedicalPersonnel": 78826,
+    "LicensedDoctrors": 29300
+  },
+  {
+    "Year": 2017,
+    "HospitalUnit": 135,
+    "HospitalBeds": 39899,
+    "MedicalPersonnel": 85282,
+    "LicensedDoctrors": 31838
+  },
+  {
+    "Year": 2018,
+    "HospitalUnit": 139,
+    "HospitalBeds": 43569,
+    "MedicalPersonnel": 93660,
+    "LicensedDoctrors": 34747
+  }
+]
