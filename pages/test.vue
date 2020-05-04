@@ -2,7 +2,9 @@
   <div >
     <!-- <lineGraph /> -->
 
-    <lineGraphGDP />
+    <!-- <lineGraphGreen /> -->
+    <!-- <lineGraphHospital /> -->
+    <CrimeGraph />
   </div>
 
 </template>
@@ -10,12 +12,15 @@
 
 <script>
 
-import lineGraph from '~/components/chart/lineGraph';
-import lineGraphGDP from '~/components/chart/lineGraphGDP';
+// import lineGraph from '~/components/chart/lineGraph';
+// import lineGraphGreen from '~/components/chart/lineGraphGreen';
+// import lineGraphHospital from '~/components/chart/lineGraphHospital';
+import CrimeGraph from '~/components/chart/CrimeGraph'
 export default{
 
 components:{
-  lineGraph,lineGraphGDP
+
+CrimeGraph
 
 }
 

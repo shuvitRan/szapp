@@ -19,11 +19,21 @@
                     <p >In the matter of Per individual Public Green Areas rate, the number from Shenzhen was going down from 2015's 16.9m² to 15.4m² in 2018. 9m² per capita is the bottom line for public green spaces, and 50m² is ideal according to some earlier studies.</p>
               </div>
               <div class="graphContainer">
-              <lineGraphGDP />
+              <lineGraphGreen />
               </div>
 
+        </div>
+        <div class='infoContent' v-if="mapRadio=='hospital'"  key="2">
 
+            <H1>Hospital Accessbility in Shenzhen</H1>
 
+                <el-divider class="dividerLine"></el-divider>
+                <div class = "p-description">
+                      <p >It is crucial that everyone, especially those people who are vulnerable, older, younger, or marginalized, has reasonable access to health services when they need it. </p>
+                </div>
+                <div class="graphContainer">
+                  <lineGraphHospital />
+                </div>
         </div>
 
       </transition>
@@ -42,13 +52,14 @@
 
 
 <script>
-import lineGraphGDP from '~/components/chart/lineGraphGDP';
+import lineGraphGreen from '~/components/chart/lineGraphGreen';
+import lineGraphHospital from '~/components/chart/lineGraphHospital';
 export default{
   name:'InfoPanel',
 
 
 components:{
-  lineGraphGDP
+  lineGraphGreen,lineGraphHospital
 },
 
   props:{

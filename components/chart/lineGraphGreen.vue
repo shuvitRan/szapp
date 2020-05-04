@@ -13,6 +13,8 @@
     <el-tab-pane label="Public Green Spaces" name="PublicGreenAreas_hectare"></el-tab-pane>
     <el-tab-pane label="Parks" name="NumberofParks_unit"></el-tab-pane>
 
+
+
   <el-tab-pane label="GDP per-Capita" name="GDPperCapita">USD($) exchange rates 1:7</el-tab-pane>
   <el-tab-pane label="GDP" name="GDP"></el-tab-pane>
   <!-- <el-tab-pane label="pri" name="primary">10,000 CHY(￥)</el-tab-pane> -->
@@ -45,10 +47,51 @@
         <text>{{lengendInfo}}</text>
         </g>
 
+        <g>
+          <!-- X AXIS -->
+          <!-- stroke-opacity="0.5"
+          stroke-dasharray="1,1" -->
+           <g v-axis:x="scale"
+                :transform="`translate(${-(scale.x.bandwidth())*0.1},${height-margin.bottom-20})`"
 
+                ></g>
+          <g
+            v-for="({Year},i) in szDataset"
+            :key="i"
+
+            :transform="`translate(${scale.x(Year)+(scale.x.bandwidth())*0.4}, ${height-margin.bottom })`"
+          >
+            <text
+            v-if="selectedCircle==i "
+              :key="i"
+              class="textGraphStyle"
+              font-size="1em"
+              font-style="bold"
+              text-anchor="middle"
+              transform=" translate(-0,-22)"
+            >{{Year}}</text>
+            <text
+            v-else
+              :key="i"
+              class="textGraphStyle"
+              font-size="0.6em"
+              text-anchor="middle"
+              transform="rotate(-45)"
+            >{{Year}}</text>
+          </g>
+
+
+        </g>
+
+        <!-- Y axis -->
+        <!-- stroke-dasharray="5,2"
+        stroke-opacity="0.5" -->
+         <g
+          :transform="`translate(${scale.x(szDataset[0]['Year'])+(scale.x.bandwidth())*0.1}, 0)`"
+          v-axis:y="scale"></g>
 
         <path fill='none'
-              stroke='rgb(221, 30, 134)'
+              stroke='rgb(238, 177, 20)'
               stroke-width='1'
               :d= "lineGenerator(szDataset)" />
 
@@ -106,36 +149,31 @@
 
         />
 
-        <g font-size="0.8em" text-anchor="middle">
+        <g  class="textGraphStyleSelect">
         <text
           v-if="selectedCircle==i && activeName=='GDP'"
-          class="textGraphStyle"
           :id="i"
           :x="0"
-          :y="margin.top + (scale.y(szDataset[i][activeName]) - margin.bottom)-30" fill="black">
+          :y="margin.top + (scale.y(szDataset[i][activeName]) - margin.bottom)-10" >
           <tspan :x="scale.x(Year)+(scale.x.bandwidth())*0.4" dy="-1em">￥{{szDataset[i][activeName]}} M</tspan>
           <tspan :x="scale.x(Year)+(scale.x.bandwidth())*0.4" dy="-1em">${{Math.round(szDataset[i][activeName]*0.01/7)}} M </tspan>
         </text>
 
         <text
         v-else-if="selectedCircle==i && activeName=='GDPperCapita'""
-          class="textGraphStyle"
           :id="i"
-
           :x="scale.x(Year)+(scale.x.bandwidth())*0.4"
-          :y="margin.top + (scale.y(szDataset[i][activeName]) - margin.bottom)-30" fill="black">
+          :y="margin.top + (scale.y(szDataset[i][activeName]) - margin.bottom)-10" >
           <tspan :x="scale.x(Year)+(scale.x.bandwidth())*0.4" dy="-1em">￥{{szDataset[i][activeName]}} </tspan>
           <tspan :x="scale.x(Year)+(scale.x.bandwidth())*0.4" dy="-1em"> ${{Math.round(szDataset[i][activeName]/7)}} </tspan>
-
         </text>
 
         <text
-          class="textGraphStyle"
         v-else-if="selectedCircle==i""
           :id="i"
 
           :x="scale.x(Year)+(scale.x.bandwidth())*0.4"
-          :y="margin.top + (scale.y(szDataset[i][activeName]) - margin.bottom)-30" fill="black">{{szDataset[i][activeName]}} </text>
+          :y="margin.top + (scale.y(szDataset[i][activeName]) - margin.bottom)-10" >{{szDataset[i][activeName]}} </text>
         </g>
 
         </g>
@@ -148,57 +186,7 @@
 
       </g>
 
-      <g>
-        <!-- X AXIS -->
 
-        <!-- stroke-opacity="0.5"
-        stroke-dasharray="1,1" -->
-         <g v-axis:x="scale"
-              :transform="`translate(${-(scale.x.bandwidth())*0.1},${height-margin.bottom-20})`"
-
-              ></g>
-        <g
-          v-for="({Year},i) in szDataset"
-          :key="i"
-
-          :transform="`translate(${scale.x(Year)+(scale.x.bandwidth())*0.4}, ${height-margin.bottom })`"
-        >
-          <text
-          v-if="selectedCircle==i "
-            :key="i"
-            class="textGraphStyle"
-            font-size="1em"
-            font-style="bold"
-            text-anchor="middle"
-            transform=" translate(-0,-22)"
-          >{{Year}}</text>
-          <text
-          v-else
-            :key="i"
-            class="textGraphStyle"
-            font-size="0.6em"
-            text-anchor="middle"
-            transform="rotate(-45)"
-          >{{Year}}</text>
-        </g>
-
-
-      </g>
-
-      <!-- Y axis -->
-      <!-- stroke-dasharray="5,2"
-      stroke-opacity="0.5" -->
- <g
-  :transform="`translate(${scale.x(szDataset[0]['Year'])+(scale.x.bandwidth())*0.1}, 0)`"
-
-
-  v-axis:y="scale"></g>
-<!--
-      <g v-for="({activeName},i) in szDataset"
-        class="yaxis"
-        :b="axesGenerator(scale.yNew[i][activeName])"
-      >
-      </g> -->
 
     </svg>
 
@@ -217,7 +205,7 @@ import szGreenData from "~/assets/dataset/szGreenSpace.json"
 import szGDPData from "~/assets/dataset/gdp.json"
 
   export default{
-    name:"lineGraphGDP",
+    name:"lineGraphGreen",
 
     components:{
 
@@ -290,7 +278,7 @@ import szGDPData from "~/assets/dataset/gdp.json"
         if(this.activeName=="PerCapitaPublicGreenAreas_sqm"||this.activeName=="PublicGreenAreas_hectare"||this.activeName=="NumberofParks_unit"){
           this.szDataset=szGreenData;
           if(this.activeName=="PerCapitaPublicGreenAreas_sqm"){
-            this.lengendInfo="Per Capita Public Green Areas in m²";
+            this.lengendInfo="Shenzhen Public Green Areas Per Capita in m²";
           }else if(this.activeName=="PublicGreenAreas_hectare"){
             this.lengendInfo="Public Green Space in Hectare";
           }else if(this.activeName=="NumberofParks_unit"){
@@ -361,7 +349,7 @@ import szGDPData from "~/assets/dataset/gdp.json"
       const x = d3
             .scaleBand()
             .domain(this.szDataset.map(d => d["Year"] ))
-            .range([this.margin.left+80, this.width - this.margin.right-20])
+            .range([this.margin.left+80, this.width - this.margin.right-40])
       const y = d3
         .scaleLinear()
         .domain(d3.extent(this.szDataset, (d) => d[this.activeName]))
@@ -429,6 +417,12 @@ import szGDPData from "~/assets/dataset/gdp.json"
   fill:white;
 
 
+}
+.textGraphStyleSelect{
+  fill:#409EFF;
+  font-size:0.8em;
+  text-anchor:middle;
+  /* font-weight: bold; */
 }
 
 .lineGraph .el-tabs__item{
