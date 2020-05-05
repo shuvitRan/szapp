@@ -218,7 +218,7 @@ components:{
 .infoFrame{
 
   /* display: inline-block; */
-  width: 60vw;
+  width: 45vw;
   height: 80vh;
   /* right:140vw; */
   opacity: 0;
@@ -248,7 +248,7 @@ components:{
    opacity: 1;
    visibility: visible;
    overflow: hidden;
-   width: 60vw;
+   width: 45vw;
    height: 80vh;
    /* left: 0px; */
    /* text-align: center; */

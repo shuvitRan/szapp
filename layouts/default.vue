@@ -44,33 +44,24 @@ h1{
   margin: 0;
 }
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
 
-.button--green:hover {
-  color: #fff;
-  background-color: #ffffff;
-}
 
 .button--grey {
 
   display: inline-block;
   border-radius: 4px;
-  border: 1px solid #fbfbfb;
-  color: #ffffff;
+  border: 1px solid black;
+  color:black;
   text-decoration: none;
   padding: 5px 40px;
-  /* margin-left: 15px; */
+  transition: 2s;
+
+  margin-right: 2vw;
 }
 
 .button--grey:hover {
-  color: #3d3d3d;
-  background-color: #c9c9c9;
+  color: white;
+  background-color: rgba(10, 10, 10, 0.67);
+
 }
 </style>

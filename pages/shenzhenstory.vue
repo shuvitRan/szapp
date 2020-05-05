@@ -1,8 +1,11 @@
 <template >
   <div>
+<Logo style="position:fixed; z-index:5;" />
+
   <!-- <Map/> -->
   <!-- <vMapbox/> -->
   <ScrollText/>
+
   </div>
 </template>
 
@@ -10,11 +13,11 @@
 <script>
 
 import ScrollText from '~/components/ScrollText'
-
+import Logo from '~/components/Logo'
   export default {
 
     components:{
-       ScrollText
+       ScrollText, Logo
     }
 
 

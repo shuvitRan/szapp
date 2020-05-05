@@ -4,7 +4,8 @@
 
     <!-- <lineGraphGreen /> -->
     <!-- <lineGraphHospital /> -->
-    <CrimeGraph />
+    <!-- <CrimeGraph /> -->
+    <Logo />
   </div>
 
 </template>
@@ -16,11 +17,12 @@
 // import lineGraphGreen from '~/components/chart/lineGraphGreen';
 // import lineGraphHospital from '~/components/chart/lineGraphHospital';
 import CrimeGraph from '~/components/chart/CrimeGraph'
+import Logo from '~/components/Logo'
 export default{
 
 components:{
 
-CrimeGraph
+CrimeGraph,Logo
 
 }
 

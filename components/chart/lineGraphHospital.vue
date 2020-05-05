@@ -1,7 +1,7 @@
 <template>
 <div >
 
-<div style="background:rgba(20, 20, 20,0); height:500; width:58vw"ref="container">
+<div style="background:rgba(20, 20, 20,0); height:500; width:43vw"ref="container">
   <!-- <div style="display:flex;margin:0;padding:0;"> -->
 
 <div class="lineGraph">

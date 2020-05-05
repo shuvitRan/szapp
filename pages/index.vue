@@ -5,20 +5,20 @@
   <!-- <Map mapStyle="mapbox://styles/randanfx/ck99glwc30uwk1ipbue3ie1hb" /> -->
     <vueMap mapStyle="mapbox://styles/randanfx/ck99glwc30uwk1ipbue3ie1hb" />
   <div class="container">
-    <!-- <client-only> -->
 
-  <!-- </client-only> -->
     <div>
       <div class ='titleContainer'>
-        <h1 class="chtitle">
+
+        <img src="~/assets/img/logo-bl.png" alt="logo">
+        <!-- <h1 class="chtitle">
           深圳
-        </h1>
-        <h1 class="title">SHENZHEN</h1>
+        </h1> -->
+        <!-- <h1 class="title">SHENZHEN</h1> -->
       </div>
 
-      <h2 class="subtitle">
+      <!-- <h2 class="subtitle">
         the growth and livability of a mega city.
-      </h2>
+      </h2> -->
 
 
       <div class="links">
@@ -36,7 +36,9 @@
         </a>
       </div>
     </div>
+
   </div>
+    <!-- <p>a data visualization by dan ran </p> -->
   </div>
 </template>
 
@@ -55,6 +57,10 @@ export default {
 /* nuxt-link{
   text-decoration: none;
 } */
+img {
+  max-width: 50vw;
+  height: auto;
+}
 .container {
   margin: 0 auto;
   min-height: 100vh;
@@ -62,6 +68,9 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
+  background: rgba(217, 207, 205, 0.43);
+  position: fixed;
+  width: 100vw;
 }
 .titleContainer{
   margin-bottom: -20px;
@@ -82,11 +91,11 @@ export default {
   /* font-family: 'Helvetica Neue', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, Arial, sans-serif; */
     font-family: 'Noto Sans JP', sans-serif;
-  display:inline-block;
-  font-weight: 400;
-  font-size: 80px;
-  color: #fcfcfc;
-  letter-spacing: 5px;
+    display:inline-block;
+    font-weight: 400;
+    font-size: 80px;
+    color: #fcfcfc;
+    letter-spacing: 5px;
 }
 
 .subtitle {
