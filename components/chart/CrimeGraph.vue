@@ -1,16 +1,18 @@
 <template>
 <div >
 
-<div style="background:rgba(20, 20, 20,1); height:500; width:58vw"ref="container">
+<div style="background:rgba(20, 20, 20,0); height:600; width:58vw"ref="container">
   <!-- <div style="display:flex;margin:0;padding:0;"> -->
 
 <div class="lineGraph">
   <el-tabs v-model="activeName" @tab-click="handleClick" class="graphStyle" >
     <el-tab-pane label="Luohu Crime Cases" name="total_cases">
-      <p> In <b>{{szHosCaculate.year}}</b> there are <b class="highlightText">{{szHosCaculate.perCap}} doctors</b> per thounsands populations in Shenzhen. In China 2018, there are 2.59 licensed doctors per 1,000 people. In Beijing this number is 5.06, and Shanghai is 5.1.</p>
+
+      <p>There is more than 1 million year-end permanent population living in Luohu, which covers 78 km². In <b>{{szSaftyCaculate.year}}</b> there are average <b class="highlightText">{{szSaftyCaculate.perCap}} criminal cases </b> happened every day in Shenzhen Luohu district. </p>
     </el-tab-pane>
     <el-tab-pane label="Luohu Public Safety Cases" name="Total">
 
+    <p>In <b>{{szSaftyCaculate.year}}</b> there are average <b class="highlightText">{{szSaftyCaculate.perCap}} public securiy cases </b> happened every day in Shenzhen Luohu district. </p>
     </el-tab-pane>
 
 
@@ -38,7 +40,7 @@
 
         <!-- legend -->
         <g
-          :transform="`translate(50, 70)`"
+          :transform="`translate(50, 125)`"
           fill="white"
           font-size="0.8em"
           font-style="bold"
@@ -58,7 +60,6 @@
           <g
             v-for="({Year},i) in szDataset"
             :key="i"
-
             :transform="`translate(${scale.x(Year)+(scale.x.bandwidth())*0.4}, ${height-margin.bottom })`"
           >
             <text
@@ -85,24 +86,77 @@
         stroke-opacity="0.5" -->
            <g
             :transform="`translate(${scale.x(szDataset[0]['Year'])+(scale.x.bandwidth())*0.1}, 0)`"
-            v-axis:y="scale"></g>
+            v-axis:y="scale">
+          </g>
 
 <!-- line Graph path -->
         <path fill='none'
-              stroke='rgb(195, 20, 238)'
+              stroke='rgb(221, 238, 20)'
               stroke-width='1'
               :d= "lineGenerator(szDataset)" />
 
 <!-- stack graph path -->
 
 
-<path fill='red'
-      stroke='rgb(195, 20, 238)'
-      stroke-width='1'
-      :d= "stackCreator(szDataset)" />
+
+        <!-- <g
+          v-for="({Year},i) in stackCreator.stackSeries(szDataset)"
+          :key="i"
+        > -->
+
+      <g v-if="activeName == 'total_cases' ||activeName == 'Total'">
+          <g v-for="(keyname,i) in lhCrimeKeys">
+            <rect
+            v-if="activeName == 'total_cases'"
+                :id="i"
+                :x="20+85*i"
+                :y="40"
+                width="10px"
+                height="10px"
+                :fill="stackColor(keyname)"
+            />
+            <text
+            v-if="activeName == 'total_cases' "
+              font-size="0.8em"
+                class="textGraphStyle"
+                :id="i"
+                :x="20+85*i"
+                :y="35"
+                width="10px"
+                height="10px"
+                :fill="stackColor(keyname)"
+            >{{keyname}}</text>
+
+            <rect
+            v-if="activeName == 'Total'"
+                :id="i"
+                :x=" i%2!=0? 20+110*i-110 : 20+110*i"
+                :y="i%2!=0? 45 : 10"
+                width="10px"
+                height="10px"
+                :fill="stackColor(keyname)"
+            />
+            <text
+            v-if="activeName == 'Total' "
+              font-size="0.8em"
+              class="textGraphStyle"
+                :id="i"
+                :x=" i%2!=0? 35+110*i-110 : 35+110*i"
+                :y="i%2!=0? 55 : 20"
+                width="20px"
+                height="20px"
+                :fill="stackColor(keyname)"
+            >{{LegendKeyName[i]}}</text>
 
 
+            <path
 
+                  :fill="stackColor(keyname)"
+                  stroke='none'
+                  stroke-width='1'
+                  :d= "areaGenerator(stackCreator(szDataset)[i])" />
+            </g>
+      </g>
 
 
         <g
@@ -145,7 +199,7 @@
         <circle
         v-else-if="selectedCircle==i"
         r="4"
-        fill="rgb(202, 233, 51)"
+        fill="rgb(233, 57, 51)"
         :cx="scale.x(Year)+(scale.x.bandwidth())*0.4"
         :cy= "margin.top + (scale.y(szDataset[i][activeName]) - margin.bottom)"
 
@@ -171,7 +225,7 @@
         </text>
 
         <text
-        v-else-if="selectedCircle==i && activeName=='GDPperCapita'""
+        v-else-if="selectedCircle==i && activeName=='GDPperCapita'"
           :id="i"
           :x="scale.x(Year)+(scale.x.bandwidth())*0.4"
           :y="margin.top + (scale.y(szDataset[i][activeName]) - margin.bottom)-10" >
@@ -185,15 +239,55 @@
           :id="i"
           :x="scale.x(Year)+(scale.x.bandwidth())*0.4"
           :y="margin.top + (scale.y(szDataset[i][activeName]) - margin.bottom)-10" >{{szDataset[i][activeName]}} </text>
+
+
+          <g v-if="activeName == 'total_cases'">
+              <g v-for="(keyname,a) in lhCrimeKeys">
+                <text
+                  v-if="selectedCircle==i""
+                  font-size="0.8em"
+                    :id="i"
+                    :x="20+85*a"
+                    :y="65"
+                    text-anchor="start"
+                    width="20px"
+                    height="20px"
+                    :fill="stackColor(keyname)"
+                >{{szDataset[i][keyname]}}</text>
+            </g>
+          </g>
+
+
+          <g v-if="activeName == 'Total'">
+              <g v-for="(keyname,a) in lhCrimeKeys">
+                <text
+                  v-if="selectedCircle==i""
+                  font-size="0.8em"
+                    :id="i"
+                    :x=" a%2!=0? 20+110*a-110 : 20+110*a"
+                    :y=" a%2!=0? 70 : 35"
+                    text-anchor="start"
+                    width="20px"
+                    height="20px"
+                    :fill="stackColor(keyname)"
+                > {{szDataset[i][keyname]}} </text>
+            </g>
+          </g>
         </g>
 
         </g>
 
 
       </g>
-
-
     </svg>
+
+
+    <div class="graphStyle" v-if="activeName == 'Total'" >
+      <p>According to Law of the People's Republic of China on Penalties for Administration of Public Security, if the violence or crime behavior is not dangerous enough for criminal punishment, the public security organ, normally is the police department, will impose on him/her penalties including warnings, detention of 1- 15 days and fine.</p>
+    <p> In Luohu, 70.4% of the criminal cases in 2017 are either fraud or theft-related, and 2.36% are homicide, violent crime, rape, or robbery. However, 74.9% of the public security cases were categorized as <b>"Acts Infringing upon Rights of the Person and of Property"</b> in the 2018 Luohu annual statistic report, which includes various violent crimes. </p>
+  </div>
+
+
 
   </div>
 
@@ -228,26 +322,27 @@ import szPopulations from "~/assets/dataset/人口变化.json"
     data(){
       return{
         szDataset: lhCrime,
-        selectedCircle:'',
+        selectedCircle:0,
         activeName:"total_cases",
 
-        lhCrimeKeys:["homicide","violentCrime","robbery","rape","fraud","theft","other"],
-
+        lhCrimeKeys:["fraud","theft","homicide","violentCrime","robbery","rape","other"],
+        LegendKeyName:["Disturb PublicOrder", "Impairment Of Public Security","Infringement of other Persons Rights","Disrupting Social Administration"],
         margin: {
         top: 50,
         left: 0,
         right: 0,
         bottom: 50
       },
-        height: 500,
+        height: 600,
         width: 0,
         showTip:false,
-        szHosCaculate:{
-          year:'2018',
-          perCap:'2.6'
+        szSaftyCaculate:{
+          year:'2017',
+          perCap:'22'
         },
-        lengendInfo:"The Criminal Cases in Shenzhen Luohu District",
 
+        lengendInfo:"The Criminal Cases in Shenzhen Luohu District",
+        indexIterLegend:0,
         yExtent: [],
         xExtent: []
 
@@ -262,14 +357,20 @@ import szPopulations from "~/assets/dataset/人口变化.json"
     },
 
     mounted(){
-      // console.log(lhCrime)
+
 
       this.width = this.$refs.container.offsetWidth - 40
       // this.width = this.$refs.container.clientWidth-40
 
         // this.width = 500;
       // this.width= 1000;
-      this.height = 400;
+      this.height = 600;
+      // console.log(this.stackCreator(this.szDataset))
+      console.log(this.stackCreator(this.szDataset)[1].key)
+      console.log(this.stackColor())
+
+
+      // console.log(this.stackCreator(this.szDataset)[0])
       // console.log(this.szDataset)
       // console.log(d3.extent(this.szDataset, (d) => d[this.activeName]))
         // console.log(d3.extent(this.szDataset, d => d[this.activeName]))
@@ -291,8 +392,16 @@ import szPopulations from "~/assets/dataset/人口变化.json"
 
         if(this.activeName=="total_cases"){
           this.szDataset=lhCrime;
+          this.lhCrimeKeys=["fraud","theft","homicide","violentCrime","robbery","rape","other"];
+          this.lengendInfo= "The Criminal Cases in Shenzhen Luohu District"
+          this.szSaftyCaculate.perCap='22'
+          this.szSaftyCaculate.year='2017'
         } else if(this.activeName=="Total"){
             this.szDataset=lhZhian;
+            this.lhCrimeKeys=["DisturbPublicOrder","ImpairmentOfPublicSecurity","infringementofotherPersonsRights","DisruptingTheSocialSdministration"];
+            this.lengendInfo= "Public Security Cases in Shenzhen Luohu District"
+            this.szSaftyCaculate.perCap='22'
+            this.szSaftyCaculate.year='2017'
         }
 
 
@@ -315,30 +424,35 @@ import szPopulations from "~/assets/dataset/人口变化.json"
     },
 
     methods:{
-      color(value){
-            return d3.interpolateSpectral(0.2 + value / d3.max(this.szDataset, d=>d[this.activeName]))
+      color(){
+
+
+
+            // return d3.interpolateSpectral(0.2 + value / d3.max(this.szDataset, d=>d[this.activeName]))
           },
+
+
 
       handleClick(tab, event) {
 
        // console.log(tab, event);
       },
       myResizeHandler(e) {
-    // your code for handling resize...
-      // this.width = this.$refs.container.clientWidth-40
+
       this.width = this.$refs.container.clientWidth
-      // this.height = this.$refs.container.clientHeight*0.4
-      // console.log(document.documentElement.clientHeight)
+
       },
       showTips(event){
       // console.log(this.$el)
       // console.log(this)
         this.selectedCircle = event.currentTarget.id;
-        // if(this.activeName=="LicensedDoctors"||this.activeName=="HospitalBeds"){
-          this.szHosCaculate.year = lhCrime[event.currentTarget.id]["Year"];
-          this.szHosCaculate.perCap = Math.round(lhCrime[event.currentTarget.id][this.activeName]);
+        if(this.activeName=="total_cases"|| this.activeName=="Total"){
+          this.szSaftyCaculate.year = lhCrime[event.currentTarget.id]["Year"];
+          this.szSaftyCaculate.perCap = Math.round(this.szDataset[event.currentTarget.id][this.activeName]/365);
 
-        // }
+          // console.log(this.selectedCircle)
+
+        }
 
             // console.log(this.selectedCircle);
       // this.selectedCircle=index;
@@ -351,30 +465,33 @@ import szPopulations from "~/assets/dataset/人口变化.json"
 
 
     },
-  //   asyncComputed: {
-  //   myResolvedValue: {
-  //     get () {
-  //       return new Promise((resolve, reject) => {
-  //         setTimeout(() => resolve('*Fancy* Resolved Value!'), 1000)
-  //       })
-  //     },
-  //     default: 'No fanciness'
-  //   }
-  // },
 
     computed:{
 
       scale() {
-      const x = d3
-            .scaleBand()
-            .domain(this.szDataset.map(d => d["Year"] ))
-            .range([this.margin.left+80, this.width - this.margin.right-40])
-      const y = d3
-        .scaleLinear()
-        .domain(d3.extent(this.szDataset, (d) => d[this.activeName]))
-        .nice()
-        .range([this.height + this.margin.bottom-140, this.margin.top+40])
-      return { x, y };
+        const x = d3
+              .scaleBand()
+              .domain(this.szDataset.map(d => d["Year"] ))
+              .range([this.margin.left+80, this.width - this.margin.right-40])
+        const y = d3
+          .scaleLinear()
+          // .domain(d3.extent(this.szDataset, (d) => d[this.activeName]))
+          .domain([0, d3.max(this.szDataset, (d) => d[this.activeName])])
+          // .domain([0,30000])
+          // .nice()
+          .range([this.height + this.margin.bottom-140, this.margin.top+100])
+        return { x, y };
+      },
+
+      stackColor(){
+        return  d3.scaleOrdinal()
+                  .domain(this.lhCrimeKeys)
+                  // .domain(this.szDataset.columns.slice(2)))
+                  .range(["#ffdb40","#0eafff","#88d229","#e90d48","#e50de9","#21817e","#2b37a3","#ff4040"])
+                  // .range(d3.schemeTableau10)
+                  .unknown("#ccc")
+
+
       },
       lineGenerator(){
         return d3.line()
@@ -386,16 +503,45 @@ import szPopulations from "~/assets/dataset/人口变化.json"
       },
       stackCreator(){
 
-        return  d3.stack().keys(this.lhCrimeKeys)
-                  .order(d3.stackOrderNone)
-              .offset(d3.stackOffsetNone);;
+        return d3.stack().keys(this.lhCrimeKeys)
+        // .map(d => (d.forEach(v => v.key = d.key), d))
+                  // .order(d3.stackOrderNone)
+              // .offset(d3.stackOffsetNone);
+
+              // return {stackSeries}
 
       },
+      areaGenerator(){
+        // return 0;
+        return d3.area()
+                 .x((d,i)=> {
+
+                   return this.scale.x(d.data["Year"])+(this.scale.x.bandwidth())*0.4 })
+
+                   .y0((d,i) =>{
+                     // console.log(d)
+                     // console.log(this.scale.y(d[0]))
+                    return this.scale.y(d[0])
+
+
+                     })
+                  .y1((d,i) => {
+                    // console.log(this.scale.y(d[1]))
+                    return this.scale.y(d[1])
+
+                  })
+
+
+      },
+
+
+
 
       axesGenerator(){
         return d3.axisLeft()
 
       }
+
 
 
 

@@ -54,6 +54,7 @@
     "theft": 10734,
     "other": 2431
   },
+
   {
     "Year": 2012,
     "total_cases": 18162,
@@ -63,18 +64,7 @@
     "rape": 44,
     "fraud": 2224,
     "theft": 12659,
-    "other": 664
-  },
-  {
-    "Year": 2012,
-    "total_cases": 18162,
-    "homicide": 12,
-    "violentCrime": 207,
-    "robbery": 269,
-    "rape": 44,
-    "fraud": 2224,
-    "theft": 12659,
-    "other": 664
+    "other": 2747
   },
   {
     "Year": 2013,

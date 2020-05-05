@@ -36,6 +36,24 @@
                 </div>
         </div>
 
+
+        <div class='infoContent' v-if="mapRadio=='crime'"  key="3">
+
+            <H1>Crime and Safety in Shenzhen</H1>
+
+                <el-divider class="dividerLine"></el-divider>
+                <div class = "p-description">
+                      <p >Everyone has the universal right to live safely and away from harm. It is a basic factor when considering well-being. (OECD)  </p>
+                      <p>3 homicide cases were on file in Luohu in 2017, and the homicide rate per 100,000 people was 0.29, and it is lower than the national average. </p>
+                </div>
+                <div class="graphContainer">
+                  <CrimeGraph />
+                </div>
+                  <div class = "p-description">
+                    <p>As reported by the Luohu public security organ, the criminal cases on file each year were going up and down from 12,188 cases in 2008, to 7,926 cases in 2017, and the public security cases dropped from 92,120 to 9,505 cases. (Luohu Bureau of Statistics,2018) The overall crime rate (criminal cases plus public security cases and then dividing the permanent population in that year) per 100,000 residents dropped from 11,590 in 2008 to 1,743 in 2017. </p>
+                </div>
+        </div>
+
       </transition>
 
 
@@ -54,12 +72,13 @@
 <script>
 import lineGraphGreen from '~/components/chart/lineGraphGreen';
 import lineGraphHospital from '~/components/chart/lineGraphHospital';
+import CrimeGraph from '~/components/chart/CrimeGraph'
 export default{
   name:'InfoPanel',
 
 
 components:{
-  lineGraphGreen,lineGraphHospital
+  lineGraphGreen,lineGraphHospital,CrimeGraph
 },
 
   props:{
