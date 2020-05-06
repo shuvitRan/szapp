@@ -1,6 +1,6 @@
 [{
     "chapter": 0,
-    "description": " Today more than 55% of the world population lives in cities-70% of the world population will reside in cities by 2050. In the past decades, numerous special economic zones and free trade zones helped the tremendous growth in the third world.",
+    "description": " China’s global rise has outgrown everyone’s expectations. With three decades of growth averaging nearly <b style=\"font-size:1.3rem;line-height: 0.7; \">10 percent</b> percent per year, China’s share of world GDP rose from 2 percent in 1980 to 19.24% percent in 2019. As one of the leading forces in urbanization in the third world, China's urban population increased from <b style=\"font-size:1.3rem;line-height: 0.7; \">17.92% </b> in 1978, to<b style=\"font-size:1.3rem;line-height: 0.7; \"> 58.52%</b> in 2017.",
     "location": {
       "center": [115.695092, 21.020431],
       "zoom": 3.03,
@@ -11,7 +11,7 @@
   },
   {
     "chapter": 1,
-    "description": "Shenzhen serves as one of the best examples of the 21st-century urbanization in developing countries. After four decades of dramatic urbanization, was developed from a fish town to a modern mega-city. ",
+    "description": "<b style=\"font-size:1.3rem;line-height: 0.7; \">Shenzhen</b>, the one pioneer city of China serves as one of the best examples of the 21st-century urbanization in developing countries. After four decades of dramatic urbanization, was developed from a fish town to a <b style=\"font-size:1.3rem;line-height: 0.7; \">modern mega-city</b>. ",
     "location": {
       "center": [113.87860, 22.61496],
       "zoom": 9.11,
@@ -23,7 +23,7 @@
   },
   {
     "chapter": 2,
-    "description": "Shenzhen is a coastal city, which covers 1997.3 square kilometers of land and more than 310 rivers. It is located on the east edge of the Zhujiang River(Pearl River) estuary, and neighboring Dongguan City and Hongkong. ",
+    "description": "It is a coastal city, which covers 1997.3 square kilometers of land and more than 310 rivers. It is located on the east edge of the Zhujiang River(Pearl River) estuary, and neighboring<b style=\"font-size:1.2rem;line-height: 0.7; \"> Dongguan City</b> and <b style=\"font-size:1.2rem;line-height: 0.7; \"> Hongkong.</b> ",
     "location": {
       "center": [113.88568,  22.62120],
       "zoom": 8.81,
@@ -37,7 +37,7 @@
     "year": 1979,
     "GDP": 196,
     "population": 314,
-    "description": " Shenzhen started with 310 thousand residents in 1979 and in the same year it became the first special economic zone in China.",
+    "description": " Started with <b style=\"font-size:1.3rem;line-height: 0.7; \">310 thousand residents</b> in 1979. After the Cultural Revolution, Shenzhen was promoted by Deng Xiaoping, and its partial districts became the first experimental<b style=\"font-size:1.2rem;line-height: 0.7; \"> Special Economic Zone </b>(SEZ) in China to practice the capitalist market economy under the communist government.",
     "location": {
       "center": [114.167245, 22.650228],
       "zoom": 9.85,
@@ -51,15 +51,16 @@
     "year": 1988,
     "GDP": 8698,
     "population": 1201,
-    "description": "In 1980, three years after the Cultural Revolution, Shenzhen was promoted by Deng Xiaoping, and its partial districts became the first experimental Special Economic Zone(SEZ) in China to practice the capitalist market economy under the communist government."
+    "description": "1988, over-the-counter stock market (OTC) appeared in Shenzhen, trading shares of Shenzhen Development Bank. It was later officially recognized as <b style=\"font-size:1.2rem;line-height: 0.7; \">Shenzhen Stock</b> Exchange in 1990, one of the two stock markets in mainland China. In 1990, the first McDonald's in mainland China opened in the Shenzhen Special Economic Zone. <br><br>In 1990, the first <b style=\"font-size:1.2rem;line-height: 0.7; color:#FFC72C; \">McDonald's </b> in mainland China opened in the Shenzhen Special Economic Zone."
 
   },
+
   {
     "chapter": 5,
     "year": 1999,
     "GDP": 182468,
     "population": 6325,
-    "description": "A large number of domestic migrants from all the places of China have been moving to Shenzhen. It is becaming a land of opportunity, and a 21st century city experimenting ground."
+    "description": "A large number of domestic migrants from all the places of China has been moving to Shenzhen, the land of opportunity. Shenzhen became an experimenting ground for 21st-century city. It is the one of the world's <b style=\"font-size:1.2rem;line-height: 0.7; \">fastest growing city</b> in 20 century and early 21 century."
 
   },
   {
@@ -67,7 +68,7 @@
     "year": 2010,
     "GDP": 1000221,
     "population": 10372,
-    "description": " In 2010, the Shenzhen SEZ expanded from its four of nine districts, which is around 396 km², to the whole city."
+    "description": " In 2010, the Shenzhen SEZ expanded from its four of nine districts, which is around 396 km², to the <b style=\"font-size:1.2rem;line-height: 0.7; \">whole city</b>. In this year China surpass Japan and become the world's second-biggest economy. "
 
   },
   {
@@ -75,12 +76,49 @@
     "year": 2018,
     "GDP": 2422197,
     "population": 13026,
-    "description": "The Gross Domestic Product(GDP) of Shenzhen in 2018 is 12,000 times larger than the GDP in 1979. It was also the first time Shenzhen’s GDP has exceeded its neighbour Hongkong."
+    "description": "The Gross Domestic Product(GDP) of Shenzhen in 2018 is <b style=\"font-size:1.3rem;line-height: 0.7; \">12,000 times</b> larger than the GDP in 1979. It was also the first time Shenzhen’s GDP has exceeded its neighbour <b style=\"font-size:1.2rem;line-height: 0.7; \">Hongkong.</b> <br> <br> It also has become the <b style=\"font-size:1.2rem;line-height: 0.7; \">most densely populated urban region</b> in China and 5th in the world, which has 6484 population per km². "
 
   },
   {
     "chapter": 8,
-    
+
+    "description": "Today,  Shenzhen is the epitome of the world factory of China, has the <b style=\"font-size:1.3rem;line-height: 0.7; \">3rd</b> busiest container port in the world. Companies like <b style=\"color:rgb(45, 52, 221); \">Foxconn</b> produced consumer electronics like the iPhone, Headphone, and drones in Shenzhen send to the world every day.  ",
+    "location": {
+      "center": [114.25034, 22.57574 ],
+      "zoom": 13.81,
+      "pitch": 0.00,
+      "bearing": 0.00,
+      "speed":0.2
+    }
+  },
+  {
+    "chapter": 9,
+
+    "description": "With the name of China's <b style=\"font-size:1.3rem;line-height: 0.7; \">Silicon Valley</b>. It is the birthplace and headquarters for many of China’s top technology companies like <b style=\"color:rgb(74, 149, 227); \">Tencent</b>, <b style=\"color:rgb(227, 74, 74); \">Huawei</b>, and <b style=\"color:rgb(214, 214, 214); \">DJI</b>. ",
+    "location": {
+      "center": [113.92881, 22.54353 ],
+      "zoom": 16.86,
+      "pitch": 21.50,
+      "bearing": 0.00,
+      "speed":0.5
+    }
+  },
+  {
+    "chapter": 10,
+
+    "description": "<b style=\"font-size:1rem;line-height: 0.7; \"> This is a story of Shenzhen’s growth. But rapid growth comes with challenges. </b>",
+    "location": {
+      "center": [114.167245, 22.650228],
+      "zoom": 9.85,
+      "pitch": 0.00,
+      "bearing": 0.00,
+      "speed":0.2
+
+    }
+  },
+  {
+    "chapter": 11,
+
     "description": "What will be the challenges that come with the fast urban development and rapid growth of the economy?  "
 
   }

@@ -143,7 +143,9 @@ export default {
        }else if(this.currentStep==7){
          // this.map.setPaintProperty('shenzhen2010', 'raster-opacity', 0);
          this.map.setPaintProperty('shenzhen2019', 'raster-opacity', 1);
-
+         this.map.setPaintProperty('mapbox-satellite', 'raster-saturation', -1);
+         this.map.setPaintProperty('mapbox-satellite', 'raster-brightness-max', 0.5);
+         this.map.flyTo(this.chapterData[3].location)
        }else if(this.currentStep==8){
          // this.map.setPaintProperty('shenzhen2010', 'raster-opacity', 0);
          this.map.setPaintProperty('shenzhen2019', 'raster-opacity', 0);
@@ -152,6 +154,23 @@ export default {
          this.map.setPaintProperty('shenzhen1988', 'raster-opacity', 0);
          this.map.setPaintProperty('shenzhen1979', 'raster-opacity', 0);
          this.map.setPaintProperty('cityShenzhenLabel', 'text-opacity', 0);
+         this.map.setPaintProperty('mapbox-satellite', 'raster-saturation', 0);
+         this.map.setPaintProperty('mapbox-satellite', 'raster-brightness-max', 1);
+         this.map.flyTo(this.chapterData[8].location)
+       } else if(this.currentStep==9){
+
+         this.map.flyTo(this.chapterData[9].location)
+          this.map.setPaintProperty('mapbox-satellite', 'raster-saturation', 0);
+
+       }else if(this.currentStep==10){
+
+         this.map.flyTo(this.chapterData[10].location)
+         this.map.setPaintProperty('mapbox-satellite', 'raster-saturation', -1);
+
+       }else if(this.currentStep==11){
+
+          this.$router.push('/threeAspects');
+
        }
 
     }

@@ -304,7 +304,7 @@ export default {
       isSzpdShow:true,
       roadOpacity:0.3,
       showPOI:[],
-      mapBounds:[[113.26480,22.16109],[114.95236,23.23148]],
+      mapBounds:[[112.17916,21.77561],[114.95560,23.95157]],
       accessToken: 'pk.eyJ1IjoicmFuZGFuZngiLCJhIjoiY2s5Z2t6ejhuMHAwZzNocXRic3Y3ZzczcyJ9.V0hw9NUKKXqgH-pLYROePA'
     }
   },
@@ -500,8 +500,8 @@ export default {
           this.isGreenSection()
           this.map.flyTo(
             {
-              "center": [114.167245, 22.650228],
-              "zoom": 9.55,
+              "center": [113.737201, 22.665613],
+              "zoom": 9.09,
               "pitch": 0.00,
 
               "speed":0.2
@@ -513,7 +513,7 @@ export default {
 
           this.map.flyTo(
             {
-              "center": [114.167245, 22.650228],
+              "center": [114.00076, 22.63705],
               "zoom": 9.85,
               "pitch": 25.00,
               "bearing": 0.00,
@@ -525,7 +525,7 @@ export default {
           this.isCrimeSection()
           this.map.flyTo(
             {
-              "center": [114.11075, 22.55859],
+              "center": [114.09626, 22.57128],
               "zoom": 12.44,
               "pitch": 10.50,
               "bearing": 0.00,

@@ -6,16 +6,18 @@
 
 <div class="lineGraph">
   <el-tabs v-model="activeName" @tab-click="handleClick" class="graphStyle" >
-    <el-tab-pane label="Public Green Spaces Rate" name="PerCapitaPublicGreenAreas_sqm">
-      <p>sdsads sdasdhsdhs</p>
-
+    <el-tab-pane label="Public Green Spaces" name="PublicGreenAreas_hectare">
+      <p>In terms of trees and meadows, the green coverage rate in the city developed areas has maintained to be 45%, and the forest coverage rate is around 40% in the past decade.  As a new city benefiting from the top-down urban designs in the 1980s and 1990s, a network consisting of more than 900 city parks is produced. The urban green space development in Shenzhen is foresight. </p>
     </el-tab-pane>
-    <el-tab-pane label="Public Green Spaces" name="PublicGreenAreas_hectare"></el-tab-pane>
+    <el-tab-pane label="Public Green Spaces Rate" name="PerCapitaPublicGreenAreas_sqm">
+      <p>In the matter of Per individual Public Green Areas rate, the number from Shenzhen was going down from 2015's 16.9m² to 15.4m² in 2018. 9m² per capita is the bottom line for public green spaces, and 50m² is ideal according to some earlier studies.</p>
+    </el-tab-pane>
+
     <el-tab-pane label="Parks" name="NumberofParks_unit"></el-tab-pane>
 
 
 
-  <el-tab-pane label="GDP per-Capita" name="GDPperCapita">USD($) exchange rates 1:7</el-tab-pane>
+  <el-tab-pane label="GDP per-Capita" name="GDPperCapita"></el-tab-pane>
   <el-tab-pane label="GDP" name="GDP"></el-tab-pane>
   <!-- <el-tab-pane label="pri" name="primary">10,000 CHY(￥)</el-tab-pane> -->
   </el-tabs>
@@ -221,7 +223,7 @@ import szGDPData from "~/assets/dataset/gdp.json"
       return{
         szDataset: szGreenData,
         selectedCircle:'',
-        activeName:"PerCapitaPublicGreenAreas_sqm",
+        activeName:"PublicGreenAreas_hectare",
         lineGraph:'',
         dotGraph:'',
         margin: {
@@ -233,7 +235,7 @@ import szGDPData from "~/assets/dataset/gdp.json"
         height: 500,
         width: 0,
         showTip:false,
-        lengendInfo:"Per Capita Public Green Areas in m²",
+        lengendInfo:"Public Green Space in Hectare",
         yExtent: [],
         xExtent: []
 

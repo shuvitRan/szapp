@@ -1,6 +1,7 @@
 <template >
   <div>
 
+<Logo style="position:fixed; z-index:10;" />
   <MapTool
       :enableScrollZoom='true'
       :mapStyle="'mapbox://styles/randanfx/ck9hijte53wtd1imxjlntcr61'"
@@ -8,7 +9,7 @@
       />
   <!-- switch -->
   <div class = 'mapSwitch noselect'>
-    <p>selecting a map to explore</p>
+    <p>Selecting a Map to Explore</p>
      <el-radio-group v-model="mapRadio" size="small" fill="rgba(54, 50, 59,0.7)">
        <el-radio-button label="green">Green Coverage</el-radio-button>
        <el-radio-button label="hospital">Hospital Accessbility</el-radio-button>
@@ -28,10 +29,12 @@
 <script>
   import MapTool from '~/components/MapTool'
   import InfoPanel from '~/components/InfoPanel'
+  import Logo from '~/components/Logo'
 
   export default {
     name:'threeAspects',
     components:{
+      Logo,
       MapTool,
       InfoPanel
     },

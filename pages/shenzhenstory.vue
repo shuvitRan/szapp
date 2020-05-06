@@ -1,6 +1,6 @@
 <template >
   <div>
-<Logo style="position:fixed; z-index:5;" />
+<Logo style="position:fixed; z-index:4;" />
 
   <!-- <Map/> -->
   <!-- <vMapbox/> -->

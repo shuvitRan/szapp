@@ -16,7 +16,8 @@
 
               <el-divider class="dividerLine"></el-divider>
               <div class = "p-description">
-                    <p >In the matter of Per individual Public Green Areas rate, the number from Shenzhen was going down from 2015's 16.9m² to 15.4m² in 2018. 9m² per capita is the bottom line for public green spaces, and 50m² is ideal according to some earlier studies.</p>
+                    <p >Environment-related issues have become a more and more critical factor globally, considering development level, well-being, and liveability. </p>
+
               </div>
               <div class="graphContainer">
               <lineGraphGreen />
@@ -49,9 +50,7 @@
                 <div class="graphContainer">
                   <CrimeGraph />
                 </div>
-                  <div class = "p-description">
-                    <p>As reported by the Luohu public security organ, the criminal cases on file each year were going up and down from 12,188 cases in 2008, to 7,926 cases in 2017, and the public security cases dropped from 92,120 to 9,505 cases. (Luohu Bureau of Statistics,2018) The overall crime rate (criminal cases plus public security cases and then dividing the permanent population in that year) per 100,000 residents dropped from 11,590 in 2008 to 1,743 in 2017. </p>
-                </div>
+
         </div>
 
       </transition>
@@ -91,10 +90,21 @@ components:{
   },
   data(){
     return{
-      infoPanelIsAcive : true,
+      infoPanelIsAcive : false,
       myfade:'fade'
 
     }
+  },
+  watch:{
+    mapRadio(val,oldVal){
+      if(val!=oldVal){
+      this.infoPanelIsAcive=false;
+      }
+
+
+    }
+
+
   },
   methods:{
 
@@ -133,6 +143,7 @@ components:{
   /* white-space: nowrap; */
   transition: 2s;
   transition-timing-function: ease-out;
+  line-break: auto;
 
 }
 
@@ -175,7 +186,7 @@ components:{
   border-radius:  0px 10px 0px 0px;
   width: 4rem;
   height: 8vh;
-  /* background: rgba(15, 15, 15, 0.5); */
+
   color: white;
   display: flex;
   align-items: center;
@@ -289,7 +300,7 @@ margin:10px 0px;
 .p-description{
   position: static;
   white-space:normal;
-  word-break: break-all;
+  /* word-break: break-all; */
 }
 
 .graphContainer{

@@ -25,14 +25,14 @@
 
         <nuxt-link to="/shenzhenstory"
                   class="button--grey"
-              >start</nuxt-link>
+              >| start</nuxt-link>
 
         <a
           href="https://github.com/shuvitRan/msdv-thesis"
           target="_blank"
           class="button--grey"
         >
-          documentation
+          | documentation
         </a>
       </div>
     </div>
@@ -75,6 +75,7 @@ img {
 .titleContainer{
   margin-bottom: -20px;
   padding-bottom: 0px;
+
 }
 .chtitle {
   font-family:  'Noto Serif JP','Ma Shan Zheng',serif;

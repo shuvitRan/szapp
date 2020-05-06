@@ -13,6 +13,8 @@
     <el-tab-pane label="Luohu Public Safety Cases" name="Total">
 
     <p>In <b>{{szSaftyCaculate.year}}</b> there are average <b class="highlightText">{{szSaftyCaculate.perCap}} public securiy cases </b> happened every day in Shenzhen Luohu district. </p>
+
+
     </el-tab-pane>
 
 
@@ -280,8 +282,9 @@
 
       </g>
     </svg>
-
-
+    <div class="graphStyle" v-if="activeName == 'total_cases'" >
+          <p>As reported by the Luohu public security organ, the criminal cases on file each year were going up and down from 12,188 cases in 2008, to 7,926 cases in 2017, and the public security cases dropped from 92,120 to 9,505 cases. (Luohu Bureau of Statistics,2018) The overall crime rate (criminal cases plus public security cases and then dividing the permanent population in that year) per 100,000 residents dropped from 11,590 in 2008 to 1,743 in 2017. </p>
+      </div>
     <div class="graphStyle" v-if="activeName == 'Total'" >
       <p>According to Law of the People's Republic of China on Penalties for Administration of Public Security, if the violence or crime behavior is not dangerous enough for criminal punishment, the public security organ, normally is the police department, will impose on him/her penalties including warnings, detention of 1- 15 days and fine.</p>
     <p> In Luohu, 70.4% of the criminal cases in 2017 are either fraud or theft-related, and 2.36% are homicide, violent crime, rape, or robbery. However, 74.9% of the public security cases were categorized as <b>"Acts Infringing upon Rights of the Person and of Property"</b> in the 2018 Luohu annual statistic report, which includes various violent crimes. </p>

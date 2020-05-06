@@ -47,10 +47,11 @@ h1{
 
 
 .button--grey {
-
+  font-size: 1.2rem;
+  font-weight: 300;
   display: inline-block;
   border-radius: 4px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   color:black;
   text-decoration: none;
   padding: 5px 40px;
@@ -61,7 +62,7 @@ h1{
 
 .button--grey:hover {
   color: white;
-  background-color: rgba(10, 10, 10, 0.67);
+  /* background-color: rgba(10, 10, 10, 0.67); */
 
 }
 </style>
