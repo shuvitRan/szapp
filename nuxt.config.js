@@ -92,7 +92,7 @@ export default {
   },
 
   router: {
-  //   base: '/ShenzhenLivability/dist'
+    base: '/szapp/'
     // mode: 'hash'
   }
 
