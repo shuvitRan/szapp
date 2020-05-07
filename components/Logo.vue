@@ -75,7 +75,7 @@ computed: {
   width:80px;
   height: 80px;
   /* fill:black; */
-  animation: 1s appear;
+  animation: 3s appear;
   margin: auto;
   /* padding: 1rem; */
   margin:0.5rem 1rem;

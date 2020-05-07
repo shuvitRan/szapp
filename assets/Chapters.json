@@ -37,7 +37,9 @@
     "year": 1979,
     "GDP": 196,
     "population": 314,
-    "description": " Started with <b style=\"font-size:1.3rem;line-height: 0.7; \">310 thousand residents</b> in 1979. After the Cultural Revolution, Shenzhen was promoted by Deng Xiaoping, and its partial districts became the first experimental<b style=\"font-size:1.2rem;line-height: 0.7; \"> Special Economic Zone </b>(SEZ) in China to practice the capitalist market economy under the communist government.",
+    "GDPperCap":606,
+    "wage":979,
+    "description": " Started with <b style=\"font-size:1.3rem;line-height: 0.7; \">310K residents</b> in 1979. Three years after the Cultural Revolution, Shenzhen was promoted by Deng Xiaoping, and its partial districts became the first experimental<b style=\"font-size:1.2rem;line-height: 0.7; \"> Special Economic Zone </b>(SEZ) in China to practice the capitalist market economy under the communist government.",
     "location": {
       "center": [114.167245, 22.650228],
       "zoom": 9.85,
@@ -51,7 +53,9 @@
     "year": 1988,
     "GDP": 8698,
     "population": 1201,
-    "description": "1988, over-the-counter stock market (OTC) appeared in Shenzhen, trading shares of Shenzhen Development Bank. It was later officially recognized as <b style=\"font-size:1.2rem;line-height: 0.7; \">Shenzhen Stock</b> Exchange in 1990, one of the two stock markets in mainland China. In 1990, the first McDonald's in mainland China opened in the Shenzhen Special Economic Zone. <br><br>In 1990, the first <b style=\"font-size:1.2rem;line-height: 0.7; color:#FFC72C; \">McDonald's </b> in mainland China opened in the Shenzhen Special Economic Zone."
+    "GDPperCap":6477,
+    "wage":3388,
+    "description": "1988, over-the-counter stock market (OTC) appeared in Shenzhen, trading shares of Shenzhen Development Bank. It was later officially recognized as <b style=\"font-size:1.2rem;line-height: 0.7; \">Shenzhen Stock</b> Exchange in 1990, one of the two stock markets in mainland China. <br><br>In 1990, the first <b style=\"font-size:1.2rem;line-height: 0.7; color:#FFC72C; \">McDonald's </b> in mainland China opened in the Shenzhen Special Economic Zone."
 
   },
 
@@ -60,6 +64,9 @@
     "year": 1999,
     "GDP": 182468,
     "population": 6325,
+    "GDPperCap":30088,
+    "wage":20714,
+    "ResiPrice":2004,
     "description": "A large number of domestic migrants from all the places of China has been moving to Shenzhen, the land of opportunity. Shenzhen became an experimenting ground for 21st-century city. It is the one of the world's <b style=\"font-size:1.2rem;line-height: 0.7; \">fastest growing city</b> in 20 century and early 21 century."
 
   },
@@ -68,7 +75,10 @@
     "year": 2010,
     "GDP": 1000221,
     "population": 10372,
-    "description": " In 2010, the Shenzhen SEZ expanded from its four of nine districts, which is around 396 km², to the <b style=\"font-size:1.2rem;line-height: 0.7; \">whole city</b>. In this year China surpass Japan and become the world's second-biggest economy. "
+    "GDPperCap":98437,
+    "wage":50456,
+    "ResiPrice":20297,
+    "description": " In 2010, the Shenzhen SEZ expanded from its four of nine districts, which is around 396 km², to the <b style=\"font-size:1.2rem;line-height: 0.7; \">whole city</b>. In this year China surpasses Japan and become the world's second-biggest economy. "
 
   },
   {
@@ -76,17 +86,20 @@
     "year": 2018,
     "GDP": 2422197,
     "population": 13026,
+    "GDPperCap":189568,
+    "wage":111709,
+    "ResiPrice":54120,
     "description": "The Gross Domestic Product(GDP) of Shenzhen in 2018 is <b style=\"font-size:1.3rem;line-height: 0.7; \">12,000 times</b> larger than the GDP in 1979. It was also the first time Shenzhen’s GDP has exceeded its neighbour <b style=\"font-size:1.2rem;line-height: 0.7; \">Hongkong.</b> <br> <br> It also has become the <b style=\"font-size:1.2rem;line-height: 0.7; \">most densely populated urban region</b> in China and 5th in the world, which has 6484 population per km². "
 
   },
   {
     "chapter": 8,
 
-    "description": "Today,  Shenzhen is the epitome of the world factory of China, has the <b style=\"font-size:1.3rem;line-height: 0.7; \">3rd</b> busiest container port in the world. Companies like <b style=\"color:rgb(45, 52, 221); \">Foxconn</b> produced consumer electronics like the iPhone, Headphone, and drones in Shenzhen send to the world every day.  ",
+    "description": "Today,  Shenzhen is the epitome of the world factory of China, has the <b style=\"font-size:1.3rem;line-height: 0.7; \">3rd</b> busiest container port in the world. Companies like <b style=\"color:rgb(45, 52, 221); \">Foxconn</b> produced consumer electronics like the iPhone, headphones, and drones in Shenzhen send to the world every day.  ",
     "location": {
       "center": [114.25034, 22.57574 ],
       "zoom": 13.81,
-      "pitch": 0.00,
+      "pitch": 30.00,
       "bearing": 0.00,
       "speed":0.2
     }
@@ -98,8 +111,8 @@
     "location": {
       "center": [113.92881, 22.54353 ],
       "zoom": 16.86,
-      "pitch": 21.50,
-      "bearing": 0.00,
+      "pitch": 0.50,
+      "bearing": -30.00,
       "speed":0.5
     }
   },
@@ -112,14 +125,14 @@
       "zoom": 9.85,
       "pitch": 0.00,
       "bearing": 0.00,
-      "speed":0.2
+      "speed":0.3
 
     }
   },
   {
     "chapter": 11,
 
-    "description": "What will be the challenges that come with the fast urban development and rapid growth of the economy?  "
+    "description": "In the next section let's take a study into Shenzhen's livability in three different aspects:  <b style=\"font-size:1.2rem;line-height: 0.7; \">Green Coverage</b>,  <b style=\"font-size:1.2rem;line-height: 0.7; \">Hospital Accessibility</b>, <b style=\"font-size:1.2rem;line-height: 0.7; \">Crime and Safty.</b> "
 
   }
 

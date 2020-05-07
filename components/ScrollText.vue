@@ -26,7 +26,7 @@
       :offset="0.5"
       @step-enter="({ element }) => (currStep = element.dataset.stepNo)"
       @step-exit="({ element }) => (currStep = null)"> -->
-  <Scrollama :debug="false" :offset="0.5" @step-enter="stepEnterHandler">
+  <Scrollama :debug="false" :offset="0.5" @step-enter="stepEnterHandler" @step-exit="stepExitHandler">
     <!-- @step-exit="({ element }) => (currStep = null)"> -->
     <div class="step" v-for="n in chapters" :key="n.chapter" :data-step-no="n.chapter" :data-cpt-year="n.year" :data-cpt-population="n.population" :data-cpt-gdp="n.GDP" :class="{ active: n.chapter == currStep }">
 
@@ -41,10 +41,19 @@
         {{chpYear}}
       </div>
       <div class="otherIndex" v-if="chpGDP!=undefined">
-        GDP: ￥{{chpGDP}} million
+        GDP: ${{Math.round(chpGDP/7)}} M
       </div>
       <div class="otherIndex" v-if="chpPop!=undefined">
-        Permenent Population: {{chpPop}} K
+        Permenent Population: {{chpPop*0.001}} M
+      </div>
+      <div class="otherIndex" v-if="chpGDPper!=undefined">
+        GDP Per Capita: $ {{Math.round(chpGDPper/7)}}
+      </div>
+      <div class="otherIndex" v-if="chpWage!=undefined">
+        Ave. Wage Per Year: $ {{Math.round(chpWage/7)}}
+      </div>
+      <div class="otherIndex" v-if="chpResi!=undefined">
+        Ave. Residential Price: $ {{ Math.round(chpResi/7)}} per/m²
       </div>
     </div>
 
@@ -52,14 +61,14 @@
 
   </Scrollama>
 
-  <!-- <div class="outro">
-    <p>Select a section</p>
-    <div class="links">
+  <div class="outro">
+    <p></p>
+    <!-- <div class="links">
 
 
     </div>
-    <nuxt-link to="/index" class="button--grey">Statistic </nuxt-link>
-  </div> -->
+    <nuxt-link to="/index" class="button--grey">Statistic </nuxt-link> -->
+  </div>
 
 
 </div>
@@ -92,7 +101,11 @@ export default {
       chapters: chapterdata,
       chpYear: null,
       chpGDP: null,
-      chpPop: null
+      chpPop: null,
+      chpGDPper:null,
+      chpWage:null,
+      chpResi:null
+
     }
   },
 
@@ -117,7 +130,17 @@ export default {
       this.chpYear = element.dataset.cptYear;
       this.chpGDP = element.dataset.cptGdp;
       this.chpPop = element.dataset.cptPopulation;
-      // console.log(this.currStep)
+      this.chpGDPper= chapterdata[element.dataset.stepNo].GDPperCap;
+      this.chpWage= chapterdata[element.dataset.stepNo].wage;
+      this.chpResi= chapterdata[element.dataset.stepNo].ResiPrice;
+      console.log(element)
+    },
+    stepExitHandler(element){
+      // if()
+      // console.log(element.index.length);
+      if(element.index=== 11){
+          this.$router.push('/threeAspects');
+      }
     }
   }
 }
@@ -216,12 +239,18 @@ text-align: center;
 
 
 .graphic {
-  height: 100vh;
-  margin: 5rem 3rem;
+  /* height: 10vh; */
+  margin: 2rem 3rem;
   /* border: 1px solid #ccc; */
-  /* background-color: #eee; */
+  background-color: rgba(1, 1, 1, 0.4);
+
+  border-radius: 10px;
+  shadow: 0 0 10px rgb(0, 0, 0);
+  padding: 1.2rem 1.2rem;
+  position: float;
   color: rgba(255, 255, 255, 1);
-  display: inline-block;
+  /* color: rgba(0, 0, 0, 1); */
+  display: inline;
   text-align: left;
   float: right;
   /* align-items: center;
@@ -232,7 +261,7 @@ text-align: center;
   display: block;
   /* font-weight: bolder; */
   font-size: 7rem;
-
+line-height: 1.2;
   /* font-style:italic; */
   font-family: 'Noto Serif JP', serif;
     font-variant-numeric: oldstyle-nums;
@@ -269,7 +298,7 @@ text-align: center;
 }
 
 .step-text{
-  background-color:  rgba(1, 1, 1, 0.8);
+  background-color:  rgba(1, 1, 1, 0.5);
   border-radius: 10px;
   font-weight: 300;
 display: block;

@@ -46,12 +46,23 @@ export default {
     },
     currentYear:{
       type: String,
-      requre:false
+      require:false
     },
     mapStyle:{
       type: String,
-      requre:true
+      require:true
+    },
+    mouseCoordX:{
+      type:Number,
+      require:false
+    },
+    mouseCoordY:{
+      type:Number,
+      require:false
     }
+
+
+
     },
 
 
@@ -167,11 +178,20 @@ export default {
          this.map.flyTo(this.chapterData[10].location)
          this.map.setPaintProperty('mapbox-satellite', 'raster-saturation', -1);
 
-       }else if(this.currentStep==11){
-
-          this.$router.push('/threeAspects');
-
        }
+
+    },
+  async  mouseCoordX(){
+
+    if(!this.isMapLoading){
+      this.map.setBearing(-this.mouseCoordX);
+    }
+
+    },
+  async  mouseCoordY(){
+    if(!this.isMapLoading){
+      this.map.setPitch(this.mouseCoordY);
+    }
 
     }
 

@@ -16,7 +16,7 @@
 
               <el-divider class="dividerLine"></el-divider>
               <div class = "p-description">
-                    <p >Environment-related issues have become a more and more critical factor globally, considering development level, well-being, and liveability. </p>
+                    <p >The green infrastructure plays a vital role in cities' livability and sustainability. Many studies have shown the urban green space is correlated to the residents' well-being, happiness level, sociality satisfaction level.  </p>
 
               </div>
               <div class="graphContainer">
@@ -26,11 +26,12 @@
         </div>
         <div class='infoContent' v-if="mapRadio=='hospital'"  key="2">
 
-            <H1>Hospital Accessbility in Shenzhen</H1>
+            <H1>Hospital Accessibility in Shenzhen</H1>
 
                 <el-divider class="dividerLine"></el-divider>
                 <div class = "p-description">
                       <p >It is crucial that everyone, especially those people who are vulnerable, older, younger, or marginalized, has reasonable access to health services when they need it. </p>
+
                 </div>
                 <div class="graphContainer">
                   <lineGraphHospital />
@@ -45,7 +46,8 @@
                 <el-divider class="dividerLine"></el-divider>
                 <div class = "p-description">
                       <p >Everyone has the universal right to live safely and away from harm. It is a basic factor when considering well-being. (OECD)  </p>
-                      <p>3 homicide cases were on file in Luohu in 2017, and the homicide rate per 100,000 people was 0.29, and it is lower than the national average. </p>
+
+                      <p>As reported by the Luohu public security organ, the criminal cases on file each year were going up and down from 12,188 cases in 2008, to 7,926 cases in 2017, and the public security cases dropped from 92,120 to 9,505 cases. The overall crime rate per 100,000 residents dropped from <b>11,590 </b>in 2008 to<b> 1,743</b> in 2017.As a reference comparison, with 2 million populations in <b>Queens</b>, New York, the crime rate is <b>1559</b> per 100,000 residents in 2018. The neighbor Hong Kong, had the overall crime rate of 758 in 2017 and 787 in 2019. </p>
                 </div>
                 <div class="graphContainer">
                   <CrimeGraph />

@@ -1,9 +1,9 @@
 <template>
-<div >
+<div style="width:100vw;height:100vh" @mousemove="mouseCoordinates">
 
 
   <!-- <Map mapStyle="mapbox://styles/randanfx/ck99glwc30uwk1ipbue3ie1hb" /> -->
-    <vueMap mapStyle="mapbox://styles/randanfx/ck99glwc30uwk1ipbue3ie1hb" />
+  <vueMap mapStyle="mapbox://styles/randanfx/ck99glwc30uwk1ipbue3ie1hb" :mouseCoordX="mousePosition.x" :mouseCoordY="mousePosition.y"  />
   <div class="container">
 
     <div>
@@ -36,7 +36,7 @@
         </a>
       </div>
     </div>
-
+  
   </div>
     <!-- <p>a data visualization by dan ran </p> -->
   </div>
@@ -49,7 +49,46 @@ import vueMap from '~/components/vueMap'
 export default {
   components: {
     vueMap
+  },
+  data(){
+    return{
+      mousePosition:{x:0,y:0},
+      window: {
+      width: 0,
+      height: 0
+      }
+
+    }
+  },
+  created() {
+       // window.addEventListener('resize', this.handleResize);
+       // this.handleResize();
+   },
+   destroyed() {
+       // window.removeEventListener('resize', this.handleResize);
+   },
+  methods:{
+    mouseCoordinates(event){
+    this.mousePosition.x=this.convertRange(event.clientX,[0,window.innerWidth],[-5,5]);
+    this.mousePosition.y=Math.round(this.convertRange(event.clientY,[0,window.innerHeight],[0,30]));
+  },
+    convertRange( value, r1, r2 ) {
+    return ( value - r1[0] ) * ( r2[ 1 ] - r2[ 0 ] ) / ( r1[ 1 ] - r1[ 0 ] ) + r2[ 0 ];
+  },
+  handleResize() {
+        // this.window.width = window.innerWidth;
+        // this.window.height = window.innerHeight;
+    }
+
+
+  },
+  computed:{
+
+
+
   }
+
+
 }
 </script>
 
@@ -75,6 +114,7 @@ img {
 .titleContainer{
   margin-bottom: -20px;
   padding-bottom: 0px;
+  animation: 4s appear ;
 
 }
 .chtitle {
@@ -97,6 +137,15 @@ img {
     font-size: 80px;
     color: #fcfcfc;
     letter-spacing: 5px;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .subtitle {

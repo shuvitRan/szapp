@@ -91,10 +91,10 @@ export default {
     }
   },
 
-  // router: {
+  router: {
   //   base: '/ShenzhenLivability/dist'
-  //   // mode: 'hash'
-  // }
+    // mode: 'hash'
+  }
 
 
 }

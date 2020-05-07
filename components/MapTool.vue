@@ -99,7 +99,7 @@
 
       <div>
         <b>Isochrone</b>
-          <p>10 minutes driving reachable reagions <br>around hospitals.</p>
+          <p>10 minutes driving reachable regions <br>around hospitals and health centers.</p>
       <div>
       <span class="panelText">Opacity</span>
 
