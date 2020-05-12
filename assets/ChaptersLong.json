@@ -1,0 +1,162 @@
+[{
+    "chapter": 0,
+    "description": " China’s global rise has outgrown everyone’s expectations. With three decades of growth averaging nearly <b style=\"font-size:1.3rem;line-height: 0.7; \">10 percent</b> percent per year, China’s share of world GDP rose from 2 percent in 1980 to 19.24% percent in 2019. As one of the leading forces in urbanization in the third world, China's urban population increased from <b style=\"font-size:1.3rem;line-height: 0.7; \">17.92% </b> in 1978, to<b style=\"font-size:1.3rem;line-height: 0.7; \"> 58.52%</b> in 2017.",
+    "location": {
+      "center": [115.695092, 21.020431],
+      "zoom": 3.03,
+      "pitch": 34.00,
+      "bearing": -6.40,
+      "speed":0.6
+    }
+  },
+  {
+    "chapter": 1,
+    "description": "<b style=\"font-size:1.3rem;line-height: 0.7; \">Shenzhen</b>, the one pioneer city of China serves as one of the best examples of the 21st-century urbanization in developing countries. ",
+    "location": {
+      "center": [113.87860, 22.61496],
+      "zoom": 9.11,
+      "pitch": 18.50,
+      "bearing": -7.2,
+      "speed":0.4,
+      "essential": true
+    }
+  },
+  {
+    "chapter": 2,
+    "description": "It is a coastal city, which covers 1997.3 square kilometers of land and more than 310 rivers. It is located on the east edge of the Zhujiang River(Pearl River) estuary, and neighboring<b style=\"font-size:1.2rem;line-height: 0.7; \"> Dongguan City</b> and <b style=\"font-size:1.2rem;line-height: 0.7; \"> Hongkong.</b> ",
+    "location": {
+      "center": [113.88568,  22.62120],
+      "zoom": 8.81,
+      "pitch": 51.50,
+      "bearing": 4.8,
+      "speed":0.05
+    }
+  },
+  {
+    "chapter": 3,
+
+    "description": "The story of growth started four decades ago. Shenzhen was a <b style=\"font-size:1.2rem;line-height: 0.7; \">fish town</b> in Guangdong Province. ",
+    "location": {
+      "center": [114.167245, 22.650228],
+      "zoom": 9.85,
+      "pitch": 0.00,
+      "bearing": 0.00,
+      "speed":0.1
+    }
+
+  },
+  {
+    "chapter": 4,
+    "year": 1979,
+    "GDP": 196,
+    "population": 314,
+    "GDPperCap":606,
+    "wage":979,
+    "description":"Three years after the Cultural Revolution, Shenzhen was promoted by Deng Xiaoping, and its partial districts became the first experimental<b style=\"font-size:1.2rem;line-height: 0.7; \"> Special Economic Zone </b>(SEZ) in China to practice the capitalist market economy under the communist government.Started with <b style=\"font-size:1.3rem;line-height: 0.7; \">310K residents</b> in 1979" ,
+    "pic":true,
+    "location": {
+      "center": [114.167245, 22.650228],
+      "zoom": 9.85,
+      "pitch": 0.00,
+      "bearing": 0.00,
+      "speed":0.1
+    }
+  },
+
+  {
+    "chapter": 5,
+    "year": 1988,
+    "GDP": 8698,
+    "population": 1201,
+    "GDPperCap":6477,
+    "wage":3388,
+    "description": "1988, over-the-counter stock market (OTC) appeared in Shenzhen, trading shares of Shenzhen Development Bank. It was later officially recognized as <b style=\"font-size:1.2rem;line-height: 0.7; \">Shenzhen Stock</b> Exchange in 1990, one of the two stock markets in mainland China. <br><br>In 1990, the first <b style=\"font-size:1.2rem;line-height: 0.7; color:#FFC72C; \">McDonald's </b> in mainland China opened in the Shenzhen Special Economic Zone."
+
+  },
+
+  {
+    "chapter": 6,
+    "year": 1999,
+    "GDP": 182468,
+    "population": 6325,
+    "GDPperCap":30088,
+    "wage":20714,
+    "ResiPrice":2004,
+    "description": "A large number of domestic migrants from all the places of China has been moving to Shenzhen, the land of opportunity. Shenzhen became an experimenting ground for 21st-century city. It is the one of the world's <b style=\"font-size:1.2rem;line-height: 0.7; \">fastest growing city</b> in 20 century and early 21 century."
+
+  },
+  {
+    "chapter": 7,
+    "year": 2010,
+    "GDP": 1000221,
+    "population": 10372,
+    "GDPperCap":98437,
+    "wage":50456,
+    "ResiPrice":20297,
+    "description": " In 2010, the Shenzhen SEZ expanded from its four of nine districts, which is around 396 km², to the <b style=\"font-size:1.2rem;line-height: 0.7; \">whole city</b>. In this year China surpasses Japan and become the world's second-biggest economy. "
+
+  },
+  {
+    "chapter": 8,
+    "year": 2018,
+    "GDP": 2422197,
+    "population": 13026,
+    "GDPperCap":189568,
+    "wage":111709,
+    "ResiPrice":54120,
+    "description": "The Gross Domestic Product(GDP) of Shenzhen in 2018 is <b style=\"font-size:1.3rem;line-height: 0.7; \">3rd</b> larger than the GDP in 1979. It was also the first time Shenzhen’s GDP has exceeded its neighbour <b style=\"font-size:1.2rem;line-height: 0.7; \">Hongkong.</b> "
+
+  },
+  {
+    "chapter": 9,
+
+    "description":" It has become the <b style=\"font-size:1.2rem;line-height: 0.7; \">most densely populated urban region</b> in China and 5th in the world, which has 6484 population per km². "
+
+  },
+  {
+    "chapter": 10,
+
+    "description": "Today,  Shenzhen is the epitome of the world factory of China, has the <b style=\"font-size:1.3rem;line-height: 0.7; \">3rd</b> busiest container port in the world. Companies like <b style=\"color:rgb(45, 52, 221); \">Foxconn</b> produced consumer electronics like the iPhone, headphones, and drones in Shenzhen send to the world every day.  ",
+    "location": {
+      "center": [114.25034, 22.57574 ],
+      "zoom": 13.81,
+      "pitch": 30.00,
+      "bearing": 0.00,
+      "speed":0.2
+    }
+  },
+  {
+    "chapter": 11,
+
+    "description": "With the name of China's <b style=\"font-size:1.3rem;line-height: 0.7; \">Silicon Valley</b>. It is the birthplace and headquarters for many of China’s top technology companies like <b style=\"color:rgb(74, 149, 227); \">Tencent</b>, <b style=\"color:rgb(227, 74, 74); \">Huawei</b>, and <b style=\"color:rgb(214, 214, 214); \">DJI</b>. ",
+    "location": {
+      "center": [113.92885, 22.52574 ],
+      "zoom": 16.86,
+      "pitch": 0.50,
+      "bearing": 15.00,
+      "speed":0.5
+    }
+  },
+  {
+    "chapter": 12,
+
+    "description": "<b style=\"font-size:1rem;line-height: 0.7; \"> This is a story of Shenzhen’s growth. But rapid growth comes with challenges. </b>",
+    "location": {
+      "center": [114.167245, 22.650228],
+      "zoom": 9.85,
+      "pitch": 0.00,
+      "bearing": 0.00,
+      "speed":0.1
+
+    }
+  },
+  {
+    "chapter": 13,
+
+    "description": "In the next section let's take a study into Shenzhen's livability in three different aspects:  <b style=\"font-size:1.2rem;line-height: 0.7; \">Green Coverage</b>,  <b style=\"font-size:1.2rem;line-height: 0.7; \">Hospital Accessibility</b>, <b style=\"font-size:1.2rem;line-height: 0.7; \">Crime and Safty.</b> "
+
+  }
+
+
+
+]

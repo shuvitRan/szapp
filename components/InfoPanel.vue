@@ -16,7 +16,7 @@
 
               <el-divider class="dividerLine"></el-divider>
               <div class = "p-description">
-                    <p >The green infrastructure plays a vital role in cities' livability and sustainability. Many studies have shown the urban green space is correlated to the residents' well-being, happiness level, sociality satisfaction level.  </p>
+                    <p >The green infrastructure plays a vital role in cities' livability and sustainability. Many studies have shown the urban green space is correlated to the residents' well-being, happiness level, and sociality satisfaction level.  </p>
 
               </div>
               <div class="graphContainer">
@@ -45,9 +45,10 @@
 
                 <el-divider class="dividerLine"></el-divider>
                 <div class = "p-description">
-                      <p >Everyone has the universal right to live safely and away from harm. It is a basic factor when considering well-being. (OECD)  </p>
+                      <p >Everyone has the universal right to live safely and away from harm. It is a basic factor when considering well-being.</p>
 
-                      <p>As reported by the Luohu public security organ, the criminal cases on file each year were going up and down from 12,188 cases in 2008, to 7,926 cases in 2017, and the public security cases dropped from 92,120 to 9,505 cases. The overall crime rate per 100,000 residents dropped from <b>11,590 </b>in 2008 to<b> 1,743</b> in 2017.As a reference comparison, with 2 million populations in <b>Queens</b>, New York, the crime rate is <b>1559</b> per 100,000 residents in 2018. The neighbor Hong Kong, had the overall crime rate of 758 in 2017 and 787 in 2019. </p>
+                      <!-- <p>As reported by the Luohu public security organ, the criminal cases on file each year were going up and down from 12,188 cases in 2008, to 7,926 cases in 2017, and the public security cases dropped from 92,120 to 9,505 cases. The overall crime rate per 100,000 residents dropped from <b>11,590 </b>in 2008 to<b> 1,743</b> in 2017.As a reference comparison, with 2 million populations in <b>Queens</b>, New York, the crime rate is <b>1559</b> per 100,000 residents in 2018. The neighbor Hong Kong, had the overall crime rate of 758 in 2017 and 787 in 2019. </p> -->
+
                 </div>
                 <div class="graphContainer">
                   <CrimeGraph />
@@ -162,6 +163,7 @@ components:{
 .infoButton{
   width: 4rem;
   height: 8vh;
+  bottom: 10vh;
   background: rgba(15, 15, 15, 0.5);
   color: white;
   display: flex;

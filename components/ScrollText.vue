@@ -5,7 +5,9 @@
   <!-- <vueMap :mapStyle="'mapbox://styles/randanfx/ck98yu85q0dkn1jnr7zqwfbqd'" /> -->
   <div class="intro">
 <div class="intro-text">
-<p> <b style="font-size:3rem; line-height: 0.7;">70%</b> of the world population will reside in cities by 2050. In the past decades, numerous special economic zones and free trade zones helped the tremendous growth in the third world.</p>
+<!-- <p> <b style="font-size:3rem; line-height: 0.7;">70%</b> of the world population will reside in cities by 2050. In the past decades, numerous special economic zones and free trade zones helped the tremendous growth in the developing world.</p> -->
+<p> <b style="font-size:4rem; line-height: 0.7;">70%</b> of the world population will reside in cities by <b>2050</b>. </p>
+
 </div>
 <div class="peopleContainers">
   <div class="people-icons" v-for="index in 10" :key="index">
@@ -31,13 +33,38 @@
     <div class="step" v-for="n in chapters" :key="n.chapter" :data-step-no="n.chapter" :data-cpt-year="n.year" :data-cpt-population="n.population" :data-cpt-gdp="n.GDP" :class="{ active: n.chapter == currStep }">
 
 
-      <p class="step-text" v-html="n.description"></p>
+
+      <p class="step-text" v-html="n.description" v-if="n.chapter!=5&&n.chapter!=6&&n.chapter!=7"></p>
 
     </div>
 
-    <div class="graphic" slot="graphic" v-if="chpYear!=undefined">
+    <!-- <transition name="fadeimg" mode="out-in"> -->
+
+    <div class="ChpPicContainer" slot="graphic" v-if="currStep==3" :key="1">
+
+      <img  class="ChpPic"  width="1000" height='auto' src="~/assets/img/sz1979.jpg" alt="Shenzhen 1981" >
+      <!-- <p class="picText">《东门街景》1979年 作者：何煌友</p> -->
+      <p class="picText">Shenzhen East Gate, 何煌友，1979 </p>
+    </div>
+    <div class="ChpPicContainer" slot="graphic" v-if="currStep==9" :key="2">
+
+      <img  class="ChpPic"  style="max-width:90%"  src="~/assets/img/sztoday2.jpg" alt="Shenzhen 1981" >
+      <!-- <p class="picText">《东门街景》1979年 作者：何煌友</p> -->
+      <p class="picText">Shenzhen Futian District, 2019 </p>
+    </div>
+
+    <!-- <div class="ChpPicContainer" style="background-color:  rgba(1, 1, 1, 0.0);;align-items: flex-end; " slot="graphic" v-if="currStep==11" :key="3">
+
+      <img  class="ChpPic"  style=" border-radius:1px;animation: 5s appear ;max-width:30%; margin-right:20vw; opacity:0.7;"  src="~/assets/img/tecent.jpg" alt="tencent" >
+
+    </div> -->
+
+  <!-- </transition> -->
+
+
+    <div class="graphic" slot="graphic" v-if="chpYear!=undefined" >
       <!-- hello {{ currStep }}{{currentYear}} -->
-      <div class="year">
+      <div class="year"  >
         {{chpYear}}
       </div>
       <div class="otherIndex" v-if="chpGDP!=undefined">
@@ -57,9 +84,13 @@
       </div>
     </div>
 
+
+
     <!-- <div class="graphic" slot="graphic"> hello {{ currStep }}</div> -->
 
   </Scrollama>
+
+
 
   <div class="outro">
     <p></p>
@@ -104,7 +135,8 @@ export default {
       chpPop: null,
       chpGDPper:null,
       chpWage:null,
-      chpResi:null
+      chpResi:null,
+      chpPic:null
 
     }
   },
@@ -123,22 +155,29 @@ export default {
       direction
     }) {
 
-      this.currStep = parseInt(element.dataset.stepNo);
+      // this.currStep = parseInt(element.dataset.stepNo);
+
       // handle the step-event as required here
-      // console.log(element, index, direction)
-      // console.log(element.dataset.cptYear)
-      this.chpYear = element.dataset.cptYear;
-      this.chpGDP = element.dataset.cptGdp;
-      this.chpPop = element.dataset.cptPopulation;
-      this.chpGDPper= chapterdata[element.dataset.stepNo].GDPperCap;
-      this.chpWage= chapterdata[element.dataset.stepNo].wage;
-      this.chpResi= chapterdata[element.dataset.stepNo].ResiPrice;
-      console.log(element)
+      console.log(element, index, direction)
+      console.log(index)
+      // this.chpYear = element.dataset.cptYear;
+      // this.chpGDP = element.dataset.cptGdp;
+      // this.chpPop = element.dataset.cptPopulation;
+      this.currStep= chapterdata[index].chapter;
+      this.chpYear=chapterdata[index].year;
+      this.chpGDP = chapterdata[index].GDP;
+      this.chpPop =chapterdata[index].population;
+      this.chpGDPper= chapterdata[index].GDPperCap;
+      this.chpWage= chapterdata[index].wage;
+      this.chpResi= chapterdata[index].ResiPrice;
+      this.chpPic = chapterdata[index].pic;
+      // this.chpResi= chapterdata[element.dataset.stepNo].ResiPrice;
+      // console.log(element)
     },
     stepExitHandler(element){
       // if()
       // console.log(element.index.length);
-      if(element.index=== 11){
+      if(element.index=== 12){
           this.$router.push('/threeAspects');
       }
     }
@@ -242,7 +281,7 @@ text-align: center;
   /* height: 10vh; */
   margin: 2rem 3rem;
   /* border: 1px solid #ccc; */
-  background-color: rgba(1, 1, 1, 0.4);
+  /* background-color: rgba(1, 1, 1, 0.4); */
 
   border-radius: 10px;
   shadow: 0 0 10px rgb(0, 0, 0);
@@ -253,6 +292,7 @@ text-align: center;
   display: inline;
   text-align: left;
   float: right;
+
   /* align-items: center;
   justify-content: left; */
 }
@@ -298,7 +338,7 @@ line-height: 1.2;
 }
 
 .step-text{
-  background-color:  rgba(1, 1, 1, 0.5);
+  background-color:  rgba(1, 1, 1, 0.7);
   border-radius: 10px;
   font-weight: 300;
 display: block;
@@ -326,10 +366,72 @@ font-size: 1.5rem;
   text-shadow: 0px 0px 10px #000000;
   color: white;
   /* transform: translateX(200); */
+
 }
 
 .links {
   display: inline-block;
   padding-top: 15px;
+}
+.ChpPicContainer{
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  /* margin-left: auto; */
+  height:100vh;
+  width: 100%;
+  background: rgba(15, 15, 15, 0.7);
+  /* display: inline; */
+
+  /* text-align: right; */
+
+
+  flex-direction: column;
+
+  animation: 1s appear ;
+  overflow-x: hidden ;
+  /* transition: 2s; */
+}
+.ChpPic{
+  /* z-index: 20; */
+  position: relative;
+
+  transition: 2s;
+
+
+
+}
+.ChpPic2{
+  /* z-index: 20; */
+  position: absolute;
+  right:10vw;
+  float:left;
+
+  transition: 5s;
+
+
+
+}
+.picText{
+  position: relative;
+  display: inline-block;
+  color: white;
+  font-size: 0.7rem;
+
+}
+
+
+.fadeimg-enter-active,
+.fadeimg-leave-active
+{
+    transition: opacity 1s;
+
+}
+.fadeimg-enter,
+.fadeimg-leave-to
+{
+    opacity: 0;
+
 }
 </style>

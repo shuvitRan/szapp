@@ -21,15 +21,25 @@
                 class="menubutton"
             > | growth </nuxt-link>
 
-            <nuxt-link to="/threeAspects"
-                      class="menubuttonOn"
-                        v-if="currentRouteName == 'threeAspects'"
-                  > | livability </nuxt-link>
+      <nuxt-link to="/threeAspects"
+                class="menubuttonOn"
+                  v-if="currentRouteName == 'threeAspects'"
+            > | livability </nuxt-link>
 
-                  <nuxt-link to="/threeAspects"
-                          v-if="currentRouteName !== 'threeAspects'"
-                            class="menubutton"
-                        > | livability </nuxt-link>
+      <nuxt-link to="/threeAspects"
+              v-if="currentRouteName !== 'threeAspects'"
+                class="menubutton"
+                      > | livability </nuxt-link>
+
+      <nuxt-link to="/about"
+                class="menubuttonOn"
+                  v-if="currentRouteName == 'about'"
+            > | about </nuxt-link>
+
+      <nuxt-link to="/about"
+              v-if="currentRouteName !== 'about'"
+                class="menubutton"
+            > | about </nuxt-link>
 
 
     </div>

@@ -7,13 +7,18 @@
 <div class="lineGraph">
   <el-tabs v-model="activeName" @tab-click="handleClick" class="graphStyle" >
     <el-tab-pane label="Public Green Spaces" name="PublicGreenAreas_hectare">
-      <p>In terms of trees and meadows, the green coverage rate in the city developed areas has maintained to be 45%, and the forest coverage rate is around 40% in the past decade.  As a new city benefiting from the top-down urban designs in the 1980s and 1990s, a network consisting of more than 900 city parks is produced. The urban green space development in Shenzhen is foresight. </p>
+      <!-- <p>In terms of trees and meadows, the green coverage rate in the city developed areas has maintained to be 45%, and the forest coverage rate is around 40% in the past decade.  As a new city benefiting from the top-down urban designs in the 1980s and 1990s, a network consisting of more than 900 city parks is produced. The urban green space development in Shenzhen is foresight. </p> -->
+      <p>As a new city benefiting from the top-down urban designs in the 1980s and 1990s, the green coverage rate in the city developed areas has maintained to be  <b class='highlightTextGreen'>45%</b>, and the forest coverage rate is around <b class='highlightTextGreen'>40%</b> in the past decade.   </p>
+
     </el-tab-pane>
     <el-tab-pane label="Public Green Spaces Rate" name="PerCapitaPublicGreenAreas_sqm">
-      <p>In the matter of Per individual Public Green Areas rate, the number from Shenzhen was going down from 2015's 16.9m² to 15.4m² in 2018. 9m² per capita is the bottom line for public green spaces, and 50m² is ideal according to some earlier studies.</p>
+      <p>In the matter of Per individual Public Green Areas rate, the number of Shenzhen was going down from 2015's 16.9m² to<b class="highlightText"> 15.4m²</b> in 2018. 9m² per capita is the bottom line for public green spaces, and 50m² is ideal according to some earlier studies.</p>
     </el-tab-pane>
 
-    <el-tab-pane label="Parks" name="NumberofParks_unit"></el-tab-pane>
+    <el-tab-pane label="Parks" name="NumberofParks_unit">
+      <p>Shenzhen has a network consisting of more than  <b class='highlightTextGreen'>900</b> city parks, but they are unevenly distributed
+</p>
+    </el-tab-pane>
 
 
 
@@ -191,6 +196,17 @@
 
 
     </svg>
+    <div class="graphStyle"  v-if="activeName == 'PublicGreenAreas_hectare'">
+<h1>Environmental Aspects of Livability</h1>
+  <p>Environment-related issues have become a more and more critical factor globally, considering development level, well-being, and liveability. It is a major dimension when the United Nations plans its Sustainable Development Goals for 2030. The late 1960s and 1970s was the start of environmental regulation. Due to the perfection in pollution regulation, safety laws, and wage equality in industrialized countries, many mass-production industries moved to the developing region. The myth of economic growth with the damaging of living environment is repeatedly happening since the Industrial Revolution.
+</p>
+      </div>
+
+    <div class="graphStyle"  v-if="activeName == 'PerCapitaPublicGreenAreas_sqm'">
+<h1>More Green is Needed</h1>
+  <p>In 2016, Shenzhen became a pilot city for the “Sponge City” initiative, a Chinese national policy framework that utilizes a nature-based solution to manage stormwater. Due to the lack of vacant land within the city, the availability of empty rooftops on buildings is a largely untapped resource, making it a perfect location to install green infrastructure. If installed under “Sponge City” standards, green roofs can retain over 65% of rainwater that reaches their surfaces, creating a stormwater management system that can absorb, purify, store and reuse rainwater. Green roofs also help regulate room temperature within the building, reduce the urban heat island effect, improve air quality, and lower greenhouse gas emissions.
+</p>
+      </div>
 
 </div>
 
@@ -411,6 +427,7 @@ import szGDPData from "~/assets/dataset/gdp.json"
 </script>
 
 <style>
+
 .graphStyle{
   color:white;
 
@@ -432,6 +449,14 @@ import szGDPData from "~/assets/dataset/gdp.json"
 
 
     color:white;
+
+
+}
+
+.highlightTextGreen{
+  font-size: 1.5rem;
+  color: #25dd59;
+  line-height: 0.7;
 
 
 }

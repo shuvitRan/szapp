@@ -27,16 +27,20 @@
                   class="button--grey"
               >| start</nuxt-link>
 
-        <a
+              <nuxt-link to="/about"
+                        class="button--grey"
+                    >| about</nuxt-link>
+
+        <!-- <a
           href="https://github.com/shuvitRan/msdv-thesis"
           target="_blank"
           class="button--grey"
         >
           | documentation
-        </a>
+        </a> -->
       </div>
     </div>
-  
+
   </div>
     <!-- <p>a data visualization by dan ran </p> -->
   </div>

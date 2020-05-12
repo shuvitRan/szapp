@@ -65,4 +65,28 @@ h1{
   /* background-color: rgba(10, 10, 10, 0.67); */
 
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb:vertical {
+  /* width: 1px; */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(41, 41, 41, 0.54);
+  /* transition: 2s; */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  /* background: #ff0000; */
+}
 </style>

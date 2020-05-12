@@ -92,7 +92,7 @@ export default {
   },
 
   router: {
-    base: '/szapp/'
+    // base: '/szapp/'
     // mode: 'hash'
   }
 

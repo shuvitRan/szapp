@@ -8,12 +8,16 @@
   <el-tabs v-model="activeName" @tab-click="handleClick" class="graphStyle" >
     <el-tab-pane label="Luohu Crime Cases" name="total_cases">
 
-      <p>There is more than 1 million year-end permanent population living in Luohu, which covers 78 km². In <b>{{szSaftyCaculate.year}}</b> there are average <b class="highlightText">{{szSaftyCaculate.perCap}} criminal cases </b> happened every day in Shenzhen Luohu district. </p>
-        <p>3 homicide cases were on file in Luohu in 2017, and the homicide rate per 100,000 people was 0.29, and it is lower than the national average. </p>
+      <!-- <p>There is more than 1 million year-end permanent population living in Luohu, which covers 78 km². In <b>{{szSaftyCaculate.year}}</b> there are average <b class="highlightText">{{szSaftyCaculate.perCap}} criminal cases </b> happened every day in Shenzhen Luohu district. </p> -->
+        <!-- <p>3 homicide cases were on file in Luohu in 2017, and the homicide rate per 100,000 people was 0.29, and it is lower than the national average. </p> -->
+
+            <p> In <b>{{szSaftyCaculate.year}}</b> there were average <b class="highlightText">{{szSaftyCaculate.perCap}} criminal cases </b> happening every day in Shenzhen Luohu district. </p>
+
+
     </el-tab-pane>
     <el-tab-pane label="Luohu Public Safety Cases" name="Total">
 
-    <p>In <b>{{szSaftyCaculate.year}}</b> there are average <b class="highlightText">{{szSaftyCaculate.perCap}} public securiy cases </b> happened every day in Shenzhen Luohu district. </p>
+    <p>In <b>{{szSaftyCaculate.year}}</b> there were average <b class="highlightText">{{szSaftyCaculate.perCap}} public securiy cases </b> happening every day in Shenzhen Luohu district. </p>
 
 
     </el-tab-pane>
@@ -134,7 +138,7 @@
             v-if="activeName == 'Total'"
                 :id="i"
                 :x=" i%2!=0? 20+110*i-110 : 20+110*i"
-                :y="i%2!=0? 45 : 10"
+                :y="i%2!=0? 65 : 20"
                 width="10px"
                 height="10px"
                 :fill="stackColor(keyname)"
@@ -145,7 +149,7 @@
               class="textGraphStyle"
                 :id="i"
                 :x=" i%2!=0? 35+110*i-110 : 35+110*i"
-                :y="i%2!=0? 55 : 20"
+                :y="i%2!=0? 75 : 30"
                 width="20px"
                 height="20px"
                 :fill="stackColor(keyname)"
@@ -264,11 +268,11 @@
           <g v-if="activeName == 'Total'">
               <g v-for="(keyname,a) in lhCrimeKeys">
                 <text
-                  v-if="selectedCircle==i""
+                  v-if="selectedCircle==i"
                   font-size="0.8em"
                     :id="i"
                     :x=" a%2!=0? 20+110*a-110 : 20+110*a"
-                    :y=" a%2!=0? 70 : 35"
+                    :y=" a%2!=0? 90 : 45"
                     text-anchor="start"
                     width="20px"
                     height="20px"
@@ -284,12 +288,17 @@
       </g>
     </svg>
     <div class="graphStyle" v-if="activeName == 'total_cases'" >
-
-
+<h1>Overall Situation</h1>
+<p>There are more than 1 million year-end permanent population living in Luohu, which covering 78 km². As reported by the Luohu public security organ, the overall crime rate per 100,000 residents dropped from <b>11,590 </b>in 2008 to<b> 1,743</b> in 2017.</p>
+<p>As a reference comparison, with 2 million populations in <b>Queens</b>, New York, the crime rate is <b>1559</b> per 100,000 residents in 2018. Shenzhen's neighbor Hong Kong, had the overall crime rate of 758 in 2017 and 787 in 2019. </p>
+<p>Due to the difference in the laws and crime definition in different political regions, measuring from different areas may not reflect the accurate crime situation. </p>
       </div>
     <div class="graphStyle" v-if="activeName == 'Total'" >
+
+      <h1>What is Public Security Case?</h1>
       <p>According to Law of the People's Republic of China on Penalties for Administration of Public Security, if the violence or crime behavior is not dangerous enough for criminal punishment, the public security organ, normally is the police department, will impose on him/her penalties including warnings, detention of 1- 15 days and fine.</p>
     <p> In Luohu, 70.4% of the criminal cases in 2017 are either fraud or theft-related, and 2.36% are homicide, violent crime, rape, or robbery. However, 74.9% of the public security cases were categorized as <b>"Acts Infringing upon Rights of the Person and of Property"</b> in the 2017 Luohu annual statistic report, which includes various violent crimes. </p>
+
   </div>
 
 
@@ -371,14 +380,7 @@ import szPopulations from "~/assets/dataset/人口变化.json"
       // this.width= 1000;
       this.height = 600;
       // console.log(this.stackCreator(this.szDataset))
-      console.log(this.stackCreator(this.szDataset)[1].key)
-      console.log(this.stackColor())
 
-
-      // console.log(this.stackCreator(this.szDataset)[0])
-      // console.log(this.szDataset)
-      // console.log(d3.extent(this.szDataset, (d) => d[this.activeName]))
-        // console.log(d3.extent(this.szDataset, d => d[this.activeName]))
 
       // let svg = d3.select(this.$refs.viz)
 
@@ -574,9 +576,10 @@ import szPopulations from "~/assets/dataset/人口变化.json"
 
 </script>
 
-<style>
+<style >
 .graphStyle{
   color:white;
+  padding:0 20px;
 
 }
 .textGraphStyle{
@@ -628,6 +631,7 @@ import szPopulations from "~/assets/dataset/人口变化.json"
 .highlightText{
   font-size: 1.5rem;
   color: #F56C6C;
+  line-height: 0.7;
 
 
 }

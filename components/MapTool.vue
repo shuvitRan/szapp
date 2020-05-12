@@ -40,7 +40,7 @@
   <div class="contro-panel"  >
     <div class="contro-panel-header">
       <H1 >Map Setting</H1>
-  </div>
+    </div>
   <transition name = "fade" mode="out-in">
    <div v-if="mapRadio=='green'"  key="1">
 
@@ -48,16 +48,16 @@
           <span class="panelText" >Parks</span>
           <el-switch
               v-model="isParkShow"
-              active-color="#13ce66"
+              active-color="#baf722"
               inactive-color="#959595">
           </el-switch>
         </div>
         <el-divider></el-divider>
         <div>
-          <span class="panelText"> Grass and Wood</span>
+          <span class="panelText"> Grass & Wood</span>
           <el-switch
               v-model="isLandUseShow"
-              active-color="#13ce66"
+              active-color="#3cd361"
               inactive-color="#959595">
           </el-switch>
         </div>
@@ -66,7 +66,7 @@
           <span class="panelText">HillShade</span>
           <el-switch
               v-model="isHillShow"
-              active-color="#13ce66"
+              active-color="#cfc113"
               inactive-color="#959595">
           </el-switch>
         </div>
@@ -86,7 +86,7 @@
           </div>
         </el-tooltip>
           <el-tooltip class='noselect' effect="dark"  placement="left">
-            <div slot="content">The top hospitals in the Chinese health sytem. They are <br/> general hospitals at the city. Normally they are provincial <br>or national level with more expertise and bed capacity </div>
+            <div slot="content">The top hospitals in the Chinese health sytem. They are <br/> general hospitals in the city. Normally they are provincial <br>or national level with more expertise and bigger bed capacity. </div>
           <div>
                 <el-radio v-model='hosSwitch' label="lv3Only">Level 3 Only</el-radio>
           </div>
@@ -99,7 +99,7 @@
 
       <div>
         <b>Isochrone</b>
-          <p>10 minutes driving reachable regions <br>around hospitals and health centers.</p>
+          <p>10-minute driving reachable regions <br>around hospitals and health centers.</p>
       <div>
       <span class="panelText">Opacity</span>
 
@@ -126,7 +126,7 @@
 
     <div>
       <b>Isochrone</b>
-        <p>5 minutes driving reachable reagions <br>around police stations.</p>
+        <p>5-minute driving reachable regions <br>around police stations.</p>
     <div>
     <span class="panelText">Opacity</span>
 
@@ -147,7 +147,7 @@
 
     <div>
       <b>Show More Points of Interest</b>
-      <p>Some POI may need a closer zoom level.</p>
+      <p>Some POI may need to zoom closer.</p>
       <el-select
       v-model="showPOI"
       multiple
@@ -164,34 +164,58 @@
     </el-select>
     </div>
 
-    <el-divider></el-divider>
-      <b>Satellite Map</b>
-    <div>
-      <span class="panelText">Opacity</span>
 
-        <div class="customSlider"  >
-          <el-slider v-model="sateOpacity"
-                  :step='0.01'
-                :max='1' ></el-slider>
-        </div>
+  <el-divider></el-divider>
+    <div >
+      <span class="panelText" >Satellite</span>
+      <el-switch
+          v-model="isSateShow"
+          active-color="#13ce66"
+          inactive-color="#959595">
+      </el-switch>
     </div>
-    <div>
-      <span class="panelText">Saturation</span>
 
-        <div class="customSlider"   >
-          <el-slider v-model="sateSaturation"
-                  :step='0.01'
-                :min='-1' :max='0.5' ></el-slider>
-        </div>
-    </div>
-    <div>
-      <span class="panelText">Brightness</span>
+    <!-- DetailControl for sate -->
+    <!-- <div>
+      <el-divider></el-divider>
+        <b>Satellite Map</b>
+      <div>
+        <span class="panelText">Opacity</span>
 
-        <div class="customSlider">
-          <el-slider v-model="sateBrightness"
-                  :step='0.01'
-                :max='1' ></el-slider>
-        </div>
+          <div class="customSlider"  >
+            <el-slider v-model="sateOpacity"
+                    :step='0.01'
+                  :max='1' ></el-slider>
+          </div>
+      </div>
+      <div>
+        <span class="panelText">Saturation</span>
+
+          <div class="customSlider"   >
+            <el-slider v-model="sateSaturation"
+                    :step='0.01'
+                  :min='-1' :max='0.5' ></el-slider>
+          </div>
+      </div>
+      <div>
+        <span class="panelText">Brightness</span>
+
+          <div class="customSlider">
+            <el-slider v-model="sateBrightness"
+                    :step='0.01'
+                  :max='1' ></el-slider>
+          </div>
+      </div>
+    </div> -->
+      <el-divider></el-divider>
+
+    <div >
+      <span class="panelText" >Districts Admin</span>
+      <div class="customSlider">
+        <el-slider v-model="szOutline"
+                :step='0.01'
+              :max='1' ></el-slider>
+      </div>
     </div>
 
     <el-divider></el-divider>
@@ -298,9 +322,11 @@ export default {
       sateOpacity:0.4,
       sateSaturation:-1,
       sateBrightness:0.49,
+      isSateShow:false,
       Hos10minOpacity:1,
       hosSwitch:'alllHos',
       szpd5minOpacity:1,
+      szOutline:0,
       isSzpdShow:true,
       roadOpacity:0.3,
       showPOI:[],
@@ -357,8 +383,9 @@ export default {
 
 
       this.map.setPaintProperty('szpd', 'circle-opacity', 0);
+      this.map.setPaintProperty('szpdList', 'text-opacity', 0);
       this.map.setPaintProperty('szpd5min', 'fill-opacity', 0);
-      this.map.setPaintProperty('shenzhenDistricts', 'line-opacity', 0);
+      // this.map.setPaintProperty('shenzhenDistricts', 'line-opacity', 0);
     },
     isHospitalSection(){
       this.map.setPaintProperty('parks', 'fill-opacity', 0);
@@ -371,7 +398,7 @@ export default {
       this.map.setPaintProperty('hosAcess10min', 'fill-opacity', 1);
 
 
-
+      this.map.setPaintProperty('szpdList', 'text-opacity', 0);
       this.map.setPaintProperty('szpd', 'circle-opacity', 0);
       this.map.setPaintProperty('szpd5min', 'fill-opacity', 0);
 
@@ -387,8 +414,10 @@ export default {
 
 
         // this.map.setPaintProperty('traffic', 'line-opacity', 1);
+            this.map.setPaintProperty('szpdList', 'text-opacity', 1);
         this.map.setPaintProperty('szpd', 'circle-opacity', 1);
         this.map.setPaintProperty('szpd5min', 'fill-opacity', 1);
+        this.szOutline=1;
         this.map.setPaintProperty('shenzhenDistricts', 'line-opacity', 1);
 
     },
@@ -424,10 +453,21 @@ export default {
         this.map.setLayoutProperty('mapbox-terrain-rgb', 'visibility', 'visible');
       }
     },
+    isSateShow(){
+      if(!this.isSateShow){
+      this.map.setPaintProperty('mapbox-satelliteOneShot', 'raster-opacity', 0);
+      } else{
+      this.map.setPaintProperty('mapbox-satelliteOneShot', 'raster-opacity', 1);
+      }
+
+    },
     sateOpacity(newVale, oldVal){
 
       this.map.setPaintProperty('mapbox-satellite', 'raster-opacity', newVale);
 
+    },
+    szOutline(newVale){
+      this.map.setPaintProperty('shenzhenDistricts', 'line-opacity', newVale);
     },
     sateBrightness(newVale){
       this.map.setPaintProperty('mapbox-satellite', 'raster-brightness-max', newVale);
@@ -615,6 +655,7 @@ transition-timing-function: ease-out;
 .panelText{
   display: inline-block;
   width: 160px;
+  /* padding-right: 2rem; */
 
 }
 
@@ -671,11 +712,11 @@ transition-timing-function: ease-out;
 .grid-content {
 display: inline-block;
 
- /* overflow: hidden; */
+ overflow: hidden;
 /* position: absolute; */
   right: 0px;
  /* text-align: center; */
-  border-radius: 2px;
+  /* border-radius: 2px; */
 /* float: right; */
 
   transition: width 1.5s;
@@ -683,16 +724,18 @@ display: inline-block;
 
 
 
+
 }
 .contro-panel {
-padding: 2vh;
+padding:0 2vh;
 
-overflow: scroll;
+overflow: auto;
+/* overflow-x: hidden; */
   height: 60vh;
 
 }
 .contro-panel-header{
-  padding-bottom:1rem;
+  padding:0.5rem 0;
 }
 .popupbutton{
 /* float: right; */
