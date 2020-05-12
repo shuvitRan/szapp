@@ -43,12 +43,15 @@
       <div class="aboutText">
 
 
-      <p>This is a project by <b style="font-size:1.2rem;">Dan Ran</b> in partial fulfillment of the requirements for the degree of Master of Science in Data Visualization, at Parsons School of Design. </p>
+      <p>This is a project by <b style="font-size:1.2rem;">Dan Ran</b> in partial fulfillment of the requirements for the
+         degree of <b> Master of Science in Data Visualization, at Parsons School of Design.</b> </p>
 
       <p>advisor - Daniel Sauter <br>
       environment consultant - The Nature Conservancy Shenzhen <br>
+       <img src="~assets/img/tnc-white.png" class='tnclogo' alt="">   <br>
       calligraphy logo - Yixiao Zhang <br>
-      special thanks - Aaron Hill, Scarlett Li, Vivi, Christopher Bost</p>
+      special thanks - Aaron Hill, Vivi, Christopher Bost, Scarlett Li </p>
+
 
       <el-divider></el-divider>
         <h2>Code</h2>
@@ -235,8 +238,19 @@ overflow: scroll;
   font-size: 0.8rem;
 color:rgb(54, 142, 223) ;
 
+
 text-decoration:none;
 
 }
 
+
+.tnclogo{
+  /* width:180px; */
+  height: 4rem;
+  display: inline-block;
+  position: static;
+  line-height: 0.7;
+  vertical-align: bottom;
+
+}
 </style>
