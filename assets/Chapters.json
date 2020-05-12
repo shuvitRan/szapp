@@ -82,7 +82,7 @@
     "GDPperCap":30088,
     "wage":20714,
     "ResiPrice":2004,
-    "description": "It is the one of the world's <b style=\"font-size:1.2rem;line-height: 0.7; \">fastest growing cities</b> in 20th century and early 21st century."
+    "description": "A large number of domestic migrants from all the places of China has been moving to Shenzhen, the land of opportunity. Shenzhen became an experimenting ground for 21st-century city. It is the one of the world's <b style=\"font-size:1.2rem;line-height: 0.7; \">fastest growing cities</b> in 20th century and early 21st century."
 
   },
   {
@@ -93,7 +93,7 @@
     "GDPperCap":85088,
     "wage":43454,
     "ResiPrice":12823,
-    "description": " In 2010, the Shenzhen SEZ expanded from its four out of nine districts to the <b style=\"font-size:1.2rem;line-height: 0.7; \">whole city</b>. And, China surpassed Japan and became the world's second-biggest economy. "
+    "description": " Two years later, in 2010, the Shenzhen SEZ expanded from its four out of nine districts to the <b style=\"font-size:1.2rem;line-height: 0.7; \">whole city</b>. And, China surpassed Japan and became the world's second-biggest economy. "
 
   },
   {
@@ -116,7 +116,7 @@
   {
     "chapter": 10,
 
-    "description": " Shenzhen is the epitome of the world factory of China, with the <b style=\"font-size:1.3rem;line-height: 0.7; \">3rd</b> busiest container port in the world. Companies like <b style=\"color:rgb(45, 52, 221); \">Foxconn</b> produce consumer electronics like the iPhone for the world every day.  ",
+    "description": " Shenzhen is the epitome of the world factory of China, with the <b style=\"font-size:1.3rem;line-height: 0.7; \">3rd</b> busiest container port in the world. Companies like <b style=\"color:rgb(45, 52, 221); \">Foxconn</b> produce consumer electronics like the iPhone, headphones, and drones for the world every day.  ",
     "location": {
       "center": [114.25034, 22.57574 ],
       "zoom": 13.81,
@@ -153,7 +153,7 @@
   {
     "chapter": 13,
 
-    "description": "In the next section let's take a study into Shenzhen's livability in three different aspects:  <b style=\"font-size:1.2rem;line-height: 0.7; \">Green Coverage</b>,  <b style=\"font-size:1.2rem;line-height: 0.7; \">Hospital Accessibility</b>, <b style=\"font-size:1.2rem;line-height: 0.7; \">Crime and Safty.</b> "
+    "description": "In the next section, let's look into Shenzhen's livability in three different aspects:  <b style=\"font-size:1.2rem;line-height: 0.7; \">Green Coverage</b>,  <b style=\"font-size:1.2rem;line-height: 0.7; \">Hospital Accessibility</b>, <b style=\"font-size:1.2rem;line-height: 0.7; \">Crime and Safty.</b> "
 
   }
 

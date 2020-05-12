@@ -5,8 +5,8 @@
   <!-- <vueMap :mapStyle="'mapbox://styles/randanfx/ck98yu85q0dkn1jnr7zqwfbqd'" /> -->
   <div class="intro">
 <div class="intro-text">
-<!-- <p> <b style="font-size:3rem; line-height: 0.7;">70%</b> of the world population will reside in cities by 2050. In the past decades, numerous special economic zones and free trade zones helped the tremendous growth in the developing world.</p> -->
-<p> <b style="font-size:4rem; line-height: 0.7;">70%</b> of the world population will reside in cities by <b>2050</b>. </p>
+<p> <b style="font-size:3rem; line-height: 0.7;">70%</b> of the world population will reside in cities by 2050. In the past decades, numerous special economic zones and free trade zones helped the tremendous growth in the developing world.</p>
+<!-- <p> <b style="font-size:4rem; line-height: 0.7;">70%</b> of the world population will reside in cities by <b>2050</b>. </p> -->
 
 </div>
 <div class="peopleContainers">
@@ -34,7 +34,8 @@
 
 
 
-      <p class="step-text" v-html="n.description" v-if="n.chapter!=5&&n.chapter!=6&&n.chapter!=7"></p>
+      <!-- <p class="step-text" v-html="n.description" v-if="n.chapter!=5&&n.chapter!=6&&n.chapter!=7"></p> -->
+      <p class="step-text" v-html="n.description" ></p>
 
     </div>
 
@@ -177,7 +178,7 @@ export default {
     stepExitHandler(element){
       // if()
       // console.log(element.index.length);
-      if(element.index=== 12){
+      if(element.index=== 13){
           this.$router.push('/threeAspects');
       }
     }

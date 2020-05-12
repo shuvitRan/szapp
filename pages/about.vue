@@ -43,12 +43,12 @@
       <div class="aboutText">
 
 
-      <p>This is a project by <b>Dan Ran</b> in partial fulfillment of the requirements for the degree of Master of Science in Data Visualization, at Parsons School of Design. </p>
+      <p>This is a project by <b style="font-size:1.2rem;">Dan Ran</b> in partial fulfillment of the requirements for the degree of Master of Science in Data Visualization, at Parsons School of Design. </p>
 
-      <p>Advisor: Daniel Sauter <br>
-      Special Counselor: The Nature Conservancy Shenzhen <br>
-      Chinese Calligraphy Logo by: Yixiao Zhang <br>
-      Special Thanks: Aaron Hill, Scarlett Li, Vivi</p>
+      <p>advisor - Daniel Sauter <br>
+      environment consultant - The Nature Conservancy Shenzhen <br>
+      calligraphy logo - Yixiao Zhang <br>
+      special thanks - Aaron Hill, Scarlett Li, Vivi, Christopher Bost</p>
 
       <el-divider></el-divider>
         <h2>Code</h2>

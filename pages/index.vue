@@ -9,7 +9,7 @@
     <div>
       <div class ='titleContainer'>
 
-        <img src="~/assets/img/logo-bl.png" alt="logo">
+        <img src="~/assets/img/logo-bl2.png" alt="logo">
         <!-- <h1 class="chtitle">
           深圳
         </h1> -->
