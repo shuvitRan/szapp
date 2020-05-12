@@ -91,10 +91,10 @@ export default {
     }
   },
 
-  router: {
+  // router: {
     // base: '/szapp/'
     // mode: 'hash'
-  }
+  // }
 
 
 }
