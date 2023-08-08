@@ -12,11 +12,11 @@
 
     </el-tab-pane>
     <el-tab-pane label="Public Green Spaces Rate" name="PerCapitaPublicGreenAreas_sqm">
-      <p>In the matter of Per individual Public Green Areas rate, the number of Shenzhen was going down from 2015's 16.9m² to<b class="highlightText"> 15.4m²</b> in 2018. 9m² per capita is the bottom line for public green spaces, and 50m² is ideal according to some earlier studies.</p>
+      <p>In the matter of Per individual Public Green Areas rate, the number of Shenzhen was going down from 2015's 16.9m² to<b class="highlightText"> 12.44m²</b> in 2021. 9m² per capita is the bottom line for public green spaces, and 50m² is ideal according to some earlier studies.</p>
     </el-tab-pane>
 
     <el-tab-pane label="Parks" name="NumberofParks_unit">
-      <p>Shenzhen has a network consisting of more than  <b class='highlightTextGreen'>900</b> city parks, but they are unevenly distributed
+      <p>Shenzhen has a network consisting of more than  <b class='highlightTextGreen'>1200</b> city parks, but they are unevenly distributed
 </p>
     </el-tab-pane>
 

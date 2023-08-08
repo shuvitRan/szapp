@@ -52,5 +52,32 @@
     "PerCapitaPublicGreenAreas_sqm": 15.4,
     "NumberofParks_unit": 973,
     "PublicGreenAreas_hectare": 19992
+  },
+  {
+    "Year": 2019,
+    "CoverageAreaofAfforestation_hectare": 101822,
+    "DevelopedAreasofAfforestation_hectare": 41685,
+    "RateofGreenAreasinDevelopedAreas": 37.4,
+    "PerCapitaPublicGreenAreas_sqm": 14.9,
+    "NumberofParks_unit": 1090,
+    "PublicGreenAreas_hectare": 20077
+  },
+  {
+    "Year": 2020,
+    "CoverageAreaofAfforestation_hectare": 101264,
+    "DevelopedAreasofAfforestation_hectare": 41457,
+    "RateofGreenAreasinDevelopedAreas": 37.4,
+    "PerCapitaPublicGreenAreas_sqm": 15,
+    "NumberofParks_unit": 1206,
+    "PublicGreenAreas_hectare": 20160
+  },
+  {
+    "Year": 2021,
+    "CoverageAreaofAfforestation_hectare": 101822,
+    "DevelopedAreasofAfforestation_hectare": 41112,
+    "RateofGreenAreasinDevelopedAreas": 37.3,
+    "PerCapitaPublicGreenAreas_sqm": 12.44,
+    "NumberofParks_unit": 1238,
+    "PublicGreenAreas_hectare": 21990
   }
 ]

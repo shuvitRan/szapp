@@ -42,10 +42,11 @@
 
       <div class="aboutText">
 
-
-      <p>This is a project by <b style="font-size:1.2rem;">Dan Ran</b> in partial fulfillment of the requirements for the
+        <p>By <b style="font-size:1.2rem;">Dan Ran</b>, Updated Aug, 2023</p>
+      <p>This is a project originally in partial fulfillment of the requirements for the
          degree of <b> Master of Science in Data Visualization, at Parsons School of Design.</b> </p>
 
+       
       <p>advisor - Daniel Sauter <br>
       environment consultant - The Nature Conservancy Shenzhen <br>
        <img src="~assets/img/tnc-white.png" class='tnclogo' alt="">   <br>
@@ -61,7 +62,7 @@
         <h2>Data & Reference</h2>
 
         <p><a href="https://opendata.sz.gov.cn/">Shenzhen Government Open Data Platform(深圳市政府数据开放平台)</a>.</p>
-
+        <p>Statistics Bureau of Shenzhen Municipality, Shenzhen Statistical Yearbook 2022(深圳统计年鉴2022), China Statistics Press, 2022.</p>
         <p>Statistics Bureau of Shenzhen Municipality, Shenzhen Statistical Yearbook 2019(深圳统计年鉴2019), China Statistics Press, 2019.</p>
           <p>Statistics Bureau of Luohu Municipality, Shenzhen Luohu District Statistical Yearbook 2018(深圳市罗湖区统计年鉴2018), 2018.</p>
 

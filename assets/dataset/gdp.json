@@ -325,7 +325,7 @@
     "primary": 69491,
     "secondary": 56128559,
     "tertiary": 61874298,
-    "GDPperCapita": 113316,
+    "GDPperCapita": 110389,
     "gudingTouzhi": 20609180,
     "RealEstateDeve": 5147362
   },
@@ -335,7 +335,7 @@
     "primary": 68164,
     "secondary": 60559131,
     "tertiary": 72569523,
-    "GDPperCapita": 126765,
+    "GDPperCapita": 116407,
     "gudingTouzhi": 23144319,
     "RealEstateDeve": 7368421
   },
@@ -345,7 +345,7 @@
     "primary": 63504,
     "secondary": 66579909,
     "tertiary": 83151073,
-    "GDPperCapita": 141474,
+    "GDPperCapita": 123208,
     "gudingTouzhi": 24901970,
     "RealEstateDeve": 8769002
   },
@@ -355,7 +355,7 @@
     "primary": 57579,
     "secondary": 72242462,
     "tertiary": 92194729,
-    "GDPperCapita": 153677,
+    "GDPperCapita": 130448,
     "gudingTouzhi": 27174226,
     "RealEstateDeve": 10694855
   },
@@ -365,7 +365,7 @@
     "primary": 72084,
     "secondary": 76780987,
     "tertiary": 103287649,
-    "GDPperCapita": 162599,
+    "GDPperCapita": 135271,
     "gudingTouzhi": 32983076,
     "RealEstateDeve": 13310333
   },
@@ -375,7 +375,7 @@
     "primary": 82840,
     "secondary": 83106513,
     "tertiary": 117607690,
-    "GDPperCapita": 172453,
+    "GDPperCapita": 142494,
     "gudingTouzhi": 40781638,
     "RealEstateDeve": 17565209
   },
@@ -385,7 +385,7 @@
     "primary": 195721,
     "secondary": 93180979,
     "tertiary": 131523886,
-    "GDPperCapita": 183544,
+    "GDPperCapita": 150739,
     "gudingTouzhi": 51473152,
     "RealEstateDeve": 21358565
   },
@@ -395,7 +395,37 @@
     "primary": 220935,
     "secondary": 99619472,
     "tertiary": 142379364,
-    "GDPperCapita": 189568,
+    "GDPperCapita": 155320,
+    "gudingTouzhi": 0,
+    "RealEstateDeve": 0
+  },
+  {
+    "Year": 2019,
+    "GDP": 269923266,
+    "primary": 0,
+    "secondary": 0,
+    "tertiary": 0,
+    "GDPperCapita": 159883,
+    "gudingTouzhi": 0,
+    "RealEstateDeve": 0
+  },
+  {
+    "Year": 2020,
+    "GDP": 277590153,
+    "primary": 0,
+    "secondary": 0,
+    "tertiary": 0,
+    "GDPperCapita": 159820,
+    "gudingTouzhi": 0,
+    "RealEstateDeve": 0
+  },
+  {
+    "Year": 2021,
+    "GDP": 306648538,
+    "primary": 0,
+    "secondary": 0,
+    "tertiary": 0,
+    "GDPperCapita": 173663,
     "gudingTouzhi": 0,
     "RealEstateDeve": 0
   }

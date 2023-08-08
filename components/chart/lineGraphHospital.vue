@@ -7,14 +7,14 @@
 <div class="lineGraph">
   <el-tabs v-model="activeName" @tab-click="handleClick" class="graphStyle" >
     <el-tab-pane label="Licensed Doctors" name="LicensedDoctors">
-      <p> In <b>{{szHosCaculate.year}}</b> there are <b class="highlightText">{{szHosCaculate.perCap}} doctors</b> per thounsands populations in Shenzhen. In China 2018, there are 2.59 licensed doctors per 1,000 people. In Beijing this number is 5.06, and Shanghai is 5.1.</p>
+      <p> In <b>{{szHosCaculate.year}}</b> there are <b class="highlightText">{{szHosCaculate.perCap}} doctors</b> per thounsands populations in Shenzhen. In China 2021, there are 3.04 licensed doctors per 1,000 people. In Beijing this number is 5.7, and Shanghai is 3.34.</p>
     </el-tab-pane>
     <el-tab-pane label="Hospital Beds" name="HospitalBeds">
-      <p> In <b>{{szHosCaculate.year}}</b> there are <b class="highlightText">{{szHosCaculate.perCap}} Hospital Beds</b> per thounsands people in Shenzhen. In 2018, there are average 6.03 hospital beds per 1,000 people in China. In Shanghai, this number is 10.1. </p>
+      <p> In <b>{{szHosCaculate.year}}</b> there are <b class="highlightText">{{szHosCaculate.perCap}} Hospital Beds</b> per thounsands people in Shenzhen. In 2021, there are average 6.70 hospital beds per 1,000 people in China. In Shanghai, this number is 6.49. </p>
     </el-tab-pane>
 
     <el-tab-pane label="Hospital Unit" name="HospitalUnit">
-<p>In 2018, with over 99 million patients visiting health services in Shenzhen, there were <b class="highlightText">3,806</b> health care institutions, and 67.6% of them were private clinics. There were 139 hospitals, and 78 of them are general hospitals.  Average of 33 hospitals were built per decade in the last thirty years. </p>
+<p>In 2021, with over 114 million patients visiting health services in Shenzhen, there were <b class="highlightText">5241</b> health care institutions, and 92% of them were private clinics. There were only 145 hospitals, and 78 of them are general hospitals.  Average of 33 hospitals were built per decade in the last thirty years. </p>
     </el-tab-pane>
 
       <el-tab-pane label="Population" name="PermanentPopulation10k"></el-tab-pane>
@@ -199,7 +199,7 @@
 
     <div class="graphStyle" >
 <h1>Utilization Rates</h1>
-  <p>The average utilization rates of beds were 84% in Shenzhen in 2018, which means there is an average of 6,971 empty hospital beds in the city. The condition also varies from the locations and facilities. Luohu, which is one of the sub-regions in Shenzhen, holds 20% of the hospitals in Shenzhen. The average utilization rates of beds in the public hospital are all above 90% in the past decade. It was overloaded in 2010 to 105% and 2012 to 101%. On the other hand, in the Nanshan district, the utilization rates of hospital beds were 84.5% in 2017 and fell to 78% in 2018.
+  <p>The average utilization rates of beds were 75%% in Shenzhen in 2021, which means there is an average of 15,997 empty hospital beds in the city. The condition also varies from the locations and facilities. Luohu, which is one of the sub-regions in Shenzhen, holds 20% of the hospitals in Shenzhen. The average utilization rates of beds in the public hospital are all above 90% in the past decade. It was overloaded in 2010 to 105% and 2012 to 101%. On the other hand, in the Nanshan district, the utilization rates of hospital beds were 84.5% in 2017 and fell to 78% in 2018.
 </p>
       </div>
 

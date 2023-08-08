@@ -278,5 +278,26 @@
     "HospitalBeds": 43569,
     "MedicalPersonnel": 93660,
     "LicensedDoctors": 34747
+  },
+  {
+    "Year": 2019,
+    "HospitalUnit": 144,
+    "HospitalBeds": 47366,
+    "MedicalPersonnel": 102788,
+    "LicensedDoctors": 38519
+  },
+  {
+    "Year": 2020,
+    "HospitalUnit": 144,
+    "HospitalBeds": 57642,
+    "MedicalPersonnel": 106261,
+    "LicensedDoctors": 40757
+  },
+  {
+    "Year": 2021,
+    "HospitalUnit": 145,
+    "HospitalBeds": 58795,
+    "MedicalPersonnel": 113284,
+    "LicensedDoctors": 43728
   }
 ]

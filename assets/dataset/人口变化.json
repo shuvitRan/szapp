@@ -289,74 +289,101 @@
   },
   {
     "Year": 2011,
-    "PermanentPopulation10k": 1046.74,
+    "PermanentPopulation10k": 1122.94,
     "Registered": 267.9,
-    "NonRegistered": 778.85,
+    "NonRegistered": 855,
     "Employed": 764.54,
     "EmployedStaffnWorkers": 261.43,
     "SelfEmployed": 408.35
   },
   {
     "Year": 2012,
-    "PermanentPopulation10k": 1054.74,
+    "PermanentPopulation10k": 1195,
     "Registered": 287.62,
-    "NonRegistered": 767.13,
+    "NonRegistered": 908,
     "Employed": 771.2,
     "EmployedStaffnWorkers": 277.9,
     "SelfEmployed": 430.71
   },
   {
     "Year": 2013,
-    "PermanentPopulation10k": 1062.89,
+    "PermanentPopulation10k": 1257,
     "Registered": 310.47,
-    "NonRegistered": 752.42,
+    "NonRegistered": 946,
     "Employed": 899.24,
     "EmployedStaffnWorkers": 445.84,
     "SelfEmployed": 441.83
   },
   {
     "Year": 2014,
-    "PermanentPopulation10k": 1077.89,
+    "PermanentPopulation10k": 1314,
     "Registered": 332.21,
-    "NonRegistered": 745.68,
+    "NonRegistered": 985,
     "Employed": 899.66,
     "EmployedStaffnWorkers": 448.93,
     "SelfEmployed": 438.43
   },
   {
     "Year": 2015,
-    "PermanentPopulation10k": 1137.87,
+    "PermanentPopulation10k": 1408.87,
     "Registered": 354.99,
-    "NonRegistered": 782.88,
+    "NonRegistered": 1053,
     "Employed": 906.14,
     "EmployedStaffnWorkers": 447.41,
     "SelfEmployed": 446.22
   },
   {
     "Year": 2016,
-    "PermanentPopulation10k": 1190.84,
+    "PermanentPopulation10k": 1495,
     "Registered": 384.52,
-    "NonRegistered": 806.32,
+    "NonRegistered": 1110,
     "Employed": 926.38,
     "EmployedStaffnWorkers": 442.55,
     "SelfEmployed": 470.15
   },
   {
     "Year": 2017,
-    "PermanentPopulation10k": 1252.83,
+    "PermanentPopulation10k": 1587,
     "Registered": 434.72,
-    "NonRegistered": 818.11,
+    "NonRegistered": 1152,
     "Employed": 943.29,
     "EmployedStaffnWorkers": 447.32,
     "SelfEmployed": 477.87
   },
   {
     "Year": 2018,
-    "PermanentPopulation10k": 1302.66,
+    "PermanentPopulation10k": 1666.12,
     "Registered": 454.7,
-    "NonRegistered": 847.97,
+    "NonRegistered": 1211,
     "Employed": 1050.25,
     "EmployedStaffnWorkers": 466.91,
     "SelfEmployed": 562.19
+  },
+  {
+    "Year": 2019,
+    "PermanentPopulation10k": 1710,
+    "Registered": 494.78,
+    "NonRegistered": 1215.62,
+    "Employed": 0,
+    "EmployedStaffnWorkers": 0,
+    "SelfEmployed": 0
+  },
+  {
+    "Year": 2020,
+    "PermanentPopulation10k": 1763,
+    "Registered": 514,
+    "NonRegistered": 1249.28,
+    "Employed": 0,
+    "EmployedStaffnWorkers": 0,
+    "SelfEmployed": 0
+  },
+  {
+    "Year": 2021,
+    "PermanentPopulation10k": 1768,
+    "Registered": 556.39,
+    "NonRegistered": 1211.77,
+    "Employed": 0,
+    "EmployedStaffnWorkers": 0,
+    "SelfEmployed": 0
   }
 ]
